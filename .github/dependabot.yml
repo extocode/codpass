@@ -25,14 +25,6 @@ updates:
         update-types:
           - "minor"
           - "patch"
-    ignore:
-      # Don't auto-update these until manual PHP upgrade
-      - dependency-name: "phpunit/phpunit"
-        versions: [">=7.0.0"]
-      - dependency-name: "symfony/debug"
-        # Will be replaced manually with symfony/error-handler
-      - dependency-name: "phpunit/dbunit"
-        # Will be removed manually (abandoned)
 
   # GitHub Actions
   - package-ecosystem: "github-actions"

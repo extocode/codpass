@@ -3187,18 +3187,6 @@ parameters:
 			path: lib/SP/Html/DataGrid/Layout/DataGridHeaderSort.php
 
 		-
-			message: '#^Property SP\\Html\\DataGrid\\Layout\\DataGridHeaderSort\:\:\$actions \(SplObjectStorage\|null\) is never assigned SplObjectStorage so it can be removed from the property type\.$#'
-			identifier: property.unusedType
-			count: 1
-			path: lib/SP/Html/DataGrid/Layout/DataGridHeaderSort.php
-
-		-
-			message: '#^Property SP\\Html\\DataGrid\\Layout\\DataGridHeaderSort\:\:\$sortFields \(SplObjectStorage\|null\) is never assigned SplObjectStorage so it can be removed from the property type\.$#'
-			identifier: property.unusedType
-			count: 1
-			path: lib/SP/Html/DataGrid/Layout/DataGridHeaderSort.php
-
-		-
 			message: '#^Method SP\\Html\\DataGrid\\Layout\\DataGridPagerBase\:\:getFirstPage\(\) should return int but returns float\.$#'
 			identifier: return.type
 			count: 1
@@ -4573,12 +4561,6 @@ parameters:
 			path: lib/SP/Services/Account/AccountSearchService.php
 
 		-
-			message: '#^Strict comparison using \!\=\= between non\-falsy\-string and '''' will always evaluate to true\.$#'
-			identifier: notIdentical.alwaysTrue
-			count: 1
-			path: lib/SP/Services/Account/AccountSearchService.php
-
-		-
 			message: '#^Function __u not found\.$#'
 			identifier: function.notFound
 			count: 10
@@ -5644,6 +5626,12 @@ parameters:
 			message: '#^Parameter \#2 \$value of method DOMDocument\:\:createElement\(\) expects string, int given\.$#'
 			identifier: argument.type
 			count: 2
+			path: lib/SP/Services/Wiki/DokuWikiApiBase.php
+
+		-
+			message: '#^Property SP\\Services\\Wiki\\DokuWikiApiBase\:\:\$params \(bool\|DOMElement\|null\) is never assigned bool so it can be removed from the property type\.$#'
+			identifier: property.unusedType
+			count: 1
 			path: lib/SP/Services/Wiki/DokuWikiApiBase.php
 
 		-
