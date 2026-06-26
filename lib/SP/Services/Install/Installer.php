@@ -61,11 +61,11 @@ final class Installer extends Service
     /**
      * sysPass' version and build number
      */
-    public const VERSION = [4, 0, 1];
+    public const VERSION = [4, 0, 2];
 
-    public const VERSION_TEXT = '4.0.1';
+    public const VERSION_TEXT = '4.0.2';
 
-    public const BUILD = 26062602;
+    public const BUILD = 26062603;
 
     private ?\SP\Services\Install\MySQL $dbs = null;
 

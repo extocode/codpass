@@ -5815,7 +5815,7 @@ parameters:
 			path: lib/SP/Util/Util.php
 
 		-
-			message: '#^Parameter \#1 \$array \(array\{4, 0, 1\}\) of array_values is already a list, call has no effect\.$#'
+			message: '#^Parameter \#1 \$array \(array\{4, 0, 2\}\) of array_values is already a list, call has no effect\.$#'
 			identifier: arrayValues.list
 			count: 1
 			path: lib/SP/Util/VersionUtil.php

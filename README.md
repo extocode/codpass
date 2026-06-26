@@ -5,7 +5,7 @@
 > modernization under the same GNU GPLv3 license. Not affiliated with or endorsed by the
 > original author.
 
-![Release](https://img.shields.io/badge/release-v4.0.1-success)
+![Release](https://img.shields.io/badge/release-v4.0.2-success)
 ![License](https://img.shields.io/badge/license-GPLv3-blue)
 ![PHP](https://img.shields.io/badge/PHP-%E2%89%A58.4-777bb4)
 
