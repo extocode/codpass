@@ -1,0 +1,332 @@
+@charset "UTF-8";
+/* MD3 Dark Theme - Search Card Layout */
+
+/* ========================================
+   SEARCH HEADER - Column Sort
+   ======================================== */
+
+#data-search-header {
+    padding: 0 32px;
+    margin-bottom: 12px;
+}
+
+#data-search-header .header-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#data-search-header .header-column {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+}
+
+#data-search-header .header-column.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+#data-search-header .header-column.sortable:hover .column-name {
+    color: #8B7FC7;
+}
+
+#data-search-header .column-name {
+    color: #948F99;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+#data-search-header .column-name.active {
+    color: #8B7FC7;
+}
+
+#data-search-header .sort-icon {
+    font-size: 18px;
+    color: #8B7FC7;
+    margin-left: 2px;
+}
+
+/* ========================================
+   ACCOUNT CARDS
+   ======================================== */
+
+#content #data-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+    text-align: center;
+    padding: 0.5em 0;
+    width: 100%;
+    margin: 0 auto;
+    background: transparent;
+}
+
+/* ACCOUNT CARD */
+#content #data-search .account-label {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 320px;
+    min-height: 180px;
+    height: auto;
+    text-align: left;
+    margin: 0;
+    padding: 16px;
+    color: #E6E1E6;
+    background: #2B292F;
+    background-color: #2B292F;
+    border: 1px solid #5C5767;
+    border-radius: 12px;
+    box-shadow: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+#content #data-search .account-label:hover {
+    border-color: #8B7FC7;
+    background: #363438;
+    background-color: #363438;
+    transform: translateY(-2px);
+}
+
+#content #data-search .account-label .label-row-up,
+#content #data-search .account-label .label-row-down {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: auto;
+    width: 100%;
+    padding: 0;
+    gap: 8px;
+    background: transparent;
+}
+
+#content #data-search .account-label .label-row-down {
+    margin-top: 8px;
+}
+
+#content #data-search .account-label .label-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    background: transparent;
+}
+
+#content #data-search .account-label .label-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #49454E;
+    background: transparent;
+}
+
+#content #data-search .account-label .label-right > div {
+    width: 100%;
+}
+
+#content #data-search .account-label .label-field {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    padding: 0;
+    margin-bottom: 4px;
+    background: transparent;
+}
+
+#content #data-search .account-label .field-text {
+    word-wrap: break-word;
+    color: #E6E1E6;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+#content #data-search .account-label .field-text a,
+#content #data-search .account-label a {
+    color: #8B7FC7;
+    font-weight: 500;
+}
+
+#content #data-search .account-label .field-text a:hover,
+#content #data-search .account-label a:hover {
+    color: #A99FD4;
+    text-decoration: underline;
+}
+
+#content #data-search .account-label .field-customer {
+    flex-grow: 0;
+    margin-bottom: 8px;
+}
+
+#content #data-search .account-label .field-name {
+    padding: 0 0 2px 0;
+    margin-bottom: 2px;
+    color: #948F99;
+    text-align: left;
+    border-bottom: 1px solid #49454E;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+#content #data-search .account-label .field-name-hidden {
+    display: none;
+}
+
+#content #data-search .account-label .header .field-name {
+    color: #E6E1E6;
+    font-weight: bold;
+}
+
+#content #data-search .account-label .no-link,
+#content #data-search .account-label .no-link a {
+    color: #E6E1E6;
+    font-weight: bold;
+}
+
+/* Account info icons */
+#content #data-search .account-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0;
+    opacity: 0.7;
+    min-height: auto;
+    background: transparent;
+}
+
+#content #data-search .account-info:hover {
+    opacity: 1;
+}
+
+#content #data-search .account-info .material-icons {
+    color: #E6E1E6;
+    font-size: 18px;
+}
+
+/* Account actions */
+#content #data-search .account-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 0;
+    border-top: none;
+    background: transparent;
+}
+
+#content #data-search .account-actions i {
+    opacity: 0.7;
+    color: #E6E1E6;
+    cursor: pointer;
+}
+
+#content #data-search .account-actions i:hover {
+    opacity: 1;
+    color: #8B7FC7;
+}
+
+#content #data-search .account-actions i.btn-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(139, 127, 199, 0.15);
+    font-size: 18px;
+}
+
+#content #data-search .account-actions i.btn-action:hover {
+    background: rgba(139, 127, 199, 0.3);
+}
+
+#content #data-search .account-spacer {
+    display: none;
+}
+
+/* Tags */
+#content #data-search .tags-box {
+    display: inline-flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+#content #data-search .tags-box span.tag {
+    cursor: pointer;
+    opacity: 0.8;
+    background: #363438;
+    color: #E6E1E6;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+#content #data-search .tags-box span.tag:hover {
+    opacity: 1;
+    background: #49454E;
+}
+
+/* Client chip */
+#content #data-search .account-label .mdl-chip--contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #363438;
+    border-radius: 16px;
+    padding-right: 10px;
+}
+
+#content #data-search .account-label .mdl-chip__contact {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+#content #data-search .account-label .mdl-chip__text {
+    color: #E6E1E6;
+    font-size: 11px;
+}
+
+/* Menu button */
+#content #data-search .account-actions .mdl-button--icon {
+    color: #E6E1E6;
+    background: transparent;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+}
+
+#content #data-search .account-actions .mdl-button--icon:hover {
+    background: rgba(139, 127, 199, 0.2);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    #content #data-search .account-label {
+        width: 100%;
+        min-width: 280px;
+    }
+}

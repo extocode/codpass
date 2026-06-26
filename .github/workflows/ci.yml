@@ -1,0 +1,131 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  static-analysis:
+    name: Static Analysis (PHP ${{ matrix.php }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.4', '8.5']
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: pdo, pdo_mysql, gd, gettext, fileinfo, mbstring, dom, libxml, zlib
+          coverage: none
+          tools: composer:v2
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: PHPStan
+        run: composer phpstan
+
+      - name: Code style (PSR-12, advisory)
+        run: composer cs-check
+        continue-on-error: true
+
+  tests:
+    name: Tests (PHP ${{ matrix.php }})
+    runs-on: ubuntu-latest
+    needs: static-analysis
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.4', '8.5']
+
+    services:
+      mysql:
+        image: mariadb:10.6
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: syspass_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: pdo, pdo_mysql, gd, gettext, fileinfo, mbstring, dom, libxml, zlib, ldap
+          coverage: xdebug
+          tools: composer:v2
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: Load database schema
+        run: mysql -h 127.0.0.1 -u root -proot syspass_test < schemas/dbstructure.sql
+
+      # Blocking gate: fast, DB-free unit tests.
+      - name: Unit tests
+        run: vendor/bin/phpunit --configuration tests/phpunit.xml --group unit
+
+      # Advisory: full DB-backed suite. Known test-isolation issue — an
+      # uncommitted transaction blocks a later TRUNCATE (metadata lock) and
+      # hangs the run. Tracked separately; non-blocking until fixed.
+      - name: Full suite (advisory)
+        run: vendor/bin/phpunit --configuration tests/phpunit.xml
+        continue-on-error: true
+        env:
+          DB_SERVER: 127.0.0.1
+          DB_NAME: syspass_test
+          DB_USER: root
+          DB_PASS: root
+
+  # Uncomment after PHP 8.2 upgrade
+  # rector-check:
+  #   name: Rector (Dry Run)
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: shivammathur/setup-php@v2
+  #       with:
+  #         php-version: '8.2'
+  #         coverage: none
+  #     - run: composer install --prefer-dist --no-progress
+  #     - run: composer rector

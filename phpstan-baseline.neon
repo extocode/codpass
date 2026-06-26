@@ -1,0 +1,5833 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: app/modules/api/Controllers/AccountController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 18
+			path: app/modules/api/Controllers/AccountController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: app/modules/api/Controllers/AccountController.php
+
+		-
+			message: '#^Parameter \#1 \$globalSearch of method SP\\Services\\Account\\AccountSearchFilter\:\:setGlobalSearch\(\) expects int, bool given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/api/Controllers/AccountController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/api/Controllers/CategoryController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: app/modules/api/Controllers/CategoryController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/api/Controllers/CategoryController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/api/Controllers/ClientController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: app/modules/api/Controllers/ClientController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/api/Controllers/ClientController.php
+
+		-
+			message: '#^Constant BACKUP_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: app/modules/api/Controllers/ConfigController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/api/Controllers/ConfigController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/api/Controllers/ConfigController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/api/Controllers/ConfigController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/api/Controllers/ControllerBase.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/api/Controllers/ControllerBase.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\)\: Unexpected token "\\n     ", expected type at offset 15 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/modules/api/Controllers/ControllerBase.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 42
+			path: app/modules/api/Controllers/Help/AccountHelp.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 9
+			path: app/modules/api/Controllers/Help/CategoryHelp.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 11
+			path: app/modules/api/Controllers/Help/ClientHelp.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/api/Controllers/Help/ConfigHelp.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: app/modules/api/Controllers/Help/TagHelp.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 11
+			path: app/modules/api/Controllers/Help/UserGroupHelp.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/api/Controllers/TagController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: app/modules/api/Controllers/TagController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/api/Controllers/TagController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/api/Controllers/UserGroupController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: app/modules/api/Controllers/UserGroupController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/api/Controllers/UserGroupController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/api/Init.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/api/Init.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\ControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 5
+			path: app/modules/web/Controllers/AccessManagerController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$useImage\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\AccountController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Constant DEBUG not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 50
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 19
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Method SP\\Modules\\Web\\Controllers\\AccountController\:\:getPasswordPreset\(\) should return SP\\DataModel\\ItemPreset\\Password but returns null\.$#'
+			identifier: return.type
+			count: 1
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Parameter \#1 \$id of method SP\\Services\\Account\\AccountService\:\:getById\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Parameter \#1 \$userId of static method SP\\Services\\Account\\AccountAclService\:\:clearAcl\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\AccountController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/AccountController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\AccountFavoriteController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/AccountFavoriteController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/AccountFavoriteController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/AccountFavoriteController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\AccountFavoriteController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/AccountFavoriteController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$files\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/AccountFileController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\AccountFileController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/AccountFileController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/AccountFileController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 33
+			path: app/modules/web/Controllers/AccountFileController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/AccountFileController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/AccountFileController.php
+
+		-
+			message: '#^Method SP\\Modules\\Web\\Controllers\\AccountFileController\:\:checkAllowedMimeType\(\) should return string but returns int\.$#'
+			identifier: return.type
+			count: 1
+			path: app/modules/web/Controllers/AccountFileController.php
+
+		-
+			message: '#^Parameter \#1 \$string of function strtolower expects string, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/modules/web/Controllers/AccountFileController.php
+
+		-
+			message: '#^Parameter \#1 \$type of method SP\\DataModel\\FileData\:\:setType\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/AccountFileController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\AccountFileController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/AccountFileController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\AccountHistoryManagerController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/AccountHistoryManagerController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 14
+			path: app/modules/web/Controllers/AccountHistoryManagerController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/AccountHistoryManagerController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/AccountHistoryManagerController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\AccountHistoryManagerController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/AccountHistoryManagerController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/AccountManagerController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\AccountManagerController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/AccountManagerController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/AccountManagerController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 13
+			path: app/modules/web/Controllers/AccountManagerController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/AccountManagerController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/AccountManagerController.php
+
+		-
+			message: '#^Parameter \#2 \$itemId of method SP\\Modules\\Web\\Controllers\\AccountManagerController\:\:deleteCustomFieldsForItem\(\) expects array\<int\>\|int, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/AccountManagerController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\AccountManagerController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/AccountManagerController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/AuthTokenController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\AuthTokenController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/AuthTokenController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/AuthTokenController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 23
+			path: app/modules/web/Controllers/AuthTokenController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/AuthTokenController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/AuthTokenController.php
+
+		-
+			message: '#^Parameter \#2 \$itemId of method SP\\Modules\\Web\\Controllers\\AuthTokenController\:\:deleteCustomFieldsForItem\(\) expects array\<int\>\|int, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/AuthTokenController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\AuthTokenController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/AuthTokenController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\BootstrapController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/BootstrapController.php
+
+		-
+			message: '#^Constant DEBUG not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/modules/web/Controllers/BootstrapController.php
+
+		-
+			message: '#^Constant RESOURCES_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/modules/web/Controllers/BootstrapController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/BootstrapController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\BootstrapController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/BootstrapController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/CategoryController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\CategoryController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/CategoryController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/CategoryController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 21
+			path: app/modules/web/Controllers/CategoryController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/CategoryController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/CategoryController.php
+
+		-
+			message: '#^Parameter \#2 \$itemId of method SP\\Modules\\Web\\Controllers\\CategoryController\:\:deleteCustomFieldsForItem\(\) expects array\<int\>\|int, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/CategoryController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\CategoryController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/CategoryController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/ClientController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ClientController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ClientController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/web/Controllers/ClientController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 32
+			path: app/modules/web/Controllers/ClientController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/ClientController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: app/modules/web/Controllers/ClientController.php
+
+		-
+			message: '#^Parameter \#2 \$itemId of method SP\\Modules\\Web\\Controllers\\ClientController\:\:deleteCustomFieldsForItem\(\) expects array\<int\>\|int, null given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/modules/web/Controllers/ClientController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\ClientController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ClientController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ConfigAccountController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ConfigAccountController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: app/modules/web/Controllers/ConfigAccountController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/ConfigAccountController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigAccountController.php
+
+		-
+			message: '#^Property \$this\(SP\\Modules\\Web\\Controllers\\ConfigAccountController\)\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ConfigAccountController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ConfigBackupController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ConfigBackupController.php
+
+		-
+			message: '#^Constant APP_ROOT not found\.$#'
+			identifier: constant.notFound
+			count: 3
+			path: app/modules/web/Controllers/ConfigBackupController.php
+
+		-
+			message: '#^Constant BACKUP_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 5
+			path: app/modules/web/Controllers/ConfigBackupController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/ConfigBackupController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 25
+			path: app/modules/web/Controllers/ConfigBackupController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/ConfigBackupController.php
+
+		-
+			message: '#^Method SP\\Modules\\Web\\Controllers\\ConfigBackupController\:\:downloadBackupAppAction\(\) should return bool but returns string\.$#'
+			identifier: return.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigBackupController.php
+
+		-
+			message: '#^Method SP\\Modules\\Web\\Controllers\\ConfigBackupController\:\:downloadBackupDbAction\(\) should return bool but returns string\.$#'
+			identifier: return.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigBackupController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigBackupController.php
+
+		-
+			message: '#^Property \$this\(SP\\Modules\\Web\\Controllers\\ConfigBackupController\)\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ConfigBackupController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ConfigDokuWikiController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ConfigDokuWikiController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/ConfigDokuWikiController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/ConfigDokuWikiController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigDokuWikiController.php
+
+		-
+			message: '#^Property \$this\(SP\\Modules\\Web\\Controllers\\ConfigDokuWikiController\)\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ConfigDokuWikiController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ConfigEncryptionController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ConfigEncryptionController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 22
+			path: app/modules/web/Controllers/ConfigEncryptionController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/web/Controllers/ConfigEncryptionController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigEncryptionController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\ConfigEncryptionController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ConfigEncryptionController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ConfigFeedbackController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ConfigFeedbackController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/ConfigFeedbackController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 10
+			path: app/modules/web/Controllers/ConfigFeedbackController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/ConfigFeedbackController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigFeedbackController.php
+
+		-
+			message: '#^Property \$this\(SP\\Modules\\Web\\Controllers\\ConfigFeedbackController\)\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ConfigFeedbackController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ConfigGeneralController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ConfigGeneralController.php
+
+		-
+			message: '#^Constant APP_ROOT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/modules/web/Controllers/ConfigGeneralController.php
+
+		-
+			message: '#^Constant LOG_FILE not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/modules/web/Controllers/ConfigGeneralController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/ConfigGeneralController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 15
+			path: app/modules/web/Controllers/ConfigGeneralController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/ConfigGeneralController.php
+
+		-
+			message: '#^Method SP\\Modules\\Web\\Controllers\\ConfigGeneralController\:\:downloadConfigBackupAction\(\) should return bool but returns string\.$#'
+			identifier: return.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigGeneralController.php
+
+		-
+			message: '#^Method SP\\Modules\\Web\\Controllers\\ConfigGeneralController\:\:downloadLogAction\(\) should return bool but returns string\.$#'
+			identifier: return.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigGeneralController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigGeneralController.php
+
+		-
+			message: '#^Property \$this\(SP\\Modules\\Web\\Controllers\\ConfigGeneralController\)\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ConfigGeneralController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ConfigImportController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ConfigImportController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/ConfigImportController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/ConfigImportController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigImportController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\ConfigImportController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ConfigImportController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ConfigLdapController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ConfigLdapController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/ConfigLdapController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 18
+			path: app/modules/web/Controllers/ConfigLdapController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/web/Controllers/ConfigLdapController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigLdapController.php
+
+		-
+			message: '#^Property \$this\(SP\\Modules\\Web\\Controllers\\ConfigLdapController\)\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ConfigLdapController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ConfigMailController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ConfigMailController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 12
+			path: app/modules/web/Controllers/ConfigMailController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/ConfigMailController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigMailController.php
+
+		-
+			message: '#^Property \$this\(SP\\Modules\\Web\\Controllers\\ConfigMailController\)\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ConfigMailController.php
+
+		-
+			message: '#^Constant BACKUP_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 3
+			path: app/modules/web/Controllers/ConfigManagerController.php
+
+		-
+			message: '#^Constant LOG_FILE not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/modules/web/Controllers/ConfigManagerController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 13
+			path: app/modules/web/Controllers/ConfigManagerController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\ControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 10
+			path: app/modules/web/Controllers/ConfigManagerController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ConfigWikiController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ConfigWikiController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/ConfigWikiController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/ConfigWikiController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ConfigWikiController.php
+
+		-
+			message: '#^Property \$this\(SP\\Modules\\Web\\Controllers\\ConfigWikiController\)\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ConfigWikiController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/ControllerBase.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/ControllerBase.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/ControllerBase.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/ControllerBase.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Core\\Acl\\Acl\:\:checkUserAccess\(\) expects int, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/ControllerBase.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\ControllerBase\:\:\$configData \(SP\\Config\\ConfigData\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 1
+			path: app/modules/web/Controllers/ControllerBase.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/CustomFieldController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\CustomFieldController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/CustomFieldController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/CustomFieldController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 19
+			path: app/modules/web/Controllers/CustomFieldController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/CustomFieldController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/CustomFieldController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\CustomFieldController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/CustomFieldController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: app/modules/web/Controllers/ErrorController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/ErrorController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\EventlogController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/EventlogController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/EventlogController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/EventlogController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/EventlogController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\EventlogController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/EventlogController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\FeedbackController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/FeedbackController.php
+
+		-
+			message: '#^Constant CONFIG_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/modules/web/Controllers/FeedbackController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 12
+			path: app/modules/web/Controllers/FeedbackController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 20
+			path: app/modules/web/Controllers/FeedbackController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/FeedbackController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\FeedbackController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/FeedbackController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 34
+			path: app/modules/web/Controllers/Helpers/Account/AccountActionsHelper.php
+
+		-
+			message: '#^Parameter \#1 \$id of method SP\\Html\\DataGrid\\Action\\DataGridActionBase\:\:setId\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountActionsHelper.php
+
+		-
+			message: '#^Access to an undefined property SP\\DataModel\\ItemData\:\:\$isEdit\.$#'
+			identifier: property.notFound
+			count: 4
+			path: app/modules/web/Controllers/Helpers/Account/AccountHelper.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/Helpers/Account/AccountHelper.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountHelper.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Core\\Acl\\Acl\:\:checkUserAccess\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountHelper.php
+
+		-
+			message: '#^Parameter \#1 \$datetime of function strtotime expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountHelper.php
+
+		-
+			message: '#^Parameter \#1 \$type of class SP\\Core\\Acl\\AccountPermissionException constructor expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountHelper.php
+
+		-
+			message: '#^Parameter \#1 \$type of class SP\\Core\\Acl\\UnauthorizedPageException constructor expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountHelper.php
+
+		-
+			message: '#^Parameter \#1 \$type of class SP\\Services\\User\\UpdatedMasterPassException constructor expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountHelper.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\Helpers\\Account\\AccountHelper\:\:\$actionId \(string\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 2
+			path: app/modules/web/Controllers/Helpers/Account/AccountHelper.php
+
+		-
+			message: '#^Parameter \#1 \$datetime of function strtotime expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountHistoryHelper.php
+
+		-
+			message: '#^Parameter \#1 \$type of class SP\\Core\\Acl\\AccountPermissionException constructor expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountHistoryHelper.php
+
+		-
+			message: '#^Parameter \#1 \$type of class SP\\Core\\Acl\\UnauthorizedPageException constructor expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountHistoryHelper.php
+
+		-
+			message: '#^Parameter \#1 \$type of class SP\\Services\\User\\UpdatedMasterPassException constructor expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountHistoryHelper.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/Helpers/Account/AccountPasswordHelper.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountPasswordHelper.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 12
+			path: app/modules/web/Controllers/Helpers/Account/AccountSearchHelper.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountSearchHelper.php
+
+		-
+			message: '#^Parameter \#1 \$globalSearch of method SP\\Services\\Account\\AccountSearchFilter\:\:setGlobalSearch\(\) expects int, bool given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountSearchHelper.php
+
+		-
+			message: '#^Parameter \#1 \$time of method SP\\Html\\DataGrid\\DataGridBase\:\:setTime\(\) expects int, float given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountSearchHelper.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\Helpers\\Account\\AccountSearchHelper\:\:\$queryTimeStart \(int\) does not accept float\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Account/AccountSearchHelper.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 15
+			path: app/modules/web/Controllers/Helpers/Grid/AccountGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/AccountGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 15
+			path: app/modules/web/Controllers/Helpers/Grid/AccountHistoryGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/AccountHistoryGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 14
+			path: app/modules/web/Controllers/Helpers/Grid/AuthTokenGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/AuthTokenGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 12
+			path: app/modules/web/Controllers/Helpers/Grid/CategoryGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/CategoryGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 15
+			path: app/modules/web/Controllers/Helpers/Grid/ClientGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/ClientGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 15
+			path: app/modules/web/Controllers/Helpers/Grid/CustomFieldGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/CustomFieldGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 13
+			path: app/modules/web/Controllers/Helpers/Grid/EventlogGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/EventlogGrid.php
+
+		-
+			message: '#^Parameter \#2 \$isMethod of method SP\\Html\\DataGrid\\DataGridDataBase\:\:addDataRowSource\(\) expects bool, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/EventlogGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 15
+			path: app/modules/web/Controllers/Helpers/Grid/FileGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/FileGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 22
+			path: app/modules/web/Controllers/Helpers/Grid/ItemPresetGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/ItemPresetGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 22
+			path: app/modules/web/Controllers/Helpers/Grid/NotificationGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/Helpers/Grid/NotificationGrid.php
+
+		-
+			message: '#^Parameter \#1 \$time of method SP\\Html\\DataGrid\\DataGridBase\:\:setTime\(\) expects int, float given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/NotificationGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 15
+			path: app/modules/web/Controllers/Helpers/Grid/PluginGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/PluginGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 21
+			path: app/modules/web/Controllers/Helpers/Grid/PublicLinkGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/PublicLinkGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 11
+			path: app/modules/web/Controllers/Helpers/Grid/TagGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/TagGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: app/modules/web/Controllers/Helpers/Grid/TrackGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/TrackGrid.php
+
+		-
+			message: '#^Parameter \#2 \$isMethod of method SP\\Html\\DataGrid\\DataGridDataBase\:\:addDataRowSource\(\) expects bool, null given\.$#'
+			identifier: argument.type
+			count: 3
+			path: app/modules/web/Controllers/Helpers/Grid/TrackGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 19
+			path: app/modules/web/Controllers/Helpers/Grid/UserGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/UserGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 14
+			path: app/modules/web/Controllers/Helpers/Grid/UserGroupGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/UserGroupGrid.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 13
+			path: app/modules/web/Controllers/Helpers/Grid/UserProfileGrid.php
+
+		-
+			message: '#^Function getElapsedTime not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/Grid/UserProfileGrid.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\Helpers\\HelperBase\:\:\$context \(SP\\Core\\Context\\SessionContext\) does not accept SP\\Core\\Context\\ContextInterface\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: app/modules/web/Controllers/Helpers/HelperBase.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: app/modules/web/Controllers/Helpers/ItemPresetHelper.php
+
+		-
+			message: '#^Constant APP_ROOT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/LayoutHelper.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: app/modules/web/Controllers/Helpers/LayoutHelper.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/Helpers/LayoutHelper.php
+
+		-
+			message: '#^Parameter \#1 \$id of method SP\\Html\\DataGrid\\Action\\DataGridActionBase\:\:setId\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/LayoutHelper.php
+
+		-
+			message: '#^Parameter \#2 \$value of method SP\\Http\\Uri\:\:addParam\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/Helpers/LayoutHelper.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\InstallController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/InstallController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/InstallController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/InstallController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/InstallController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\InstallController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/InstallController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\ControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 8
+			path: app/modules/web/Controllers/ItemManagerController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/ItemPresetController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\ItemPresetController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/ItemPresetController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/ItemPresetController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 23
+			path: app/modules/web/Controllers/ItemPresetController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/ItemPresetController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/ItemPresetController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\ItemPresetController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/ItemPresetController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/ItemsController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\LoginController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/LoginController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: app/modules/web/Controllers/LoginController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/LoginController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\LoginController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/LoginController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/NotificationController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\NotificationController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/NotificationController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/NotificationController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 22
+			path: app/modules/web/Controllers/NotificationController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/NotificationController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: app/modules/web/Controllers/NotificationController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\NotificationController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/NotificationController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/PluginController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\PluginController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/PluginController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/PluginController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 14
+			path: app/modules/web/Controllers/PluginController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/PluginController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/web/Controllers/PluginController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\PluginController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/PluginController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/PublicLinkController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\PublicLinkController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/PublicLinkController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/PublicLinkController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 19
+			path: app/modules/web/Controllers/PublicLinkController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/PublicLinkController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: app/modules/web/Controllers/PublicLinkController.php
+
+		-
+			message: '#^Parameter \#2 \$itemId of method SP\\Modules\\Web\\Controllers\\PublicLinkController\:\:deleteCustomFieldsForItem\(\) expects array\<int\>\|int, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/PublicLinkController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\PublicLinkController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/PublicLinkController.php
+
+		-
+			message: '#^Constant PUBLIC_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 4
+			path: app/modules/web/Controllers/ResourceController.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Modules\\Web\\Controllers\\ControllerBase\:\:checkAccess\(\) expects null, int given\.$#'
+			identifier: argument.type
+			count: 4
+			path: app/modules/web/Controllers/SecurityManagerController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/SimpleControllerBase.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/SimpleControllerBase.php
+
+		-
+			message: '#^Parameter \#1 \$action of method SP\\Core\\Acl\\Acl\:\:checkUserAccess\(\) expects int, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/SimpleControllerBase.php
+
+		-
+			message: '#^Parameter \#1 \$type of class SP\\Core\\Acl\\UnauthorizedPageException constructor expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/SimpleControllerBase.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\SimpleControllerBase\:\:\$configData \(SP\\Config\\ConfigData\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 1
+			path: app/modules/web/Controllers/SimpleControllerBase.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\StatusController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/StatusController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/StatusController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/StatusController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/StatusController.php
+
+		-
+			message: '#^Parameter \#1 \$exception of method SP\\Modules\\Web\\Controllers\\StatusController\:\:returnJsonResponseException\(\) expects Exception, GuzzleHttp\\Exception\\GuzzleException given\.$#'
+			identifier: argument.type
+			count: 2
+			path: app/modules/web/Controllers/StatusController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\StatusController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/StatusController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/TagController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\TagController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/TagController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/TagController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 14
+			path: app/modules/web/Controllers/TagController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/TagController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/TagController.php
+
+		-
+			message: '#^Parameter \#2 \$itemId of method SP\\Modules\\Web\\Controllers\\TagController\:\:deleteCustomFieldsForItem\(\) expects array\<int\>\|int, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/TagController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\TagController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/TagController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/TaskController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\TrackController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/TrackController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/web/Controllers/TrackController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/TrackController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: app/modules/web/Controllers/TrackController.php
+
+		-
+			message: '#^Parameter \#1 \$type of class SP\\Core\\Acl\\UnauthorizedActionException constructor expects string, int given\.$#'
+			identifier: argument.type
+			count: 3
+			path: app/modules/web/Controllers/TrackController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\TrackController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/TrackController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\UpgradeController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/UpgradeController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: app/modules/web/Controllers/UpgradeController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/UpgradeController.php
+
+		-
+			message: '#^Parameter \#1 \$upgradeKey of method SP\\Config\\ConfigData\:\:setUpgradeKey\(\) expects string, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/UpgradeController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\UpgradeController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/UpgradeController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/UserController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\UserController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/UserController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/web/Controllers/UserController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 26
+			path: app/modules/web/Controllers/UserController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/UserController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: app/modules/web/Controllers/UserController.php
+
+		-
+			message: '#^Parameter \#1 \$id of method SP\\Services\\User\\UserService\:\:getById\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/UserController.php
+
+		-
+			message: '#^Parameter \#2 \$itemId of method SP\\Modules\\Web\\Controllers\\UserController\:\:deleteCustomFieldsForItem\(\) expects array\<int\>\|int, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/UserController.php
+
+		-
+			message: '#^Parameter \#2 \$userId of method SP\\Core\\Acl\\Acl\:\:checkUserAccess\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/UserController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\UserController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/UserController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/UserGroupController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\UserGroupController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/UserGroupController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/UserGroupController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 21
+			path: app/modules/web/Controllers/UserGroupController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/UserGroupController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/UserGroupController.php
+
+		-
+			message: '#^Parameter \#2 \$itemId of method SP\\Modules\\Web\\Controllers\\UserGroupController\:\:deleteCustomFieldsForItem\(\) expects array\<int\>\|int, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/UserGroupController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\UserGroupController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/UserGroupController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\UserPassResetController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/UserPassResetController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/UserPassResetController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 13
+			path: app/modules/web/Controllers/UserPassResetController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/UserPassResetController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\UserPassResetController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/UserPassResetController.php
+
+		-
+			message: '#^Access to an undefined property SP\\Mvc\\View\\Template\:\:\$isView\.$#'
+			identifier: property.notFound
+			count: 1
+			path: app/modules/web/Controllers/UserProfileController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\UserProfileController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/UserProfileController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Controllers/UserProfileController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 21
+			path: app/modules/web/Controllers/UserProfileController.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/UserProfileController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: app/modules/web/Controllers/UserProfileController.php
+
+		-
+			message: '#^Parameter \#2 \$itemId of method SP\\Modules\\Web\\Controllers\\UserProfileController\:\:deleteCustomFieldsForItem\(\) expects array\<int\>\|int, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Controllers/UserProfileController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\UserProfileController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/UserProfileController.php
+
+		-
+			message: '#^Call to function property_exists\(\) with \$this\(SP\\Modules\\Web\\Controllers\\UserSettingsGeneralController\) and ''session'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/modules/web/Controllers/UserSettingsGeneralController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/UserSettingsGeneralController.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/UserSettingsGeneralController.php
+
+		-
+			message: '#^Property SP\\Modules\\Web\\Controllers\\UserSettingsGeneralController\:\:\$session \(SP\\Core\\Context\\SessionContext\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: app/modules/web/Controllers/UserSettingsGeneralController.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Controllers/UserSettingsManagerController.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: app/modules/web/Forms/AccountForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Forms/AuthTokenForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Forms/CategoryForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Forms/ClientForm.php
+
+		-
+			message: '#^Parameter \#1 \$isGlobal of method SP\\DataModel\\ClientData\:\:setIsGlobal\(\) expects int, bool given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Forms/ClientForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: app/modules/web/Forms/CustomFieldDefForm.php
+
+		-
+			message: '#^Parameter \#1 \$isEncrypted of method SP\\DataModel\\CustomFieldDefinitionData\:\:setIsEncrypted\(\) expects int, bool given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Forms/CustomFieldDefForm.php
+
+		-
+			message: '#^Parameter \#1 \$required of method SP\\DataModel\\CustomFieldDefinitionData\:\:setRequired\(\) expects int, bool given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Forms/CustomFieldDefForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: app/modules/web/Forms/ItemsPresetForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: app/modules/web/Forms/NotificationForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Forms/PublicLinkForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Forms/TagForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 11
+			path: app/modules/web/Forms/UserForm.php
+
+		-
+			message: '#^Parameter \#1 \$isLdap of method SP\\DataModel\\UserData\:\:setIsLdap\(\) expects bool, int\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/modules/web/Forms/UserForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Forms/UserGroupForm.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Forms/UserProfileForm.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 10
+			path: app/modules/web/Init.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: app/modules/web/Init.php
+
+		-
+			message: '#^PHPDoc tag @property has invalid value \(itemPresetService\)\: Unexpected token "\\n \* ", expected variable at offset 52 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: app/modules/web/Init.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 33
+			path: app/modules/web/themes/inducio/inc/Icons.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 33
+			path: app/modules/web/themes/material-3/inc/Icons.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 33
+			path: app/modules/web/themes/material-blue/inc/Icons.php
+
+		-
+			message: '#^Constant APP_MODULE not found\.$#'
+			identifier: constant.notFound
+			count: 4
+			path: lib/SP/Bootstrap.php
+
+		-
+			message: '#^Constant LOG_FILE not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: lib/SP/Bootstrap.php
+
+		-
+			message: '#^Constant OLD_CONFIG_FILE not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Bootstrap.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Bootstrap.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Bootstrap.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 15
+			path: lib/SP/Bootstrap.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Bootstrap.php
+
+		-
+			message: '#^Constant CACHE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Config/Config.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Config/Config.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Config/Config.php
+
+		-
+			message: '#^Constant CACHE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Config/ConfigCache.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Config/ConfigCache.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Config/ConfigCache.php
+
+		-
+			message: '#^Call to function is_array\(\) with array will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 2
+			path: lib/SP/Config/ConfigData.php
+
+		-
+			message: '#^Property SP\\Config\\ConfigData\:\:\$ldapTlsEnabled \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Config/ConfigData.php
+
+		-
+			message: '#^Constant CONFIG_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: lib/SP/Config/ConfigUtil.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Config/ConfigUtil.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Config/ConfigUtil.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Acl/AccountPermissionException.php
+
+		-
+			message: '#^Parameter \#2 \$type of method SP\\Core\\Exceptions\\SPException\:\:__construct\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Core/Acl/AccountPermissionException.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Acl/Acl.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Core/Acl/Acl.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Acl/Acl.php
+
+		-
+			message: '#^Left side of \|\| is always false\.$#'
+			identifier: booleanOr.leftAlwaysFalse
+			count: 1
+			path: lib/SP/Core/Acl/Acl.php
+
+		-
+			message: '#^Property SP\\Core\\Acl\\Acl\:\:\$context \(SP\\Core\\Context\\SessionContext\) does not accept SP\\Core\\Context\\ContextInterface\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Core/Acl/Acl.php
+
+		-
+			message: '#^Constant CACHE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Core/Acl/Actions.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Acl/Actions.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Core/Acl/Actions.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Acl/Actions.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Acl/UnauthorizedActionException.php
+
+		-
+			message: '#^Parameter \#2 \$type of method SP\\Core\\Exceptions\\SPException\:\:__construct\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Core/Acl/UnauthorizedActionException.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Acl/UnauthorizedPageException.php
+
+		-
+			message: '#^Parameter \#2 \$type of method SP\\Core\\Exceptions\\SPException\:\:__construct\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Core/Acl/UnauthorizedPageException.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Core/Context/ContextBase.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Context/SessionContext.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Context/SessionContext.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Context/SessionContext.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Context/StatelessContext.php
+
+		-
+			message: '#^Constant APP_MODULE not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/Cookie.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/Cookie.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Core/Crypt/Crypt.php
+
+		-
+			message: '#^Call to an undefined method phpseclib3\\Crypt\\Common\\PrivateKey\:\:getLength\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/CryptPKI.php
+
+		-
+			message: '#^Call to an undefined method phpseclib3\\Crypt\\Common\\PrivateKey\:\:withPadding\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/CryptPKI.php
+
+		-
+			message: '#^Call to an undefined method phpseclib3\\Crypt\\Common\\PublicKey\:\:withPadding\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/CryptPKI.php
+
+		-
+			message: '#^Constant CONFIG_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: lib/SP/Core/Crypt/CryptPKI.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/CryptPKI.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Core/Crypt/CryptSessionHandler.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/Hash.php
+
+		-
+			message: '#^Constant MCRYPT_DEV_URANDOM not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Constant MCRYPT_MODE_CBC not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Constant MCRYPT_RAND not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Constant MCRYPT_RIJNDAEL_256 not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function mcrypt_create_iv not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function mcrypt_enc_get_iv_size not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function mcrypt_generic not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function mcrypt_generic_deinit not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function mcrypt_generic_init not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function mcrypt_module_close not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function mcrypt_module_open not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function mcrypt_module_self_test not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function mdecrypt_generic not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Method SP\\Core\\Crypt\\OldCrypt\:\:getDecrypt\(\) should return string but returns false\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Method SP\\Core\\Crypt\\OldCrypt\:\:mkEncrypt\(\) should return bool but returns string\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Variable \$data in empty\(\) always exists and is not falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: lib/SP/Core/Crypt/OldCrypt.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Core/Crypt/SecureKeyCookie.php
+
+		-
+			message: '#^Method SP\\Core\\Crypt\\SecureKeyCookie\:\:getKey\(\) never returns string so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: lib/SP/Core/Crypt/SecureKeyCookie.php
+
+		-
+			message: '#^Method SP\\Core\\Crypt\\SecureKeyCookie\:\:saveKey\(\) never returns Defuse\\Crypto\\Key so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: lib/SP/Core/Crypt/SecureKeyCookie.php
+
+		-
+			message: '#^Method SP\\Core\\Crypt\\SecureKeyCookie\:\:saveKey\(\) should return Defuse\\Crypto\\Key\|false but returns true\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Core/Crypt/SecureKeyCookie.php
+
+		-
+			message: '#^Parameter \#2 \$options of function unserialize expects array\{allowed_classes\?\: array\<string\>\|bool\}, array\{allowed_classes\: ''SP\\\\Core\\\\Crypt\\\\Vault''\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Core/Crypt/SecureKeyCookie.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Crypt/Session.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Events/Event.php
+
+		-
+			message: '#^Method SP\\Core\\Events\\Event\:\:getEventMessage\(\) never returns null so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: lib/SP/Core/Events/Event.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Events/EventDispatcherBase.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Events/EventDispatcherBase.php
+
+		-
+			message: '#^Property SP\\Core\\Events\\EventDispatcherBase\:\:\$observers \(array\<SP\\Core\\Events\\EventReceiver\>\) does not accept array\<SplObserver\>\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Core/Events/EventDispatcherBase.php
+
+		-
+			message: '#^Method SP\\Core\\Events\\Psr14\\Psr14EventAdapter\:\:getTypedSource\(\) has RuntimeException in PHPDoc @throws tag but it''s not thrown\.$#'
+			identifier: throws.unusedType
+			count: 1
+			path: lib/SP/Core/Events/Psr14/Psr14EventAdapter.php
+
+		-
+			message: '#^Constant LOCALES_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: lib/SP/Core/Language.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Core/Language.php
+
+		-
+			message: '#^Method SP\\Core\\Language\:\:getBrowserLang\(\) never returns array so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: lib/SP/Core/Language.php
+
+		-
+			message: '#^Property SP\\Core\\Language\:\:\$context \(SP\\Core\\Context\\SessionContext\) does not accept SP\\Core\\Context\\ContextInterface\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Core/Language.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Core/Messages/HtmlFormatter.php
+
+		-
+			message: '#^Binary operation "\." between ''\<footer\>'' and array results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: lib/SP/Core/Messages/LogMessage.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/Messages/LogMessage.php
+
+		-
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
+			count: 1
+			path: lib/SP/Core/Messages/MessageBase.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Core/Messages/TextFormatter.php
+
+		-
+			message: '#^Constant CACHE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Core/MimeTypes.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Core/MimeTypes.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/MimeTypes.php
+
+		-
+			message: '#^Constant DEBUG not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Core/ModuleBase.php
+
+		-
+			message: '#^Property SP\\Core\\ModuleBase\:\:\$container \(DI\\Container\) does not accept Psr\\Container\\ContainerInterface\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Core/ModuleBase.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/PhpExtensionChecker.php
+
+		-
+			message: '#^Constant CACHE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Core/UI/Theme.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Core/UI/Theme.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/UI/Theme.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Core/UI/Theme.php
+
+		-
+			message: '#^Property SP\\Core\\UI\\Theme\:\:\$context \(SP\\Core\\Context\\SessionContext\) does not accept SP\\Core\\Context\\ContextInterface\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Core/UI/Theme.php
+
+		-
+			message: '#^Property SP\\DataModel\\AccountData\:\:\$otherUserEdit \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/AccountData.php
+
+		-
+			message: '#^Property SP\\DataModel\\AccountData\:\:\$otherUserGroupEdit \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/AccountData.php
+
+		-
+			message: '#^Property SP\\DataModel\\AccountHistoryData\:\:\$isDeleted \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/AccountHistoryData.php
+
+		-
+			message: '#^Property SP\\DataModel\\AccountHistoryData\:\:\$isDeleted \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/AccountHistoryData.php
+
+		-
+			message: '#^Property SP\\DataModel\\AccountHistoryData\:\:\$isModify \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/AccountHistoryData.php
+
+		-
+			message: '#^Property SP\\DataModel\\AccountHistoryData\:\:\$isModify \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/AccountHistoryData.php
+
+		-
+			message: '#^Parameter \#1 \$datetime of function strtotime expects string, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: lib/SP/DataModel/Dto/AccountAclDto.php
+
+		-
+			message: '#^Property SP\\DataModel\\ItemPreset\\SessionTimeout\:\:\$mask \(string\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/ItemPreset/SessionTimeout.php
+
+		-
+			message: '#^Property SP\\DataModel\\NotificationData\:\:\$checked \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/NotificationData.php
+
+		-
+			message: '#^Property SP\\DataModel\\NotificationData\:\:\$checked \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/NotificationData.php
+
+		-
+			message: '#^Property SP\\DataModel\\NotificationData\:\:\$onlyAdmin \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/NotificationData.php
+
+		-
+			message: '#^Property SP\\DataModel\\NotificationData\:\:\$onlyAdmin \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/NotificationData.php
+
+		-
+			message: '#^Property SP\\DataModel\\NotificationData\:\:\$sticky \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/NotificationData.php
+
+		-
+			message: '#^Property SP\\DataModel\\NotificationData\:\:\$sticky \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/NotificationData.php
+
+		-
+			message: '#^Argument of an invalid type \$this\(SP\\DataModel\\ProfileData\) supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: lib/SP/DataModel/ProfileData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isAdminAcc \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isAdminAcc \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isAdminApp \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isAdminApp \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isChangePass \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isChangePass \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isChangedPass \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isChangedPass \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isDisabled \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isDisabled \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isLdap \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isLdap \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isMigrate \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserData\:\:\$isMigrate \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/UserData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserPassRecoverData\:\:\$used \(bool\) does not accept default value of type int\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: lib/SP/DataModel/UserPassRecoverData.php
+
+		-
+			message: '#^Property SP\\DataModel\\UserPassRecoverData\:\:\$used \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/DataModel/UserPassRecoverData.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Html/Assets/IconBase.php
+
+		-
+			message: '#^Method SP\\Html\\DataGrid\\Action\\DataGridActionBase\:\:getId\(\) should return string but returns int\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Html/DataGrid/Action/DataGridActionBase.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Html/DataGrid/DataGridBase.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Html/DataGrid/DataGridBase.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Html/DataGrid/DataGridBase.php
+
+		-
+			message: '#^Property SP\\Html\\DataGrid\\DataGridBase\:\:\$data \(SP\\Html\\DataGrid\\DataGridData\) does not accept SP\\Html\\DataGrid\\DataGridDataInterface\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Html/DataGrid/DataGridBase.php
+
+		-
+			message: '#^Property SP\\Html\\DataGrid\\DataGridBase\:\:\$onCloseAction \(int\) does not accept SP\\Core\\Acl\\ActionsInterface\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Html/DataGrid/DataGridBase.php
+
+		-
+			message: '#^Property SP\\Html\\DataGrid\\DataGridBase\:\:\$pager \(SP\\Html\\DataGrid\\Layout\\DataGridPagerBase\) does not accept SP\\Html\\DataGrid\\Layout\\DataGridPagerInterface\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Html/DataGrid/DataGridBase.php
+
+		-
+			message: '#^Return type \(array\<SP\\Html\\DataGrid\\Action\\DataGridActionInterface\>\) of method SP\\Html\\DataGrid\\DataGridBase\:\:getDataActions\(\) should be compatible with return type \(SP\\Html\\DataGrid\\Action\\DataGridActionInterface\) of method SP\\Html\\DataGrid\\DataGridInterface\:\:getDataActions\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Html/DataGrid/DataGridBase.php
+
+		-
+			message: '#^Method SP\\Html\\DataGrid\\DataGridDataBase\:\:getDataRowSourceId\(\) should return string but returns int\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Html/DataGrid/DataGridDataBase.php
+
+		-
+			message: '#^Method SP\\Html\\DataGrid\\Layout\\DataGridHeaderSort\:\:getActions\(\) should return array\<SP\\Html\\DataGrid\\Action\\DataGridActionInterface\> but returns SplObjectStorage\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Html/DataGrid/Layout/DataGridHeaderSort.php
+
+		-
+			message: '#^Method SP\\Html\\DataGrid\\Layout\\DataGridHeaderSort\:\:getSortFields\(\) should return array\<SP\\Html\\DataGrid\\DataGridSortInterface\> but returns SplObjectStorage\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Html/DataGrid/Layout/DataGridHeaderSort.php
+
+		-
+			message: '#^PHPDoc tag @var for property SP\\Html\\DataGrid\\Layout\\DataGridHeaderSort\:\:\$actions with type array\<SP\\Html\\DataGrid\\Action\\DataGridActionInterface\> is incompatible with native type SplObjectStorage\|null\.$#'
+			identifier: property.phpDocType
+			count: 1
+			path: lib/SP/Html/DataGrid/Layout/DataGridHeaderSort.php
+
+		-
+			message: '#^PHPDoc tag @var for property SP\\Html\\DataGrid\\Layout\\DataGridHeaderSort\:\:\$sortFields with type array\<SP\\Html\\DataGrid\\DataGridSortInterface\> is incompatible with native type SplObjectStorage\|null\.$#'
+			identifier: property.phpDocType
+			count: 1
+			path: lib/SP/Html/DataGrid/Layout/DataGridHeaderSort.php
+
+		-
+			message: '#^Parameter \#1 \$object of method SplObjectStorage\<object,mixed\>\:\:attach\(\) expects object, array\<SP\\Html\\DataGrid\\Action\\DataGridActionInterface\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Html/DataGrid/Layout/DataGridHeaderSort.php
+
+		-
+			message: '#^Property SP\\Html\\DataGrid\\Layout\\DataGridHeaderSort\:\:\$actions \(SplObjectStorage\|null\) is never assigned SplObjectStorage so it can be removed from the property type\.$#'
+			identifier: property.unusedType
+			count: 1
+			path: lib/SP/Html/DataGrid/Layout/DataGridHeaderSort.php
+
+		-
+			message: '#^Property SP\\Html\\DataGrid\\Layout\\DataGridHeaderSort\:\:\$sortFields \(SplObjectStorage\|null\) is never assigned SplObjectStorage so it can be removed from the property type\.$#'
+			identifier: property.unusedType
+			count: 1
+			path: lib/SP/Html/DataGrid/Layout/DataGridHeaderSort.php
+
+		-
+			message: '#^Method SP\\Html\\DataGrid\\Layout\\DataGridPagerBase\:\:getFirstPage\(\) should return int but returns float\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Html/DataGrid/Layout/DataGridPagerBase.php
+
+		-
+			message: '#^Method SP\\Html\\DataGrid\\Layout\\DataGridPagerBase\:\:getLastPage\(\) should return int but returns float\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Html/DataGrid/Layout/DataGridPagerBase.php
+
+		-
+			message: '#^PHPDoc tag @return with type string\|false is not subtype of native type string\|null\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: lib/SP/Html/Html.php
+
+		-
+			message: '#^Parameter &\$data by\-ref type of method SP\\Html\\Html\:\:sanitize\(\) expects string, string\|null given\.$#'
+			identifier: parameterByRef.type
+			count: 11
+			path: lib/SP/Html/Html.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Html/Minify.php
+
+		-
+			message: '#^Constant PUBLIC_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Html/ViteAssets.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Http/Address.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Http/Address.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Http/Address.php
+
+		-
+			message: '#^Method SP\\Http\\Address\:\:check\(\) should return int but returns bool\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Http/Address.php
+
+		-
+			message: '#^Method SP\\Http\\Address\:\:cidrToDec\(\) should return int but returns string\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Http/Address.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Http/Json.php
+
+		-
+			message: '#^Argument of an invalid type \$this\(SP\\Http\\JsonResponse\) supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: lib/SP/Http/JsonResponse.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Http/JsonResponse.php
+
+		-
+			message: '#^Parameter \#1 \$callback of function array_map expects \(callable\(mixed\)\: mixed\)\|null, ''__'' given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Http/JsonResponse.php
+
+		-
+			message: '#^Constant APP_MODULE not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Constant APP_ROOT not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Offset ''host'' on array\{''host ''\: non\-falsy\-string, proto\: non\-falsy\-string, for\: array\|null\} in empty\(\) does not exist\.$#'
+			identifier: empty.offset
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Offset ''host'' on array\{host\: string, proto\: string, for\: array\|null\} in isset\(\) always exists and is not nullable\.$#'
+			identifier: isset.offset
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Offset ''proto'' on array\{''host ''\: non\-falsy\-string, proto\: non\-falsy\-string, for\: array\|null\} in isset\(\) always exists and is not nullable\.$#'
+			identifier: isset.offset
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Offset ''proto'' on array\{host\: string, proto\: string, for\: array\|null\} in isset\(\) always exists and is not nullable\.$#'
+			identifier: isset.offset
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Result of && is always false\.$#'
+			identifier: booleanAnd.alwaysFalse
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Result of && is always true\.$#'
+			identifier: booleanAnd.alwaysTrue
+			count: 2
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between non\-falsy\-string and '''' will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between non\-falsy\-string and ''0'' will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: lib/SP/Http/Request.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Http/XMLRPCResponseParse.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$data DOMElement\)\: Unexpected token "\$data", expected type at offset 28 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: lib/SP/Http/XMLRPCResponseParse.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$fault DOMElement\)\: Unexpected token "\$fault", expected type at offset 24 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: lib/SP/Http/XMLRPCResponseParse.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$member DOMNode\)\: Unexpected token "\$member", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: lib/SP/Http/XMLRPCResponseParse.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$node DOMElement\)\: Unexpected token "\$node", expected type at offset 32 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: lib/SP/Http/XMLRPCResponseParse.php
+
+		-
+			message: '#^Variable \$name might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: lib/SP/Http/XMLRPCResponseParse.php
+
+		-
+			message: '#^Call to function is_string\(\) with string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: lib/SP/Http/Xml.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Mvc/Controller/Validators/PasswordValidator.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Mvc/Controller/Validators/PasswordValidator.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Mvc/Model/QueryCondition.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Mvc/View/Components/SelectItemAdapter.php
+
+		-
+			message: '#^Constant DEBUG not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Mvc/View/Template.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Mvc/View/Template.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Mvc/View/Template.php
+
+		-
+			message: '#^Method SP\\Mvc\\View\\Template\:\:__unset\(\) with return type void returns \$this\(SP\\Mvc\\View\\Template\) but should not return anything\.$#'
+			identifier: return.void
+			count: 2
+			path: lib/SP/Mvc/View/Template.php
+
+		-
+			message: '#^Method SP\\Mvc\\View\\Template\:\:addContentTemplate\(\) should return bool but returns string\.$#'
+			identifier: return.type
+			count: 2
+			path: lib/SP/Mvc/View/Template.php
+
+		-
+			message: '#^Method SP\\Mvc\\View\\Template\:\:addTemplate\(\) should return bool but returns string\.$#'
+			identifier: return.type
+			count: 2
+			path: lib/SP/Mvc/View/Template.php
+
+		-
+			message: '#^Method SP\\Mvc\\View\\Template\:\:includeTemplate\(\) should return bool but returns string\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Mvc/View/Template.php
+
+		-
+			message: '#^Property SP\\Mvc\\View\\Template\:\:\$base \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 1
+			path: lib/SP/Mvc/View/Template.php
+
+		-
+			message: '#^Property SP\\Mvc\\View\\Template\:\:\$vars \(SP\\Mvc\\View\\TemplateVarCollection\) does not accept array\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Mvc/View/Template.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between mixed and null will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
+			count: 1
+			path: lib/SP/Mvc/View/Template.php
+
+		-
+			message: '#^Constructor of class SP\\Plugin\\PluginManager has an unused parameter \$context\.$#'
+			identifier: constructor.unusedParameter
+			count: 1
+			path: lib/SP/Plugin/PluginManager.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Plugin/PluginManager.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 14
+			path: lib/SP/Plugin/PluginManager.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Plugin/PluginManager.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Plugin/PluginManager.php
+
+		-
+			message: '#^Method SP\\Plugin\\PluginManager\:\:getPlugin\(\) should return SP\\Plugin\\PluginInterface but returns null\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Plugin/PluginManager.php
+
+		-
+			message: '#^Method SP\\Plugin\\PluginManager\:\:loadPluginClass\(\) should return SP\\Plugin\\PluginInterface but returns null\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Plugin/PluginManager.php
+
+		-
+			message: '#^Parameter \#1 \$data of method SP\\Repositories\\Plugin\\PluginModel\:\:setData\(\) expects string, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Plugin/PluginManager.php
+
+		-
+			message: '#^Parameter \#1 \$enabled of method SP\\Repositories\\Plugin\\PluginModel\:\:setEnabled\(\) expects int, false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Plugin/PluginManager.php
+
+		-
+			message: '#^Parameter \#2 \$available of method SP\\Services\\Plugin\\PluginService\:\:toggleAvailableByName\(\) expects int, false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Plugin/PluginManager.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Providers/Acl/AclHandler.php
+
+		-
+			message: '#^Method SP\\Providers\\Auth\\AuthDataBase\:\:getAuthenticated\(\) should return int but returns bool\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Providers/Auth/AuthDataBase.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Providers/Auth/AuthProvider.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Auth/AuthProvider.php
+
+		-
+			message: '#^Method SP\\Providers\\Auth\\AuthProvider\:\:authLdap\(\) never returns bool so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: lib/SP/Providers/Auth/AuthProvider.php
+
+		-
+			message: '#^Method SP\\Providers\\Auth\\Browser\\Browser\:\:getServerAuthUser\(\) should return string but returns null\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Providers/Auth/Browser/Browser.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Auth/Database/Database.php
+
+		-
+			message: '#^Method SP\\Providers\\Auth\\Database\\Database\:\:authUser\(\) should return bool but returns null\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Providers/Auth/Database/Database.php
+
+		-
+			message: '#^Result of method SP\\Services\\User\\UserPassService\:\:migrateUserPassById\(\) \(void\) is used\.$#'
+			identifier: method.void
+			count: 1
+			path: lib/SP/Providers/Auth/Database/Database.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Auth/Ldap/Ldap.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: lib/SP/Providers/Auth/Ldap/LdapActions.php
+
+		-
+			message: '#^Parameter \#1 \$ldap of function ldap_get_entries expects LDAP\\Connection, resource given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Providers/Auth/Ldap/LdapActions.php
+
+		-
+			message: '#^Parameter \#1 \$ldap of function ldap_parse_result expects LDAP\\Connection, resource given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Providers/Auth/Ldap/LdapActions.php
+
+		-
+			message: '#^Parameter \#1 \$ldap of function ldap_search expects array\|LDAP\\Connection, resource given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Providers/Auth/Ldap/LdapActions.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Auth/Ldap/LdapAuth.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Auth/Ldap/LdapAuth.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 9
+			path: lib/SP/Providers/Auth/Ldap/LdapConnection.php
+
+		-
+			message: '#^Method SP\\Providers\\Auth\\Ldap\\LdapConnection\:\:connectAndBind\(\) should return resource but returns bool\|LDAP\\Connection\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Providers/Auth/Ldap/LdapConnection.php
+
+		-
+			message: '#^Return type \(void\) of method SP\\Providers\\Auth\\Ldap\\LdapConnection\:\:checkParams\(\) should be compatible with return type \(bool\) of method SP\\Providers\\Auth\\Ldap\\LdapConnectionInterface\:\:checkParams\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Providers/Auth/Ldap/LdapConnection.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 9
+			path: lib/SP/Providers/Auth/Ldap/LdapMsAds.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Auth/Ldap/LdapMsAds.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 9
+			path: lib/SP/Providers/Auth/Ldap/LdapMsAzureAd.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Auth/Ldap/LdapMsAzureAd.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Providers/Auth/Ldap/LdapStd.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Providers/Log/DatabaseLogHandler.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Log/DatabaseLogHandler.php
+
+		-
+			message: '#^Constant LOG_FILE not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Providers/Log/FileLogHandler.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Log/LoggerBase.php
+
+		-
+			message: '#^Function getLastCaller not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Log/LoggerBase.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Providers/Mail/MailHandler.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Mail/MailHandler.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Mail/MailProvider.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Mail/MailProvider.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Mail/MailProvider.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Providers/Notification/NotificationHandler.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Providers/Notification/NotificationHandler.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Repositories/Account/AccountFileRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Account\\AccountFileRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountFileRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Account\\AccountFileRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountFileRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Account\\AccountFileRepository\:\:getByIdBatch\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountFileRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\Account\\AccountFileRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountFileRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Repositories/Account/AccountHistoryRepository.php
+
+		-
+			message: '#^PHPDoc tag @return with type bool is incompatible with native type int\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountHistoryRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Account\\AccountHistoryRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountHistoryRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type array\<SP\\DataModel\\DataModelInterface\> is not subtype of native type never\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountHistoryRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Account\\AccountHistoryRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountHistoryRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\Account\\AccountHistoryRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountHistoryRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 10
+			path: lib/SP/Repositories/Account/AccountRepository.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Repositories/Account/AccountRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Account\\AccountRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type array\<SP\\DataModel\\DataModelInterface\> is not subtype of native type never\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Account\\AccountRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\Account\\AccountRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Repositories/Account/AccountToFavoriteRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Repositories/Account/AccountToTagRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Account\\AccountToTagRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountToTagRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Repositories/Account/AccountToUserGroupRepository.php
+
+		-
+			message: '#^Method SP\\Repositories\\Account\\AccountToUserGroupRepository\:\:updateByType\(\) should return bool but returns int\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Repositories/Account/AccountToUserGroupRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Account\\AccountToUserGroupRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountToUserGroupRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Repositories/Account/AccountToUserRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Account\\AccountToUserRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Account/AccountToUserRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: lib/SP/Repositories/AuthToken/AuthTokenRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\AuthToken\\AuthTokenRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/AuthToken/AuthTokenRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type array\<SP\\DataModel\\DataModelInterface\> is not subtype of native type never\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/AuthToken/AuthTokenRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\AuthToken\\AuthTokenRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/AuthToken/AuthTokenRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\AuthToken\\AuthTokenRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/AuthToken/AuthTokenRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Repositories/Category/CategoryRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Category\\CategoryRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Category/CategoryRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Category\\CategoryRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Category/CategoryRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Category\\CategoryRepository\:\:getByIdBatch\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Category/CategoryRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\Category\\CategoryRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Category/CategoryRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: lib/SP/Repositories/Client/ClientRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Client\\ClientRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Client/ClientRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Client\\ClientRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Client/ClientRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\Client\\ClientRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Client/ClientRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Repositories/CustomField/CustomFieldDefRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\CustomField\\CustomFieldDefRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldDefRepository.php
+
+		-
+			message: '#^Parameter \#1 \$key of method SP\\Core\\DataCollection\:\:exists\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: lib/SP/Repositories/CustomField/CustomFieldDefRepository.php
+
+		-
+			message: '#^Parameter \#1 \$key of method SP\\Core\\DataCollection\:\:get\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldDefRepository.php
+
+		-
+			message: '#^Parameter \#1 \$key of method SP\\Core\\DataCollection\:\:remove\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldDefRepository.php
+
+		-
+			message: '#^Parameter \#1 \$key of method SP\\Core\\DataCollection\:\:set\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldDefRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\CustomField\\CustomFieldDefRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldDefRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\CustomField\\CustomFieldDefRepository\:\:getByIdBatch\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldDefRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\CustomField\\CustomFieldDefRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldDefRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\CustomField\\CustomFieldRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type array\<SP\\DataModel\\DataModelInterface\> is not subtype of native type never\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\CustomField\\CustomFieldRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Repositories/CustomField/CustomFieldTypeRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\CustomField\\CustomFieldTypeRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldTypeRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type array\<SP\\DataModel\\DataModelInterface\> is not subtype of native type never\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldTypeRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\CustomField\\CustomFieldTypeRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldTypeRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\CustomField\\CustomFieldTypeRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/CustomField/CustomFieldTypeRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Repositories/EventLog/EventlogRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Repositories/ItemPreset/ItemPresetRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\ItemPreset\\ItemPresetRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/ItemPreset/ItemPresetRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\ItemPreset\\ItemPresetRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/ItemPreset/ItemPresetRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\ItemPreset\\ItemPresetRepository\:\:getByIdBatch\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/ItemPreset/ItemPresetRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\ItemPreset\\ItemPresetRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/ItemPreset/ItemPresetRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 13
+			path: lib/SP/Repositories/Notification/NotificationRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Notification\\NotificationRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Notification/NotificationRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Notification\\NotificationRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Notification/NotificationRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Notification\\NotificationRepository\:\:getByIdBatch\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Notification/NotificationRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\Notification\\NotificationRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Notification/NotificationRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Repositories/Plugin/PluginDataRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Plugin\\PluginDataRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Plugin/PluginDataRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Plugin\\PluginDataRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Plugin/PluginDataRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Plugin\\PluginDataRepository\:\:getByIdBatch\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Plugin/PluginDataRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\Plugin\\PluginDataRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Plugin/PluginDataRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 9
+			path: lib/SP/Repositories/Plugin/PluginRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Plugin\\PluginRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Plugin/PluginRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Plugin\\PluginRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Plugin/PluginRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\Plugin\\PluginRepository\:\:getByIdBatch\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Plugin/PluginRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\Plugin\\PluginRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Plugin/PluginRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 9
+			path: lib/SP/Repositories/PublicLink/PublicLinkRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\PublicLink\\PublicLinkRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/PublicLink/PublicLinkRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\PublicLink\\PublicLinkRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/PublicLink/PublicLinkRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\PublicLink\\PublicLinkRepository\:\:getByIdBatch\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/PublicLink/PublicLinkRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\PublicLink\\PublicLinkRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/PublicLink/PublicLinkRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Repositories/Tag/TagRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\Tag\\TagRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/Tag/TagRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\Tag\\TagRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/Tag/TagRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: lib/SP/Repositories/Track/TrackRepository.php
+
+		-
+			message: '#^Method SP\\Repositories\\Track\\TrackRepository\:\:add\(\) never returns bool so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: lib/SP/Repositories/Track/TrackRepository.php
+
+		-
+			message: '#^Method SP\\Repositories\\Track\\TrackRepository\:\:add\(\) never returns null so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: lib/SP/Repositories/Track/TrackRepository.php
+
+		-
+			message: '#^Method SP\\Repositories\\Track\\TrackRepository\:\:add\(\) never returns string so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: lib/SP/Repositories/Track/TrackRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Repositories/User/UserPassRecoverRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 11
+			path: lib/SP/Repositories/User/UserRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\User\\UserRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/User/UserRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\User\\UserRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/User/UserRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Repositories/UserGroup/UserGroupRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\UserGroup\\UserGroupRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/UserGroup/UserGroupRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\UserGroup\\UserGroupRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/UserGroup/UserGroupRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\UserGroup\\UserGroupRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/UserGroup/UserGroupRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Repositories/UserGroup/UserToUserGroupRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\UserGroup\\UserToUserGroupRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/UserGroup/UserToUserGroupRepository.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Repositories/UserProfile/UserProfileRepository.php
+
+		-
+			message: '#^PHPDoc tag @var with type SP\\Repositories\\RepositoryItemInterface is not subtype of native type \$this\(SP\\Repositories\\UserProfile\\UserProfileRepository\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Repositories/UserProfile/UserProfileRepository.php
+
+		-
+			message: '#^Return type \(SP\\Storage\\Database\\QueryResult\) of method SP\\Repositories\\UserProfile\\UserProfileRepository\:\:getAll\(\) should be compatible with return type \(array\) of method SP\\Repositories\\RepositoryItemInterface\:\:getAll\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/UserProfile/UserProfileRepository.php
+
+		-
+			message: '#^Return type \(int\) of method SP\\Repositories\\UserProfile\\UserProfileRepository\:\:deleteByIdBatch\(\) should be compatible with return type \(\$this\(SP\\Repositories\\RepositoryItemInterface\)\) of method SP\\Repositories\\RepositoryItemInterface\:\:deleteByIdBatch\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: lib/SP/Repositories/UserProfile/UserProfileRepository.php
+
+		-
+			message: '#^Argument of an invalid type \$this\(SP\\Services\\Account\\AccountAcl\) supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
+			count: 1
+			path: lib/SP/Services/Account/AccountAcl.php
+
+		-
+			message: '#^Constant CACHE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Services/Account/AccountAclService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/Account/AccountAclService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Account/AccountAclService.php
+
+		-
+			message: '#^PHPDoc tag @return with type array\|bool is not subtype of native type array\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: lib/SP/Services/Account/AccountAclService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Account/AccountCryptService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 14
+			path: lib/SP/Services/Account/AccountCryptService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Account/AccountCryptService.php
+
+		-
+			message: '#^Parameter \#1 \$progress of method SP\\Core\\Messages\\TaskMessage\:\:setProgress\(\) expects int, float given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Account/AccountCryptService.php
+
+		-
+			message: '#^Parameter \#1 \$time of method SP\\Core\\Messages\\TaskMessage\:\:setTime\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Account/AccountCryptService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Account/AccountFileService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Account/AccountFileService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Account/AccountHistoryService.php
+
+		-
+			message: '#^Method SP\\Services\\Account\\AccountSearchFilter\:\:getGlobalSearch\(\) should return int but returns bool\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchFilter.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountSearchFilter\:\:\$categoryId \(int\) does not accept null\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchFilter.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountSearchFilter\:\:\$cleanTxtSearch \(string\) does not accept null\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchFilter.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountSearchFilter\:\:\$clientId \(int\) does not accept null\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchFilter.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountSearchFilter\:\:\$filterOperator \(string\) does not accept null\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchFilter.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountSearchFilter\:\:\$globalSearch \(bool\) does not accept int\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchFilter.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountSearchFilter\:\:\$limitCount \(int\) does not accept null\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchFilter.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountSearchFilter\:\:\$sortViews \(bool\) does not accept null\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchFilter.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountSearchFilter\:\:\$txtSearch \(string\) does not accept null\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchFilter.php
+
+		-
+			message: '#^Static property SP\\Services\\Account\\AccountSearchFilter\:\:\$queryNumRows \(int\) does not accept null\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchFilter.php
+
+		-
+			message: '#^Access to an undefined property SP\\DataModel\\ItemData\:\:\$login\.$#'
+			identifier: property.notFound
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchItem.php
+
+		-
+			message: '#^Method SP\\Services\\Account\\AccountSearchItem\:\:getNumFiles\(\) should return string but returns int\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchItem.php
+
+		-
+			message: '#^Call to an undefined method SP\\Core\\Context\\ContextInterface\:\:setAccountsCache\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchService.php
+
+		-
+			message: '#^Constant CACHE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Account/AccountSearchService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Account/AccountSearchService.php
+
+		-
+			message: '#^Parameter \#1 \$link of method SP\\Services\\Account\\AccountSearchItem\:\:setLink\(\) expects string, bool given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchService.php
+
+		-
+			message: '#^Parameter \#1 \$useGlobalSearch of method SP\\Services\\Account\\AccountFilterUser\:\:getFilter\(\) expects bool, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchService.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountSearchService\:\:\$cleanString \(string\) does not accept null\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchService.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between non\-falsy\-string and '''' will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: lib/SP/Services/Account/AccountSearchService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 10
+			path: lib/SP/Services/Account/AccountService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Account/AccountService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Api/ApiRequest.php
+
+		-
+			message: '#^Cannot call method getHelpFor\(\) on string\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: lib/SP/Services/Api/ApiService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: lib/SP/Services/Api/ApiService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Api/ApiService.php
+
+		-
+			message: '#^Parameter \#3 \$hint of class SP\\Services\\ServiceException constructor expects string\|null, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Api/ApiService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Api/JsonRpcResponse.php
+
+		-
+			message: '#^Call to an undefined method SP\\Core\\Context\\ContextInterface\:\:setAuthCompleted\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: lib/SP/Services/Auth/LoginService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Auth/LoginService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 42
+			path: lib/SP/Services/Auth/LoginService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Auth/LoginService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/AuthToken/AuthTokenService.php
+
+		-
+			message: '#^Method SP\\Services\\AuthToken\\AuthTokenService\:\:deleteByIdBatch\(\) should return bool but returns int\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Services/AuthToken/AuthTokenService.php
+
+		-
+			message: '#^Parameter \#1 \$hash of method SP\\DataModel\\AuthTokenData\:\:setHash\(\) expects string, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/AuthToken/AuthTokenService.php
+
+		-
+			message: '#^Call to function is_array\(\) with string will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: lib/SP/Services/Backup/FileBackupService.php
+
+		-
+			message: '#^Constant BASE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Services/Backup/FileBackupService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Backup/FileBackupService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 9
+			path: lib/SP/Services/Backup/FileBackupService.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$tables with type array\|string is not subtype of native type string\.$#'
+			identifier: parameter.phpDocType
+			count: 1
+			path: lib/SP/Services/Backup/FileBackupService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Category/CategoryService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Client/ClientService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Config/ConfigBackupService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Config/ConfigBackupService.php
+
+		-
+			message: '#^PHPDoc tag @return with type SP\\Config\\ConfigData is incompatible with native type string\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: lib/SP/Services/Config/ConfigBackupService.php
+
+		-
+			message: '#^Parameter \#2 \$value of method SP\\Services\\Config\\ConfigService\:\:save\(\) expects string, int\<1, max\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Config/ConfigBackupService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Config/ConfigService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Config/ConfigService.php
+
+		-
+			message: '#^Parameter \#2 \$value of method SP\\Services\\Config\\ConfigService\:\:save\(\) expects string, int\<1, max\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Crypt/MasterPassService.php
+
+		-
+			message: '#^Constant CACHE_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Services/Crypt/SecureSessionService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Crypt/SecureSessionService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Crypt/SecureSessionService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/Crypt/TemporaryMasterPassService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/Crypt/TemporaryMasterPassService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Crypt/TemporaryMasterPassService.php
+
+		-
+			message: '#^Parameter \#2 \$value of method SP\\Services\\Config\\ConfigService\:\:save\(\) expects string, int\<min, 50\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Crypt/TemporaryMasterPassService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/CustomField/CustomFieldCryptService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 8
+			path: lib/SP/Services/CustomField/CustomFieldCryptService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/CustomField/CustomFieldCryptService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/CustomField/CustomFieldDefService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/CustomField/CustomFieldDefService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/CustomField/CustomFieldService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/CustomField/CustomFieldTypeService.php
+
+		-
+			message: '#^Cannot call method getElementsByTagName\(\) on bool\|DOMNode\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: lib/SP/Services/Export/XmlExportService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Export/XmlExportService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: lib/SP/Services/Export/XmlExportService.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$category CategoryData\)\: Unexpected token "\$category", expected type at offset 9 on line 1$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: lib/SP/Services/Export/XmlExportService.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\)\: Unexpected token "\\n     ", expected type at offset 15 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: lib/SP/Services/Export/XmlExportService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/Export/XmlVerifyService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Export/XmlVerifyService.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$node DOMElement\)\: Unexpected token "\$node", expected type at offset 9 on line 1$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: lib/SP/Services/Export/XmlVerifyService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Import/CsvImport.php
+
+		-
+			message: '#^PHPDoc tag @return with type SP\\Services\\Import\\ImportInterface is not subtype of native type SP\\Services\\Import\\CsvImport\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: lib/SP/Services/Import/CsvImport.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Import/CsvImportBase.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Services/Import/CsvImportBase.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Import/CsvImportBase.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Import/FileImport.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/Import/FileImport.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Import/FileImport.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Import/ImportService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Import/ImportService.php
+
+		-
+			message: '#^PHPDoc tag @return with type SP\\Services\\Import\\ImportInterface is not subtype of native type SP\\Services\\Import\\CsvImport\|SP\\Services\\Import\\XmlImport\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: lib/SP/Services/Import/ImportService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/Import/KeepassImport.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Import/KeepassImport.php
+
+		-
+			message: '#^PHPDoc tag @return with type SP\\Services\\Import\\ImportInterface is not subtype of native type SP\\Services\\Import\\KeepassImport\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: lib/SP/Services/Import/KeepassImport.php
+
+		-
+			message: '#^PHPDoc tag @var with type array\<SP\\Services\\Account\\AccountRequest\> is not subtype of native type \(int\|string\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: lib/SP/Services/Import/KeepassImport.php
+
+		-
+			message: '#^Parameter \#2 \$name of class SP\\DataModel\\CategoryData constructor expects string\|null, array\<SP\\Services\\Account\\AccountRequest\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Import/KeepassImport.php
+
+		-
+			message: '#^Variable \$groups in isset\(\) is never defined\.$#'
+			identifier: isset.variable
+			count: 1
+			path: lib/SP/Services/Import/KeepassImport.php
+
+		-
+			message: '#^Access to private property \$items of parent class SP\\Services\\Import\\XmlImportBase\.$#'
+			identifier: property.private
+			count: 2
+			path: lib/SP/Services/Import/SyspassImport.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 12
+			path: lib/SP/Services/Import/SyspassImport.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/Import/SyspassImport.php
+
+		-
+			message: '#^PHPDoc tag @return with type SP\\Services\\Import\\ImportInterface is not subtype of native type SP\\Services\\Import\\SyspassImport\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: lib/SP/Services/Import/SyspassImport.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\$node DOMElement\)\: Unexpected token "\$node", expected type at offset 9 on line 1$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: lib/SP/Services/Import/SyspassImport.php
+
+		-
+			message: '#^Parameter \#2 \$value of method SP\\Services\\Import\\XmlImportBase\:\:addWorkingItem\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 4
+			path: lib/SP/Services/Import/SyspassImport.php
+
+		-
+			message: '#^Parameter \#2 \$value of method SP\\Services\\Import\\XmlImportBase\:\:getWorkingItem\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 3
+			path: lib/SP/Services/Import/SyspassImport.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountRequest\:\:\$categoryId \(int\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 2
+			path: lib/SP/Services/Import/SyspassImport.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountRequest\:\:\$clientId \(int\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 2
+			path: lib/SP/Services/Import/SyspassImport.php
+
+		-
+			message: '#^Property SP\\Services\\Account\\AccountRequest\:\:\$name \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 2
+			path: lib/SP/Services/Import/SyspassImport.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Import/XmlFileImport.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Import/XmlFileImport.php
+
+		-
+			message: '#^Call to an undefined method SP\\Services\\Import\\FileImport\:\:detectXMLFormat\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: lib/SP/Services/Import/XmlImport.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Import/XmlImport.php
+
+		-
+			message: '#^Parameter \#1 \$dic of class SP\\Services\\Import\\KeepassImport constructor expects DI\\Container, Psr\\Container\\ContainerInterface given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Import/XmlImport.php
+
+		-
+			message: '#^Parameter \#1 \$dic of class SP\\Services\\Import\\SyspassImport constructor expects DI\\Container, Psr\\Container\\ContainerInterface given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Import/XmlImport.php
+
+		-
+			message: '#^Parameter \#2 \$xmlFileImport of class SP\\Services\\Import\\KeepassImport constructor expects SP\\Services\\Import\\XmlFileImport, SP\\Services\\Import\\FileImport given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Import/XmlImport.php
+
+		-
+			message: '#^Parameter \#2 \$xmlFileImport of class SP\\Services\\Import\\SyspassImport constructor expects SP\\Services\\Import\\XmlFileImport, SP\\Services\\Import\\FileImport given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Import/XmlImport.php
+
+		-
+			message: '#^Property SP\\Services\\Import\\XmlImport\:\:\$dic \(DI\\Container\) does not accept Psr\\Container\\ContainerInterface\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Import/XmlImport.php
+
+		-
+			message: '#^Property SP\\Services\\Import\\XmlImport\:\:\$xmlFileImport \(SP\\Services\\Import\\FileImport\) does not accept SP\\Services\\Import\\XmlFileImport\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Import/XmlImport.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Import/XmlImportBase.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Import/XmlImportBase.php
+
+		-
+			message: '#^Trait SP\\Services\\Import\\XmlImportTrait is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: lib/SP/Services/Import/XmlImportTrait.php
+
+		-
+			message: '#^Call to an undefined method Psr\\Container\\ContainerInterface\:\:set\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: lib/SP/Services/Install/Installer.php
+
+		-
+			message: '#^Constant APP_MODULE not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: lib/SP/Services/Install/Installer.php
+
+		-
+			message: '#^Constant SELF_IP_ADDRESS not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Services/Install/Installer.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 21
+			path: lib/SP/Services/Install/Installer.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Install/Installer.php
+
+		-
+			message: '#^Parameter \#1 \$dbPort of method SP\\Services\\Install\\InstallData\:\:setDbPort\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Install/Installer.php
+
+		-
+			message: '#^Parameter \#1 \$isAdminApp of method SP\\DataModel\\UserData\:\:setIsAdminApp\(\) expects bool, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Install/Installer.php
+
+		-
+			message: '#^Parameter \#1 \$upgradeKey of method SP\\Config\\ConfigData\:\:setUpgradeKey\(\) expects string, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Install/Installer.php
+
+		-
+			message: '#^Parameter \#2 \$value of class SP\\DataModel\\ConfigData constructor expects string, int\<1, max\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Install/Installer.php
+
+		-
+			message: '#^Constant SQL_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Services/Install/MySQL.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Services/Install/MySQL.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 13
+			path: lib/SP/Services/Install/MySQL.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Install/MySQL.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Services/Install/MySQL.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/ItemPreset/ItemPresetService.php
+
+		-
+			message: '#^Method SP\\Services\\ItemPreset\\ItemPresetService\:\:getForUser\(\) should return SP\\DataModel\\ItemPresetData but returns null\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Services/ItemPreset/ItemPresetService.php
+
+		-
+			message: '#^Property SP\\Services\\Ldap\\LdapCheckService\:\:\$ldap \(SP\\Providers\\Auth\\Ldap\\Ldap\) does not accept SP\\Providers\\Auth\\Ldap\\LdapInterface\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: lib/SP/Services/Ldap/LdapCheckService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Ldap/LdapImportService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Ldap/LdapImportService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Ldap/LdapImportService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Services/Mail/MailService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Mail/MailService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Services/Notification/NotificationService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Plugin/PluginDataService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 9
+			path: lib/SP/Services/Plugin/PluginService.php
+
+		-
+			message: '#^Method SP\\Services\\Plugin\\PluginService\:\:resetById\(\) should return bool but returns int\<min, \-1\>\|int\<1, max\>\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Services/Plugin/PluginService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: lib/SP/Services/PublicLink/PublicLinkService.php
+
+		-
+			message: '#^Method SP\\Services\\PublicLink\\PublicLinkService\:\:calcDateExpire\(\) never returns float so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: lib/SP/Services/PublicLink/PublicLinkService.php
+
+		-
+			message: '#^Method SP\\Services\\PublicLink\\PublicLinkService\:\:deleteByIdBatch\(\) should return bool but returns int\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Services/PublicLink/PublicLinkService.php
+
+		-
+			message: '#^Method SP\\Services\\PublicLink\\PublicLinkService\:\:refresh\(\) should return bool but returns int\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Services/PublicLink/PublicLinkService.php
+
+		-
+			message: '#^Parameter \#1 \$data of method SP\\DataModel\\PublicLinkData\:\:setData\(\) expects string, SP\\Core\\Crypt\\Vault given\.$#'
+			identifier: argument.type
+			count: 2
+			path: lib/SP/Services/PublicLink/PublicLinkService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/Service.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Service.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Tag/TagService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Task/Task.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Task/Task.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Task/TaskService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Task/TaskService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Task/TaskService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Track/TrackService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: lib/SP/Services/Track/TrackService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Track/TrackService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Track/TrackService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Upgrade/UpgradeAppService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeAppService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeAppService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Upgrade/UpgradeAuthToken.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeAuthToken.php
+
+		-
+			message: '#^Constant OLD_CONFIG_FILE not found\.$#'
+			identifier: constant.notFound
+			count: 3
+			path: lib/SP/Services/Upgrade/UpgradeConfigService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 18
+			path: lib/SP/Services/Upgrade/UpgradeConfigService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeConfigService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Upgrade/UpgradeCustomFieldData.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeCustomFieldData.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 12
+			path: lib/SP/Services/Upgrade/UpgradeCustomFieldDefinition.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Upgrade/UpgradeCustomFieldDefinition.php
+
+		-
+			message: '#^Parameter \#1 \$required of method SP\\DataModel\\CustomFieldDefinitionData\:\:setRequired\(\) expects int, bool given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeCustomFieldDefinition.php
+
+		-
+			message: '#^Parameter \#1 \$showInList of method SP\\DataModel\\CustomFieldDefinitionData\:\:setShowInList\(\) expects int, bool given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeCustomFieldDefinition.php
+
+		-
+			message: '#^Constant SQL_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeDatabaseService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeDatabaseService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 11
+			path: lib/SP/Services/Upgrade/UpgradeDatabaseService.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/Upgrade/UpgradeDatabaseService.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Upgrade/UpgradeDatabaseService.php
+
+		-
+			message: '#^Method SP\\Services\\Upgrade\\UpgradeDatabaseService\:\:getQueriesFromFile\(\) never returns bool so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeDatabaseService.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$version with type int is incompatible with native type string\.$#'
+			identifier: parameter.phpDocType
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeDatabaseService.php
+
+		-
+			message: '#^Parameter \#1 \$currentVersion of static method SP\\Util\\VersionUtil\:\:checkVersion\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradeDatabaseService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Upgrade/UpgradePlugin.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/Upgrade/UpgradePublicLink.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Upgrade/UpgradePublicLink.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/User/UpdatedMasterPassException.php
+
+		-
+			message: '#^Parameter \#2 \$type of method SP\\Core\\Exceptions\\SPException\:\:__construct\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Services/User/UpdatedMasterPassException.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$preferences with type mixed is not subtype of native type SP\\DataModel\\UserPreferencesData\.$#'
+			identifier: parameter.phpDocType
+			count: 1
+			path: lib/SP/Services/User/UserLoginResponse.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/User/UserPassService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: lib/SP/Services/User/UserService.php
+
+		-
+			message: '#^Parameter \#1 \$isLdap of method SP\\DataModel\\UserData\:\:setIsLdap\(\) expects bool, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: lib/SP/Services/User/UserService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/UserGroup/UserGroupService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/UserGroup/UserToUserGroupService.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/UserPassRecover/UserPassRecoverService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Services/UserPassRecover/UserPassRecoverService.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Services/UserProfile/UserProfileService.php
+
+		-
+			message: '#^Call to static method getDokuWikiSession\(\) on an unknown class SP\\Services\\Wiki\\SessionFactory\.$#'
+			identifier: class.notFound
+			count: 1
+			path: lib/SP/Services/Wiki/DokuWikiApi.php
+
+		-
+			message: '#^Call to static method setDokuWikiSession\(\) on an unknown class SP\\Services\\Wiki\\SessionFactory\.$#'
+			identifier: class.notFound
+			count: 2
+			path: lib/SP/Services/Wiki/DokuWikiApi.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Wiki/DokuWikiApi.php
+
+		-
+			message: '#^Call to an undefined method SP\\Services\\Wiki\\DokuWikiApiBase\:\:injectDependencies\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: lib/SP/Services/Wiki/DokuWikiApiBase.php
+
+		-
+			message: '#^Call to an undefined static method SP\\Util\\Util\:\:getDataFromUrl\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: lib/SP/Services/Wiki/DokuWikiApiBase.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Services/Wiki/DokuWikiApiBase.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Services/Wiki/DokuWikiApiBase.php
+
+		-
+			message: '#^Parameter \#2 \$value of method DOMDocument\:\:createElement\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 2
+			path: lib/SP/Services/Wiki/DokuWikiApiBase.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Storage/Database/Database.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Storage/Database/Database.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Storage/Database/Database.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Storage/Database/Database.php
+
+		-
+			message: '#^Method SP\\Storage\\Database\\Database\:\:getLastId\(\) should return int but returns bool\|string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: lib/SP/Storage/Database/Database.php
+
+		-
+			message: '#^PHPDoc tag @var for property SP\\Storage\\Database\\Database\:\:\$lastId with type int is incompatible with native type bool\|string\|null\.$#'
+			identifier: property.phpDocType
+			count: 1
+			path: lib/SP/Storage/Database/Database.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Storage/Database/DatabaseConnectionData.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Storage/Database/DatabaseUtil.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: lib/SP/Storage/Database/DatabaseUtil.php
+
+		-
+			message: '#^Parameter \#2 \$characters of function trim expects string, int\<0, max\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Storage/Database/MySQLFileParser.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: lib/SP/Storage/Database/MySQLHandler.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Storage/Database/QueryData.php
+
+		-
+			message: '#^PHPDoc tag @return with type SP\\Storage\\File\\FileCacheInterface is not subtype of native type SP\\Storage\\File\\FileCache\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: lib/SP/Storage/File/FileCache.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Storage/File/FileCacheBase.php
+
+		-
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
+			count: 1
+			path: lib/SP/Storage/File/FileCacheBase.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Storage/File/FileCachePacked.php
+
+		-
+			message: '#^PHPDoc tag @return with type SP\\Storage\\File\\FileCacheInterface is not subtype of native type SP\\Storage\\File\\FileCachePacked\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: lib/SP/Storage/File/FileCachePacked.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 12
+			path: lib/SP/Storage/File/FileHandler.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Storage/File/FileHandler.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: lib/SP/Storage/File/XmlHandler.php
+
+		-
+			message: '#^PHPDoc tag @return with type SP\\Storage\\File\\XmlFileStorageInterface is not subtype of native type SP\\Storage\\File\\XmlHandler\.$#'
+			identifier: return.phpDocType
+			count: 2
+			path: lib/SP/Storage/File/XmlHandler.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Util/Connection.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 14
+			path: lib/SP/Util/ErrorUtil.php
+
+		-
+			message: '#^Function processException not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Util/ErrorUtil.php
+
+		-
+			message: '#^Parameter \#1 \$string of function strtolower expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: lib/SP/Util/FileUtil.php
+
+		-
+			message: '#^Constant PUBLIC_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: lib/SP/Util/ImageUtil.php
+
+		-
+			message: '#^Function __u not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: lib/SP/Util/ImageUtil.php
+
+		-
+			message: '#^Constant LOCK_FILE not found\.$#'
+			identifier: constant.notFound
+			count: 3
+			path: lib/SP/Util/Util.php
+
+		-
+			message: '#^Constant TMP_PATH not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: lib/SP/Util/Util.php
+
+		-
+			message: '#^Function logger not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: lib/SP/Util/Util.php
+
+		-
+			message: '#^Parameter \#1 \$array \(array\{4, 0, 0\}\) of array_values is already a list, call has no effect\.$#'
+			identifier: arrayValues.list
+			count: 1
+			path: lib/SP/Util/VersionUtil.php

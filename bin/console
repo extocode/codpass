@@ -1,0 +1,168 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/**
+ * sysPass CLI Console
+ *
+ * Command-line interface for sysPass administration tasks.
+ * Currently supports Doctrine Migrations for database schema management.
+ *
+ * Usage:
+ *   php bin/console migrations:status     - Show migration status
+ *   php bin/console migrations:migrate    - Run pending migrations
+ *   php bin/console migrations:diff       - Generate migration from schema diff
+ *   php bin/console list                  - List all available commands
+ *
+ * Environment variables (optional):
+ *   DB_SERVER - Database host (overrides config.xml)
+ *   DB_NAME   - Database name (overrides config.xml)
+ *   DB_USER   - Database user (overrides config.xml)
+ *   DB_PASS   - Database password (overrides config.xml)
+ *   DB_PORT   - Database port (overrides config.xml)
+ */
+
+use Doctrine\DBAL\DriverManager;
+use Doctrine\Migrations\Configuration\Configuration;
+use Doctrine\Migrations\Configuration\Connection\ExistingConnection;
+use Doctrine\Migrations\Configuration\Migration\ConfigurationArray;
+use Doctrine\Migrations\DependencyFactory;
+use Doctrine\Migrations\Metadata\Storage\TableMetadataStorageConfiguration;
+use Doctrine\Migrations\Tools\Console\Command;
+use SP\Config\Config;
+use SP\Storage\File\FileCache;
+use SP\Storage\File\FileHandler;
+use SP\Storage\File\XmlHandler;
+use Symfony\Component\Console\Application;
+
+// Define constants needed for sysPass bootstrap
+define('APP_ROOT', dirname(__DIR__));
+define('APP_MODULE', 'cli');
+define('BASE_PATH', APP_ROOT . DIRECTORY_SEPARATOR . 'lib');
+define('APP_PATH', APP_ROOT . DIRECTORY_SEPARATOR . 'app');
+define('CONFIG_PATH', APP_PATH . DIRECTORY_SEPARATOR . 'config');
+define('CONFIG_FILE', CONFIG_PATH . DIRECTORY_SEPARATOR . 'config.xml');
+define('CACHE_PATH', APP_PATH . DIRECTORY_SEPARATOR . 'cache');
+define('VENDOR_PATH', APP_ROOT . DIRECTORY_SEPARATOR . 'vendor');
+
+// Load autoloader
+require VENDOR_PATH . DIRECTORY_SEPARATOR . 'autoload.php';
+
+/**
+ * Get database connection parameters from sysPass config or environment
+ */
+function getConnectionParams(): array
+{
+    // Check for environment variables first (useful for testing/CI)
+    $host = getenv('DB_SERVER') ?: null;
+    $name = getenv('DB_NAME') ?: null;
+    $user = getenv('DB_USER') ?: null;
+    $pass = getenv('DB_PASS') ?: null;
+    $port = getenv('DB_PORT') ?: null;
+
+    // If all env vars are set, use them
+    if ($host && $name && $user) {
+        return [
+            'dbname' => $name,
+            'user' => $user,
+            'password' => $pass ?: '',
+            'host' => $host,
+            'port' => $port ? (int)$port : 3306,
+            'driver' => 'pdo_mysql',
+            'charset' => 'utf8',
+        ];
+    }
+
+    // Otherwise, load from sysPass config.xml
+    if (!file_exists(CONFIG_FILE)) {
+        fwrite(STDERR, "Error: sysPass is not installed. Configuration file not found.\n");
+        fwrite(STDERR, "You can use environment variables instead:\n");
+        fwrite(STDERR, "  DB_SERVER=localhost DB_NAME=syspass DB_USER=root DB_PASS=secret php bin/console ...\n");
+        exit(1);
+    }
+
+    try {
+        $config = new Config(
+            new XmlHandler(new FileHandler(CONFIG_FILE)),
+            new FileCache(Config::CONFIG_CACHE_FILE . '_cli'),
+            null
+        );
+        $configData = $config->loadConfig();
+
+        return [
+            'dbname' => $configData->getDbName(),
+            'user' => $configData->getDbUser(),
+            'password' => $configData->getDbPass(),
+            'host' => $configData->getDbHost(),
+            'port' => $configData->getDbPort() ?: 3306,
+            'driver' => 'pdo_mysql',
+            'charset' => 'utf8',
+        ];
+    } catch (Exception $e) {
+        fwrite(STDERR, "Error loading configuration: " . $e->getMessage() . "\n");
+        exit(1);
+    }
+}
+
+// Create DBAL connection
+$connectionParams = getConnectionParams();
+$connection = DriverManager::getConnection($connectionParams);
+
+// Configure migrations
+$storageConfig = new TableMetadataStorageConfiguration();
+$storageConfig->setTableName('doctrine_migration_versions');
+$storageConfig->setVersionColumnName('version');
+$storageConfig->setVersionColumnLength(191);
+$storageConfig->setExecutedAtColumnName('executed_at');
+$storageConfig->setExecutionTimeColumnName('execution_time');
+
+$configuration = new Configuration();
+$configuration->addMigrationsDirectory('SP\\Migrations', APP_ROOT . '/migrations');
+$configuration->setAllOrNothing(true);
+$configuration->setTransactional(true);
+$configuration->setCheckDatabasePlatform(true);
+$configuration->setMetadataStorageConfiguration($storageConfig);
+
+// Create dependency factory
+$dependencyFactory = DependencyFactory::fromConnection(
+    new ConfigurationArray([
+        'table_storage' => [
+            'table_name' => 'doctrine_migration_versions',
+            'version_column_name' => 'version',
+            'version_column_length' => 191,
+            'executed_at_column_name' => 'executed_at',
+            'execution_time_column_name' => 'execution_time',
+        ],
+        'migrations_paths' => [
+            'SP\\Migrations' => APP_ROOT . '/migrations',
+        ],
+        'all_or_nothing' => true,
+        'transactional' => true,
+        'check_database_platform' => true,
+        'organize_migrations' => 'none',
+    ]),
+    new ExistingConnection($connection)
+);
+
+// Create console application
+$app = new Application('sysPass Console', '1.0.0');
+
+// Add migration commands
+$app->addCommands([
+    new Command\CurrentCommand($dependencyFactory),
+    new Command\DiffCommand($dependencyFactory),
+    new Command\DumpSchemaCommand($dependencyFactory),
+    new Command\ExecuteCommand($dependencyFactory),
+    new Command\GenerateCommand($dependencyFactory),
+    new Command\LatestCommand($dependencyFactory),
+    new Command\ListCommand($dependencyFactory),
+    new Command\MigrateCommand($dependencyFactory),
+    new Command\RollupCommand($dependencyFactory),
+    new Command\StatusCommand($dependencyFactory),
+    new Command\SyncMetadataCommand($dependencyFactory),
+    new Command\VersionCommand($dependencyFactory),
+]);
+
+// Run application
+$app->run();

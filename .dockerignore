@@ -1,0 +1,18 @@
+# Build context exclusions — these are large, generated, or host-specific.
+# (Source is bind-mounted at runtime; the build context only needs the
+#  Dockerfile and docker/ helpers.)
+vendor/
+node_modules/
+.git/
+public/dist/
+
+# Local tooling / caches
+.idea/
+.vite/
+.php-cs-fixer.cache
+.phpunit.result.cache
+tests/.phpunit.cache/
+tests/_output/
+tests/res/cache/
+tests/tmp/
+*.log

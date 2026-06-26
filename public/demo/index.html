@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design 3 Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+    <style>
+        :root {
+            /* Periwinkle palette */
+            --md-primary: #8B7FC7;
+            --md-primary-light: #A99FD4;
+            --md-primary-dark: #6B5FA7;
+            --md-primary-container: #E8E5F7;
+            --md-on-primary: #FFFFFF;
+            --md-on-primary-container: #2D2559;
+
+            /* Slate/Gray palette */
+            --md-surface: #1C1B1F;
+            --md-surface-dim: #141316;
+            --md-surface-bright: #2B292F;
+            --md-surface-container-lowest: #0F0E12;
+            --md-surface-container-low: #1C1B1F;
+            --md-surface-container: #201F24;
+            --md-surface-container-high: #2B292F;
+            --md-surface-container-highest: #363438;
+
+            /* Text colors */
+            --md-on-surface: #E6E1E6;
+            --md-on-surface-variant: #CAC4CF;
+            --md-outline: #948F99;
+            --md-outline-variant: #49454E;
+
+            /* Secondary */
+            --md-secondary: #CCC2DC;
+            --md-secondary-container: #4A4458;
+            --md-on-secondary-container: #E8DEF8;
+
+            /* Tertiary */
+            --md-tertiary: #EFB8C8;
+            --md-tertiary-container: #633B48;
+
+            /* Error */
+            --md-error: #F2B8B5;
+            --md-error-container: #8C1D18;
+
+            /* Shadows */
+            --md-shadow: rgba(0, 0, 0, 0.3);
+
+            /* Transitions */
+            --md-transition: 200ms cubic-bezier(0.2, 0, 0, 1);
+        }
+
+        /* Material Symbols */
+        .material-symbols-rounded {
+            font-family: 'Material Symbols Rounded';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-feature-settings: 'liga';
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--md-surface);
+            color: var(--md-on-surface);
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* Top App Bar */
+        .top-app-bar {
+            background: var(--md-surface-container);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--md-outline-variant);
+        }
+
+        .top-app-bar h1 {
+            font-size: 22px;
+            font-weight: 400;
+            flex: 1;
+        }
+
+        /* Icon Button */
+        .icon-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            background: transparent;
+            color: var(--md-on-surface);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--md-transition);
+        }
+
+        .icon-btn:hover {
+            background: var(--md-surface-container-highest);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .card {
+            background: var(--md-surface-container);
+            border-radius: 28px;
+            overflow: hidden;
+            transition: box-shadow var(--md-transition), transform var(--md-transition);
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px var(--md-shadow);
+            transform: translateY(-2px);
+        }
+
+        .card-media {
+            height: 200px;
+            background: linear-gradient(135deg, var(--md-primary) 0%, var(--md-primary-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-media .material-symbols-rounded {
+            font-size: 64px;
+            color: var(--md-on-primary);
+            opacity: 0.9;
+        }
+
+        .card-content {
+            padding: 24px;
+        }
+
+        .card-content h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--md-on-surface);
+        }
+
+        .card-content p {
+            color: var(--md-on-surface-variant);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            padding: 16px 24px;
+            border-top: 1px solid var(--md-outline-variant);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 24px;
+            border-radius: 100px;
+            border: none;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--md-transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-filled {
+            background: var(--md-primary);
+            color: var(--md-on-primary);
+        }
+
+        .btn-filled:hover {
+            background: var(--md-primary-light);
+            box-shadow: 0 2px 8px var(--md-shadow);
+        }
+
+        .btn-tonal {
+            background: var(--md-secondary-container);
+            color: var(--md-on-secondary-container);
+        }
+
+        .btn-tonal:hover {
+            background: var(--md-surface-container-highest);
+        }
+
+        .btn-outlined {
+            background: transparent;
+            color: var(--md-primary);
+            border: 1px solid var(--md-outline);
+        }
+
+        .btn-outlined:hover {
+            background: var(--md-primary-container);
+            color: var(--md-on-primary-container);
+        }
+
+        .btn-text {
+            background: transparent;
+            color: var(--md-primary);
+        }
+
+        .btn-text:hover {
+            background: var(--md-primary-container);
+            color: var(--md-on-primary-container);
+        }
+
+        /* FAB */
+        .fab {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            border: none;
+            background: var(--md-primary-container);
+            color: var(--md-on-primary-container);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px var(--md-shadow);
+            transition: all var(--md-transition);
+        }
+
+        .fab:hover {
+            box-shadow: 0 8px 24px var(--md-shadow);
+            background: var(--md-primary);
+            color: var(--md-on-primary);
+        }
+
+        .fab .material-symbols-rounded {
+            font-size: 24px;
+        }
+
+        /* Extended FAB */
+        .fab-extended {
+            width: auto;
+            padding: 16px 20px;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--md-primary);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Chips */
+        .chip-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .chip {
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: var(--md-surface-container-high);
+            color: var(--md-on-surface);
+            font-size: 14px;
+            border: 1px solid var(--md-outline-variant);
+            cursor: pointer;
+            transition: all var(--md-transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chip:hover {
+            background: var(--md-surface-container-highest);
+        }
+
+        .chip.selected {
+            background: var(--md-secondary-container);
+            color: var(--md-on-secondary-container);
+            border-color: transparent;
+        }
+
+        .chip .material-symbols-rounded {
+            font-size: 18px;
+        }
+
+        /* Text Fields */
+        .text-field {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .text-field input,
+        .text-field textarea {
+            width: 100%;
+            padding: 20px 16px 8px;
+            border: none;
+            border-radius: 16px 16px 0 0;
+            background: var(--md-surface-container-highest);
+            color: var(--md-on-surface);
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            border-bottom: 2px solid var(--md-outline);
+            transition: all var(--md-transition);
+        }
+
+        .text-field input:focus,
+        .text-field textarea:focus {
+            outline: none;
+            border-bottom-color: var(--md-primary);
+        }
+
+        .text-field label {
+            position: absolute;
+            left: 16px;
+            top: 14px;
+            color: var(--md-on-surface-variant);
+            font-size: 16px;
+            transition: all var(--md-transition);
+            pointer-events: none;
+        }
+
+        .text-field input:focus + label,
+        .text-field input:not(:placeholder-shown) + label,
+        .text-field textarea:focus + label,
+        .text-field textarea:not(:placeholder-shown) + label {
+            top: 4px;
+            font-size: 12px;
+            color: var(--md-primary);
+        }
+
+        /* Switch */
+        .switch-container {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .switch {
+            position: relative;
+            width: 52px;
+            height: 32px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .switch-track {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--md-surface-container-highest);
+            border-radius: 16px;
+            border: 2px solid var(--md-outline);
+            transition: all var(--md-transition);
+        }
+
+        .switch-thumb {
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            left: 6px;
+            bottom: 6px;
+            background: var(--md-outline);
+            border-radius: 50%;
+            transition: all var(--md-transition);
+        }
+
+        .switch input:checked + .switch-track {
+            background: var(--md-primary);
+            border-color: var(--md-primary);
+        }
+
+        .switch input:checked + .switch-track .switch-thumb {
+            transform: translateX(20px);
+            background: var(--md-on-primary);
+            width: 24px;
+            height: 24px;
+            bottom: 2px;
+            left: 2px;
+        }
+
+        /* Lists */
+        .list {
+            background: var(--md-surface-container);
+            border-radius: 28px;
+            overflow: hidden;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            padding: 16px 24px;
+            gap: 16px;
+            cursor: pointer;
+            transition: background var(--md-transition);
+        }
+
+        .list-item:hover {
+            background: var(--md-surface-container-high);
+        }
+
+        .list-item-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--md-primary-container);
+            color: var(--md-on-primary-container);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .list-item-content {
+            flex: 1;
+        }
+
+        .list-item-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--md-on-surface);
+        }
+
+        .list-item-subtitle {
+            font-size: 14px;
+            color: var(--md-on-surface-variant);
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--md-outline-variant);
+            margin: 0 24px;
+        }
+
+        /* Navigation Rail */
+        .nav-rail {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            background: var(--md-surface-container);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px 0;
+            gap: 8px;
+            border-right: 1px solid var(--md-outline-variant);
+        }
+
+        .nav-rail-item {
+            width: 56px;
+            padding: 16px 0 12px;
+            border-radius: 16px;
+            background: transparent;
+            border: none;
+            color: var(--md-on-surface-variant);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+            transition: all var(--md-transition);
+        }
+
+        .nav-rail-item:hover {
+            background: var(--md-surface-container-high);
+        }
+
+        .nav-rail-item.active {
+            color: var(--md-on-secondary-container);
+        }
+
+        .nav-rail-item.active .nav-indicator {
+            background: var(--md-secondary-container);
+        }
+
+        .nav-indicator {
+            width: 56px;
+            height: 32px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--md-transition);
+        }
+
+        /* Snackbar */
+        .snackbar {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--md-surface-container-highest);
+            color: var(--md-on-surface);
+            padding: 16px 24px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 4px 12px var(--md-shadow);
+            opacity: 0;
+            transition: opacity var(--md-transition);
+            pointer-events: none;
+        }
+
+        .snackbar.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .snackbar-action {
+            color: var(--md-primary);
+            background: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background var(--md-transition);
+        }
+
+        .snackbar-action:hover {
+            background: var(--md-surface-container);
+        }
+
+        /* Progress Indicator */
+        .progress-container {
+            margin-bottom: 24px;
+        }
+
+        .progress-linear {
+            height: 4px;
+            background: var(--md-surface-container-highest);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-linear-bar {
+            height: 100%;
+            background: var(--md-primary);
+            border-radius: 2px;
+            width: 60%;
+            animation: progress-indeterminate 2s ease-in-out infinite;
+        }
+
+        @keyframes progress-indeterminate {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(0%); }
+            100% { transform: translateX(200%); }
+        }
+
+        /* Badge */
+        .badge-container {
+            position: relative;
+            display: inline-flex;
+        }
+
+        .badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            min-width: 18px;
+            height: 18px;
+            padding: 0 5px;
+            background: var(--md-error);
+            color: var(--md-surface);
+            font-size: 11px;
+            font-weight: 500;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-rail {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .main-content {
+                margin-left: 80px;
+            }
+
+            .top-app-bar {
+                margin-left: 80px;
+            }
+
+            .fab {
+                right: 40px;
+                bottom: 40px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .card:nth-child(2) { animation-delay: 0.1s; }
+        .card:nth-child(3) { animation-delay: 0.2s; }
+    </style>
+</head>
+<body>
+    <!-- Navigation Rail -->
+    <nav class="nav-rail">
+        <button class="nav-rail-item active">
+            <div class="nav-indicator">
+                <span class="material-symbols-rounded">home</span>
+            </div>
+            Home
+        </button>
+        <button class="nav-rail-item">
+            <div class="nav-indicator">
+                <span class="material-symbols-rounded">lock</span>
+            </div>
+            Vault
+        </button>
+        <button class="nav-rail-item">
+            <div class="nav-indicator">
+                <span class="material-symbols-rounded">group</span>
+            </div>
+            Teams
+        </button>
+        <button class="nav-rail-item">
+            <div class="nav-indicator">
+                <span class="material-symbols-rounded">settings</span>
+            </div>
+            Settings
+        </button>
+    </nav>
+
+    <!-- Top App Bar -->
+    <header class="top-app-bar">
+        <button class="icon-btn">
+            <span class="material-symbols-rounded">menu</span>
+        </button>
+        <h1>Material Design 3 Demo</h1>
+        <div class="badge-container">
+            <button class="icon-btn">
+                <span class="material-symbols-rounded">notifications</span>
+            </button>
+            <span class="badge">3</span>
+        </div>
+        <button class="icon-btn">
+            <span class="material-symbols-rounded">account_circle</span>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Progress -->
+        <div class="progress-container">
+            <div class="progress-linear">
+                <div class="progress-linear-bar"></div>
+            </div>
+        </div>
+
+        <!-- Chips -->
+        <section class="section">
+            <h2 class="section-title">Filter Chips</h2>
+            <div class="chip-group">
+                <button class="chip selected">
+                    <span class="material-symbols-rounded">check</span>
+                    All Items
+                </button>
+                <button class="chip">
+                    <span class="material-symbols-rounded">vpn_key</span>
+                    Passwords
+                </button>
+                <button class="chip">
+                    <span class="material-symbols-rounded">credit_card</span>
+                    Cards
+                </button>
+                <button class="chip">
+                    <span class="material-symbols-rounded">note</span>
+                    Notes
+                </button>
+                <button class="chip">
+                    <span class="material-symbols-rounded">badge</span>
+                    Identities
+                </button>
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="section">
+            <h2 class="section-title">Cards</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <div class="card-media">
+                        <span class="material-symbols-rounded">security</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Secure Vault</h3>
+                        <p>Your passwords are encrypted with AES-256 and protected with zero-knowledge architecture.</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-filled">Open Vault</button>
+                        <button class="btn btn-text">Learn More</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media" style="background: linear-gradient(135deg, var(--md-tertiary-container) 0%, var(--md-secondary-container) 100%);">
+                        <span class="material-symbols-rounded">share</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Team Sharing</h3>
+                        <p>Securely share passwords and credentials with your team members.</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-tonal">Manage Team</button>
+                        <button class="btn btn-text">Invite</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-media" style="background: linear-gradient(135deg, var(--md-secondary-container) 0%, var(--md-primary-dark) 100%);">
+                        <span class="material-symbols-rounded">sync</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Auto Sync</h3>
+                        <p>Your data syncs automatically across all your devices in real-time.</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-outlined">Settings</button>
+                        <button class="btn btn-text">Sync Now</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="section">
+            <h2 class="section-title">Buttons</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
+                <button class="btn btn-filled">
+                    <span class="material-symbols-rounded">add</span>
+                    Filled Button
+                </button>
+                <button class="btn btn-tonal">
+                    <span class="material-symbols-rounded">edit</span>
+                    Tonal Button
+                </button>
+                <button class="btn btn-outlined">
+                    <span class="material-symbols-rounded">bookmark</span>
+                    Outlined Button
+                </button>
+                <button class="btn btn-text">
+                    <span class="material-symbols-rounded">info</span>
+                    Text Button
+                </button>
+            </div>
+        </section>
+
+        <!-- Form -->
+        <section class="section">
+            <h2 class="section-title">Form Elements</h2>
+            <div style="max-width: 400px;">
+                <div class="text-field">
+                    <input type="text" id="username" placeholder=" ">
+                    <label for="username">Username</label>
+                </div>
+                <div class="text-field">
+                    <input type="password" id="password" placeholder=" ">
+                    <label for="password">Password</label>
+                </div>
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="switch-track">
+                            <span class="switch-thumb"></span>
+                        </span>
+                    </label>
+                    <span>Remember me</span>
+                </div>
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch-track">
+                            <span class="switch-thumb"></span>
+                        </span>
+                    </label>
+                    <span>Enable notifications</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- List -->
+        <section class="section">
+            <h2 class="section-title">List Items</h2>
+            <div class="list">
+                <div class="list-item">
+                    <div class="list-item-icon">
+                        <span class="material-symbols-rounded">email</span>
+                    </div>
+                    <div class="list-item-content">
+                        <div class="list-item-title">Email Account</div>
+                        <div class="list-item-subtitle">john.doe@example.com</div>
+                    </div>
+                    <span class="material-symbols-rounded" style="color: var(--md-outline);">chevron_right</span>
+                </div>
+                <div class="divider"></div>
+                <div class="list-item">
+                    <div class="list-item-icon">
+                        <span class="material-symbols-rounded">cloud</span>
+                    </div>
+                    <div class="list-item-content">
+                        <div class="list-item-title">Cloud Storage</div>
+                        <div class="list-item-subtitle">Dropbox, Google Drive</div>
+                    </div>
+                    <span class="material-symbols-rounded" style="color: var(--md-outline);">chevron_right</span>
+                </div>
+                <div class="divider"></div>
+                <div class="list-item">
+                    <div class="list-item-icon">
+                        <span class="material-symbols-rounded">code</span>
+                    </div>
+                    <div class="list-item-content">
+                        <div class="list-item-title">Development</div>
+                        <div class="list-item-subtitle">GitHub, GitLab, Bitbucket</div>
+                    </div>
+                    <span class="material-symbols-rounded" style="color: var(--md-outline);">chevron_right</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FAB -->
+    <button class="fab fab-extended" onclick="showSnackbar()">
+        <span class="material-symbols-rounded">add</span>
+        New Item
+    </button>
+
+    <!-- Snackbar -->
+    <div class="snackbar" id="snackbar">
+        <span>Item created successfully</span>
+        <button class="snackbar-action" onclick="hideSnackbar()">Dismiss</button>
+    </div>
+
+    <script>
+        // Chip selection
+        document.querySelectorAll('.chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+                chip.classList.add('selected');
+                if (!chip.querySelector('.material-symbols-rounded')?.textContent.includes('check')) {
+                    const icon = chip.querySelector('.material-symbols-rounded');
+                    if (icon) icon.textContent = 'check';
+                }
+            });
+        });
+
+        // Nav rail selection
+        document.querySelectorAll('.nav-rail-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.nav-rail-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+
+        // Snackbar
+        function showSnackbar() {
+            document.getElementById('snackbar').classList.add('show');
+            setTimeout(hideSnackbar, 4000);
+        }
+
+        function hideSnackbar() {
+            document.getElementById('snackbar').classList.remove('show');
+        }
+    </script>
+</body>
+</html>

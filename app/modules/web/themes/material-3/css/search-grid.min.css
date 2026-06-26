@@ -1,0 +1,895 @@
+@charset "UTF-8";
+/* MD3 Dark Theme - Search Grid Layout */
+
+/* ========================================
+   SEARCH HEADER - Column Sort
+   ======================================== */
+
+#data-search-header {
+    padding: 0 352px 0 32px !important;
+    margin-bottom: 12px !important;
+}
+
+#data-search-header .header-columns {
+    display: grid !important;
+    grid-template-columns:
+        minmax(0, 1.8fr)
+        minmax(0, 1.5fr)
+        minmax(0, 1fr)
+        minmax(0, 1fr)
+        minmax(0, 2fr) !important;
+    gap: 24px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#data-search-header .header-column {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+}
+
+#data-search-header .header-column.sortable {
+    cursor: pointer !important;
+    user-select: none !important;
+}
+
+#data-search-header .header-column.sortable:hover .column-name {
+    color: #8893d1 !important;
+}
+
+#data-search-header .column-name {
+    color: #757575 !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    transition: color 0.2s ease !important;
+}
+
+#data-search-header .column-name.active {
+    color: #8893d1 !important;
+}
+
+#data-search-header .sort-icon {
+    font-size: 18px !important;
+    color: #8893d1 !important;
+    margin-left: 2px !important;
+}
+
+/* Fix parent container clipping */
+#content,
+.mdl-layout__content {
+    overflow: visible !important;
+}
+
+#content #data-search {
+    text-align: left !important;
+    padding: 8px 0;
+    width: 100%;
+    margin: 0;
+    background: transparent;
+    overflow: visible !important;
+}
+
+#content #data-search * {
+    text-align: left !important;
+}
+
+#content #data-search .account-info img,
+#content #data-search .account-actions img {
+    width: 24px;
+    height: 24px;
+    margin: 0 0.5em;
+}
+
+/* ACCOUNT CARD */
+#content #data-search .account-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 70px;
+    height: auto;
+    text-align: left;
+    margin: 0 0 12px 0;
+    padding: 24px 32px;
+    color: #eeeeee;
+    background: #212121;
+    background-color: #212121;
+    border: 1px solid #616161;
+    border-radius: 12px;
+    box-shadow: none;
+    overflow: visible;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+/* Ensure card containers are visible (but NOT chip contact) */
+#content #data-search .account-label,
+#content #data-search .account-label .label-left,
+#content #data-search .account-label .label-row-up,
+#content #data-search .account-label .field-customer {
+    overflow: visible !important;
+    text-indent: 0 !important;
+    clip: auto !important;
+}
+
+/* Hide contact circle - it contains full text causing clipping issues */
+#content #data-search .account-label .mdl-chip__contact {
+    display: none !important;
+}
+
+#content #data-search .account-label {
+    cursor: pointer;
+}
+
+#content #data-search .account-label:hover {
+    border-color: #8893d1;
+    background: #424242;
+    background-color: #424242;
+}
+
+#content #data-search .account-label .label-row-up,
+#content #data-search .account-label .label-row-down {
+    display: flex;
+    min-height: auto;
+    height: auto;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent;
+}
+
+#content #data-search .account-label .label-row-up {
+    display: grid !important;
+    grid-template-columns:
+        minmax(0, 1.8fr)
+        minmax(0, 1.5fr)
+        minmax(0, 1fr)
+        minmax(0, 1fr)
+        minmax(0, 2fr) !important;
+    gap: 24px !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+#content #data-search .account-label .field-tag .field-text {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+#content #data-search .account-label .field-tag .tag-truncated {
+    max-width: 120px !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+}
+
+#content #data-search .account-label .field-tag .tag-more {
+    flex: 0 0 auto !important;
+    background: #424242 !important;
+    color: #b9b9b9 !important;
+    font-weight: 500 !important;
+    cursor: help !important;
+}
+
+#content
+    #data-search
+    .account-label
+    .label-row-up
+    > *:not(.field-tag):not(.field-customer),
+#content #data-search .account-label .field-account,
+#content #data-search .account-label .field-category,
+#content #data-search .account-label .field-user,
+#content #data-search .account-label .field-url,
+#content
+    #data-search
+    .account-label
+    .label-field:not(.field-tag):not(.field-customer),
+#content
+    #data-search
+    .account-label
+    .label-field:not(.field-tag):not(.field-customer)
+    * {
+    text-align: left !important;
+    justify-self: start !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+#content #data-search .account-label div[class^="field-"] {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+#content #data-search .account-label .field-account .field-text,
+#content #data-search .account-label .field-category .field-text,
+#content #data-search .account-label .field-user .field-text,
+#content #data-search .account-label .field-account > a {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+/* URL field - ensure left alignment */
+#content #data-search .account-label .field-url {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+#content #data-search .account-label .field-url a,
+#content #data-search .account-label .field-url .field-text,
+#content #data-search .account-label .field-url > a,
+#content #data-search .account-label .field-url > .field-text {
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+}
+
+#content #data-search .account-label .label-row-down {
+    margin-top: 8px;
+    padding-left: 0 !important;
+    text-align: left !important;
+}
+
+#content #data-search .account-label .label-left {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    gap: 4px !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    align-items: flex-start !important;
+}
+
+#content #data-search .account-label .label-right {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 320px !important;
+    min-width: 320px !important;
+    max-width: 320px !important;
+    flex: 0 0 320px !important;
+    height: auto !important;
+    background: transparent !important;
+    padding-left: 24px !important;
+    margin-left: 16px !important;
+    justify-content: flex-end !important;
+}
+
+#content #data-search .account-label .label-right > div {
+    width: auto;
+}
+
+#content #data-search .account-label .label-field {
+    width: auto;
+    min-height: auto;
+    height: auto;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent;
+}
+
+/* Hide ALL field labels */
+#content #data-search .account-label .field-name,
+#content #data-search .account-label .field-name-hidden,
+#content #data-search .account-label div[class*="field-name"] {
+    display: none !important;
+}
+
+#content #data-search .account-label .field-text {
+    word-wrap: break-word;
+    color: #eeeeee;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left !important;
+}
+
+#content #data-search .account-label .field-text a,
+#content #data-search .account-label a {
+    color: #8893d1;
+    font-weight: 500;
+}
+
+#content #data-search .account-label .field-text a:hover,
+#content #data-search .account-label a:hover {
+    color: #9fa8da;
+    text-decoration: underline;
+}
+
+#content #data-search .account-label .field-customer {
+    flex-grow: 0;
+}
+
+#content #data-search .account-label .field-name {
+    padding: 0;
+    color: #757575;
+    display: none;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+#content #data-search .account-label .field-name-hidden {
+    display: none;
+}
+
+#content #data-search .account-label .header .field-name {
+    color: #eeeeee;
+    font-weight: bold;
+}
+
+#content #data-search .account-label .no-link,
+#content #data-search .account-label .no-link a {
+    color: #eeeeee;
+    font-weight: bold;
+}
+
+/* Account info icons */
+#content #data-search .account-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    text-align: left;
+    opacity: 1;
+    min-height: auto;
+    background: transparent;
+}
+
+#content #data-search .account-info .material-icons {
+    color: #eeeeee !important;
+    font-size: 20px !important;
+    transition: color 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+body.md3-theme #content #data-search .account-info .material-icons:hover,
+#content #data-search .account-info .material-icons:hover {
+    color: #9fa8da !important;
+}
+
+/* Notes empty state */
+#content #data-search .account-info .notes-empty {
+    opacity: 0.3;
+}
+
+/* Account actions */
+#content #data-search .account-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    padding-left: 16px;
+    margin-left: 16px;
+    text-align: right;
+    border-top: none;
+    border-left: 1px solid #616161;
+    background: transparent;
+}
+
+
+#content #data-search .account-actions .material-icons,
+#content #data-search .account-actions i.btn-action {
+    color: #eeeeee !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+    transition: color 0.2s ease !important;
+}
+
+body.md3-theme #content #data-search .account-actions .material-icons:hover,
+body.md3-theme #content #data-search .account-actions i.btn-action:hover,
+body.md3-theme
+    #content
+    #data-search
+    .account-actions
+    .mdl-button--icon:hover
+    .material-icons,
+#content #data-search .account-actions .material-icons:hover,
+#content #data-search .account-actions i.btn-action:hover,
+#content #data-search .account-actions .mdl-button--icon:hover .material-icons {
+    color: #9fa8da !important;
+}
+
+#content #data-search .account-spacer {
+    display: none;
+}
+
+/* Tags */
+#content #data-search .tags-box {
+    display: inline-flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+#content #data-search .tags-box span.tag {
+    cursor: pointer;
+    opacity: 0.8;
+    background: #424242;
+    color: #eeeeee;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+#content #data-search .tags-box span.tag:hover {
+    opacity: 1;
+    background: #424242;
+}
+
+/* Tag column - left aligned to match header */
+#content #data-search .account-label .field-tag {
+    text-align: left !important;
+    justify-self: start !important;
+    justify-content: flex-start !important;
+    padding-right: 12px !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+}
+
+#content #data-search .account-label .field-tag .field-text {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    display: flex !important;
+}
+
+#content #data-search .account-label .field-tag span.tag {
+    text-align: left !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+/* Client chip - ensure not clipped and LEFT aligned */
+#content #data-search .account-label .field-customer {
+    overflow: visible !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    text-align: left !important;
+    gap: 6px !important;
+}
+
+/* Tag pills beneath client chip */
+#content #data-search .account-label .field-customer .client-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+#content #data-search .account-label .field-customer .client-tag {
+    display: inline-block !important;
+    padding: 2px 8px !important;
+    font-size: 10px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+    color: #b9b9b9 !important;
+    background: rgba(136, 147, 209, 0.12) !important;
+    border: 1px solid rgba(136, 147, 209, 0.35) !important;
+    border-radius: 10px !important;
+    line-height: 1.4 !important;
+    max-width: 140px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    cursor: default !important;
+    transition: background 0.15s ease, color 0.15s ease !important;
+}
+
+#content #data-search .account-label .field-customer .client-tag:hover {
+    background: rgba(136, 147, 209, 0.22) !important;
+    color: #eeeeee !important;
+}
+
+body.light-mode #content #data-search .account-label .field-customer .client-tag {
+    color: #3949ab !important;
+    background: rgba(92, 107, 192, 0.10) !important;
+    border-color: rgba(92, 107, 192, 0.45) !important;
+}
+
+body.light-mode #content #data-search .account-label .field-customer .client-tag:hover {
+    background: rgba(92, 107, 192, 0.20) !important;
+    color: #1a237e !important;
+}
+
+#content #data-search .account-label .mdl-chip,
+#content #data-search .account-label .mdl-chip--contact {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #424242 !important;
+    border-radius: 16px !important;
+    padding: 8px 14px !important;
+    margin: 0 !important;
+    margin-right: auto !important;
+    overflow: visible !important;
+}
+
+/* HIDE contact circle completely - it breaks layout */
+#content #data-search .account-label .mdl-chip__contact {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    visibility: hidden !important;
+}
+
+/* Chip text - plain text, centered */
+#content #data-search .account-label .mdl-chip__text {
+    color: #eeeeee !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    display: block !important;
+}
+
+/* Menu button - 3 dots */
+#content #data-search .account-actions .mdl-button--icon {
+    color: #eeeeee !important;
+    background: transparent !important;
+}
+
+#content #data-search .account-actions .mdl-button--icon .material-icons {
+    font-size: 20px !important;
+    transition: color 0.2s ease !important;
+}
+
+body.md3-theme
+    #content
+    #data-search
+    .account-actions
+    .mdl-button--icon:hover
+    .material-icons,
+#content #data-search .account-actions .mdl-button--icon:hover .material-icons {
+    color: #9fa8da !important;
+}
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+    #content #data-search .account-label {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+    }
+
+    #content #data-search .account-label .label-row-up,
+    #content #data-search .account-label .label-row-down {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 8px;
+    }
+
+    #content #data-search .account-label .label-field .field-name {
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid #424242;
+        color: #757575;
+        margin-bottom: 2px;
+    }
+
+    #content #data-search .account-label .label-left,
+    #content #data-search .account-label .label-right {
+        width: 100%;
+        height: auto;
+    }
+
+    #content #data-search .account-label .label-right {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid #424242;
+        justify-content: space-between;
+    }
+
+    #content #data-search .account-label .label-right > div {
+        width: auto;
+    }
+}
+
+/* ========================================
+   LIGHT MODE OVERRIDES
+   ======================================== */
+
+body.light-mode #content #data-search .account-info .material-icons,
+body.light-mode #content #data-search .account-actions i.btn-action,
+body.light-mode #content #data-search .account-actions .mdl-button--icon,
+body.light-mode
+    #content
+    #data-search
+    .account-actions
+    .mdl-button--icon
+    .material-icons,
+body.light-mode #content #data-search .account-actions .material-icons {
+    color: #1a1a1a !important;
+}
+
+body.light-mode #content #data-search .account-info .material-icons:hover,
+body.light-mode #content #data-search .account-actions i.btn-action:hover,
+body.light-mode
+    #content
+    #data-search
+    .account-actions
+    .mdl-button--icon:hover
+    .material-icons {
+    color: #5c6bc0 !important;
+}
+
+/* Tags in light mode - white text on gray background */
+body.light-mode #content #data-search .tags-box span.tag,
+body.light-mode #content #data-search .field-tag span.tag,
+body.light-mode .field-tag .tag,
+body.light-mode .tags-box .tag {
+    color: #ffffff !important;
+}
+
+/* ========================================
+   SEARCH BOX - Single Line Layout
+   ======================================== */
+
+#searchbox,
+#content #searchbox {
+    overflow: visible !important;
+    padding: 16px 24px !important;
+    min-height: auto !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+}
+
+#content #searchbox > form {
+    margin-bottom: 0 !important;
+}
+
+#frmSearch {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+    min-height: auto !important;
+}
+
+/* Hide submit button properly */
+#frmSearch input[type="submit"] {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    border: 0 !important;
+}
+
+#frmSearch .search-text {
+    flex: 0 0 280px !important;
+    min-width: 220px !important;
+    max-width: 280px !important;
+}
+
+#frmSearch .search-text .mdl-textfield {
+    width: 100% !important;
+}
+
+#frmSearch .search-filters {
+    display: flex !important;
+    flex: 1 1 600px !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    overflow: visible !important;
+}
+
+#frmSearch .search-filters .selectize-control {
+    flex: 0 0 260px !important;
+    min-width: 200px !important;
+    max-width: 280px !important;
+    width: 260px !important;
+    padding: 0 !important;
+}
+
+#frmSearch .search-filters .selectize-control .selectize-input,
+#frmSearch .search-filters .selectize-control.single .selectize-input {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+#content #searchbox .search-filters-tags {
+    display: inline-flex !important;
+    align-items: center !important;
+    width: 260px !important;
+    gap: 0 !important;
+    flex: 0 0 260px !important;
+    min-width: 200px !important;
+    max-width: 280px !important;
+}
+
+#frmSearch .search-filters #btn-favorite {
+    margin-left: auto !important;
+}
+
+#content #searchbox .search-filters-tags .selectize-control {
+    flex: 1 1 auto !important;
+    min-width: 80px !important;
+    max-width: 100% !important;
+}
+
+#content #searchbox .search-filters-tags .selectize-control::after {
+    content: "arrow_drop_down" !important;
+    font-family: "Material Icons" !important;
+    position: absolute !important;
+    right: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #757575 !important;
+    font-size: 20px !important;
+    pointer-events: none !important;
+}
+
+#content #searchbox .search-filters-tags .selectize-control {
+    position: relative !important;
+}
+
+#content #searchbox #btn-clear-tags {
+    min-width: 24px !important;
+    width: 24px !important;
+    height: 24px !important;
+    padding: 0 !important;
+    margin-left: 4px !important;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+#content #searchbox #btn-clear-tags:hover {
+    opacity: 1;
+}
+
+#content #searchbox #btn-clear-tags .material-icons {
+    font-size: 16px !important;
+    color: #eeeeee !important;
+}
+
+#frmSearch .search-filters .filter-slider {
+    flex: 0 0 120px !important;
+    min-width: 100px !important;
+}
+
+/* Compact buttons and slider */
+#frmSearch .search-filters #btn-favorite {
+    margin-left: auto !important;
+    flex: 0 0 auto !important;
+}
+
+#frmSearch .search-filters #btn-reset {
+    flex: 0 0 auto !important;
+}
+
+/* Explicit ordering for all filter elements */
+/* Hide original selects (selectize hides them but also for non-selectize) */
+#frmSearch .search-filters > select.select-box {
+    order: -10 !important;
+}
+
+/* All selectize dropdowns and tags should come first (negative order) */
+#frmSearch .search-filters .selectize-control {
+    order: -3 !important;
+}
+
+#frmSearch .search-filters .search-filters-tags {
+    order: -2 !important;
+}
+
+/* Global search toggle - after dropdowns, before buttons */
+#frmSearch .search-filters .mdl-switch,
+#frmSearch .search-filters .mdl-switch--inline,
+#frmSearch .search-filters label.mdl-switch {
+    flex: 0 0 36px !important;
+    width: 36px !important;
+    max-width: 36px !important;
+    order: 0 !important;
+    height: 24px !important;
+    min-height: 24px !important;
+    margin: 0 4px !important;
+    overflow: hidden !important;
+}
+
+/* Hidden input for global search */
+#frmSearch .search-filters input[name="gsearch"] {
+    order: 0 !important;
+}
+
+/* Clear filter (X) sits right after Tag */
+#frmSearch .search-filters #btn-reset {
+    order: -1 !important;
+    margin-left: 0 !important;
+}
+
+/* Favorite (star) starts the right-side group */
+#frmSearch .search-filters #btn-favorite {
+    order: 1 !important;
+}
+
+#frmSearch .search-filters .filter-slider,
+#frmSearch .search-filters .filter-buttons.filter-slider {
+    order: 3 !important;
+}
+
+/* ULTRA OVERRIDE: URL truncation */
+html body #content #data-search .account-label .field-url,
+html body #content #data-search .account-label div.field-url {
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+html body #content #data-search .account-label .field-url a,
+html body #content #data-search .account-label div.field-url a,
+html body #content #data-search .account-label .field-url > a,
+html body #content #data-search .account-label .field-url > div.field-text,
+html body #content #data-search .account-label .field-url > .field-text {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+}
