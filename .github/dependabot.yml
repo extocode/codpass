@@ -1,0 +1,47 @@
+# Dependabot configuration
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+
+version: 2
+updates:
+  # PHP Composer dependencies
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Berlin"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "php"
+    commit-message:
+      prefix: "composer"
+    groups:
+      # Group minor/patch updates together
+      php-minor:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+    ignore:
+      # Don't auto-update these until manual PHP upgrade
+      - dependency-name: "phpunit/phpunit"
+        versions: [">=7.0.0"]
+      - dependency-name: "symfony/debug"
+        # Will be replaced manually with symfony/error-handler
+      - dependency-name: "phpunit/dbunit"
+        # Will be removed manually (abandoned)
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "dependencies"
+      - "ci"
+    commit-message:
+      prefix: "ci"

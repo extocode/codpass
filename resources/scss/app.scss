@@ -1,0 +1,33 @@
+/**
+ * sysPass Main Stylesheet
+ *
+ * This is the entry point for all styles.
+ * Vite will compile this to CSS with autoprefixing and minification.
+ */
+
+// Variables and mixins
+@import 'variables';
+@import 'mixins';
+
+// Base styles
+@import 'base';
+
+// Layout
+@import 'layout';
+
+// Components
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/cards';
+@import 'components/modals';
+@import 'components/tables';
+
+// Pages
+@import 'pages/login';
+@import 'pages/search';
+
+// Material Design overrides
+@import 'material-custom';
+
+// Utilities
+@import 'utilities';

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Vite Test</title>
+</head>
+<body>
+    <h1>Simple Test</h1>
+    <div id="result"></div>
+
+    <script type="module">
+        import $ from '/resources/js/../node_modules/jquery/dist/jquery.module.js';
+
+        console.log('jQuery loaded:', typeof $);
+        document.getElementById('result').textContent = 'jQuery: ' + (typeof $ !== 'undefined' ? '✅' : '❌');
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+# codPass local development stack: app (PHP 8.4 + Apache) + MariaDB 10.6.
+# Usage: docker compose up --build  ->  http://localhost:8080
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      # Live source mount for development.
+      - .:/var/www/html
+      # Named volumes keep runtime data and deps off the host bind mount so
+      # the container owns them (correct permissions, survives restarts).
+      - app_config:/var/www/html/app/config
+      - app_cache:/var/www/html/app/cache
+      - app_temp:/var/www/html/app/temp
+      - app_backup:/var/www/html/app/backup
+      - vendor:/var/www/html/vendor
+    environment:
+      # Reference DB credentials (match the db service). The web installer
+      # still requires manual entry — these are not auto-read by the app.
+      DB_HOST: db
+      DB_NAME: syspass
+      DB_USER: syspass
+      DB_PASSWORD: syspass
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mariadb:10.6
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: syspass
+      MARIADB_USER: syspass
+      MARIADB_PASSWORD: syspass
+    ports:
+      # Host 3307 to avoid clashing with a local MySQL/MariaDB on 3306.
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  app_config:
+  app_cache:
+  app_temp:
+  app_backup:
+  vendor:
+  db_data:

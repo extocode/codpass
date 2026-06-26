@@ -1,0 +1,58 @@
+parameters:
+    # Floor enforced for NEW code. The remainder is baselined (phpstan-baseline.neon)
+    # and should shrink over time. Going 0->5 adds ~150 errors per level; level 6
+    # explodes by +1372 (missing-type-hint PHPDoc churn), so 5 is the highest
+    # realistically adoptable level. Raise toward 9 as the baseline drains: 5 -> ... -> 9.
+    level: 5
+
+    paths:
+        - lib/SP
+        - app/modules/web
+        - app/modules/api
+
+    excludePaths:
+        # Vendor dependencies
+        - vendor/*
+        # Test files (can enable later)
+        - tests/*
+        # Generated/cache files
+        - app/cache/*
+        - app/config/*
+        - app/temp/*
+        - app/backup/*
+
+    # Scan only these directories for classes
+    scanDirectories:
+        - lib/SP
+        - app/modules
+
+    # Don't scan files
+    scanFiles: []
+
+    # PHP version to analyze against (matches composer.json)
+    phpVersion: 80400
+
+    # Parallel processing for faster analysis
+    parallel:
+        maximumNumberOfProcesses: 4
+
+    # Report unmatched ignored errors
+    reportUnmatchedIgnoredErrors: false
+
+    # Treat phpdoc types as certain
+    treatPhpDocTypesAsCertain: false
+
+    # Bootstrap file if needed for constants/autoloading
+    # bootstrapFiles:
+    #     - vendor/autoload.php
+
+    # Ignore specific error patterns (add as needed during baseline generation)
+    ignoreErrors:
+        # Example patterns - uncomment and adjust as needed:
+        # - '#Call to an undefined method#'
+        # - '#Access to an undefined property#'
+        # - '#Parameter \$\w+ of method .+ has invalid type#'
+
+# Include baseline once generated
+includes:
+    - phpstan-baseline.neon
