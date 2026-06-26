@@ -11,6 +11,14 @@
 
 PHP web-based password manager for business and personal use.
 
+# About the name
+
+You might be wondering about the name. Our company develops and ships a vendor-agnostic infrastructure management framework called CentralOperationsDashboard (COD) — and, as you can tell, we're not particularly creative when it comes to naming things. ;)
+
+We deliberately chose not to carry over the original name. We want to keep this effort clearly separate, as we are not affiliated with nuxsmin/Rubén or the upstream sysPass project in any way.
+
+**This fork will not receive any new features. It is intended purely as a secure, drop-in replacement for an existing sysPass installation — letting users continue running it in its current feature set until they decide to migrate to another solution. In the meantime, we are working on our own version: a modern, on-prem password and secrets manager.**
+
 ## Features
 - AES-256 encryption (CTR mode)
 - RSA for transmitting passwords from forms
