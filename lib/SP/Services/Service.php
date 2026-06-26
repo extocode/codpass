@@ -29,6 +29,7 @@ namespace SP\Services;
 use Closure;
 use Defuse\Crypto\Exception\CryptoException;
 use Exception;
+use Throwable;
 use Psr\Container\ContainerInterface;
 use SP\Config\Config;
 use SP\Core\Context\ContextException;
@@ -103,7 +104,10 @@ abstract class Service
                 $database->endTransaction();
 
                 return $result;
-            } catch (Exception $e) {
+            } catch (Throwable $e) {
+                // ponytail: catch Throwable not Exception — a PHP Error/TypeError
+                // from the closure must still roll back, else the connection
+                // leaks an open transaction and the next TRUNCATE blocks forever.
                 $database->rollbackTransaction();
 
                 logger('Transaction:Rollback');
