@@ -24,7 +24,7 @@
   "require": {
     "php": "^8.4",
     "defuse/php-encryption": "^2.1",
-    "phpmailer/phpmailer": "^6.0",
+    "phpmailer/phpmailer": "^7.1",
     "phpseclib/phpseclib": "^3.0",
     "klein/klein": "^2.1",
     "php-di/php-di": "^7.0",
