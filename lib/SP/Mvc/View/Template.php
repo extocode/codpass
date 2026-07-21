@@ -347,7 +347,7 @@ final class Template
      * @return string Con el contenido del buffer de salida
      * @throws FileNotFoundException
      */
-    public function render(): string|false
+    public function render(): string
     {
         if (empty($this->templates)) {
             throw new FileNotFoundException(__('Template does not contain files'));
