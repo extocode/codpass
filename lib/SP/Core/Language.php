@@ -70,7 +70,7 @@ final class Language
     protected static $appSet = false;
 
     /**
-     * @var array Available languages (English first, rest sorted alphabetically by key)
+     * @var array Available languages (English first, then the others in alphabetical order by key)
      */
     private static array $langs = [
         'en_US' => 'English',

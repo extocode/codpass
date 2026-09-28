@@ -58,7 +58,7 @@ abstract class WebTestCase extends TestCase
      */
     protected static function createClient(array $server = [])
     {
-        // In Symfony 7, server options should be passed to HttpClient::create()
+        // In Symfony 7, pass the server options to HttpClient::create()
         // The HttpBrowser constructor signature is: (HttpClientInterface, History, CookieJar)
         $httpClient = empty($server) ? HttpClient::create() : HttpClient::create(['headers' => $server]);
         return new HttpBrowser($httpClient);

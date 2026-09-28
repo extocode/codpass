@@ -80,7 +80,7 @@ final class AccountActionsHelper extends HelperBase
     {
         $actions = [];
 
-        // Only show back action for history views (to return to current version)
+        // Show the back action only for history views (to go back to the current version)
         if ($accountActionsDto->isHistory()) {
             $actionBack = $this->getBackAction();
             $actionBack->addData('item-id', $accountActionsDto->getAccountId());

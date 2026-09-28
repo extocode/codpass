@@ -1,8 +1,9 @@
 parameters:
-    # Floor enforced for NEW code. The remainder is baselined (phpstan-baseline.neon)
-    # and should shrink over time. Going 0->5 adds ~150 errors per level; level 6
-    # explodes by +1372 (missing-type-hint PHPDoc churn), so 5 is the highest
-    # realistically adoptable level. Raise toward 9 as the baseline drains: 5 -> ... -> 9.
+    # Minimum level for NEW code. The baseline (phpstan-baseline.neon) holds the
+    # remaining errors. The plan is to make it smaller over time. Each level from 0 to 5
+    # adds ~150 errors. Level 6 adds +1372 (missing-type-hint PHPDoc churn). Thus, 5 is
+    # the highest level that is realistic to adopt. When the baseline becomes smaller,
+    # raise the level toward 9: 5 -> ... -> 9.
     level: 5
 
     paths:
@@ -13,7 +14,7 @@ parameters:
     excludePaths:
         # Vendor dependencies
         - vendor/*
-        # Test files (can enable later)
+        # Test files (you can enable them later)
         - tests/*
         # Generated/cache files
         - app/cache/*
@@ -26,7 +27,7 @@ parameters:
         - lib/SP
         - app/modules
 
-    # Don't scan files
+    # Do not scan files
     scanFiles: []
 
     # PHP version to analyze against (matches composer.json)
@@ -42,7 +43,7 @@ parameters:
     # Treat phpdoc types as certain
     treatPhpDocTypesAsCertain: false
 
-    # Bootstrap file if needed for constants/autoloading
+    # Bootstrap file, if necessary, for constants/autoloading
     # bootstrapFiles:
     #     - vendor/autoload.php
 
@@ -53,6 +54,6 @@ parameters:
         # - '#Access to an undefined property#'
         # - '#Parameter \$\w+ of method .+ has invalid type#'
 
-# Include baseline once generated
+# Include the baseline after you generate it
 includes:
     - phpstan-baseline.neon

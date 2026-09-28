@@ -51,8 +51,8 @@ final class FileCache extends FileCacheBase
     {
         $this->createPath();
 
-        // Atomic write (LOCK_EX acquired and released within the call). Avoids
-        // leaving a locked handle open, which previously deadlocked a later
+        // Atomic write (the call gets and releases LOCK_EX). This does not keep
+        // a locked handle open. Before, an open handle caused a deadlock in a later
         // save() on the same file in the same process (see FileHandler::lock).
         $this->path->checkIsWritable()->save(serialize($data));
 

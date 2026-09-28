@@ -1,8 +1,8 @@
 /**
  * Vendor Dependencies
  *
- * All third-party libraries are imported here.
- * Vite will create optimized chunks for these.
+ * This file imports all third-party libraries.
+ * Vite creates optimized chunks for them.
  */
 
 console.log('[VENDOR] Starting imports...');
@@ -34,7 +34,7 @@ $.fn.selectize = function(options = {}) {
         const tsOptions = { ...options };
 
         // Tom Select uses 'create' as a function or boolean
-        // It's compatible with Selectize's create option
+        // It is compatible with the Selectize create option
 
         // Map plugin names from Selectize to Tom Select
         if (tsOptions.plugins) {
@@ -65,7 +65,7 @@ $.fn.selectize = function(options = {}) {
         // Create Tom Select instance
         const ts = new TomSelect(this, tsOptions);
 
-        // Handle clear_selection plugin behavior (click header to clear)
+        // Process the clear_selection plugin behavior (click the header to clear)
         if (tsOptions._clearOnHeaderClick && ts.dropdown_header) {
             ts.dropdown_header.addEventListener('click', function(e) {
                 ts.clear();
@@ -76,7 +76,7 @@ $.fn.selectize = function(options = {}) {
             });
         }
 
-        // Store instance for access via element
+        // Store the instance for access through the element
         this.selectize = ts;  // Legacy property name for compatibility
     });
 };

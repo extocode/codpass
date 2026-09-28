@@ -206,14 +206,14 @@ final class AccountSearchItem
     public function isUrlIslink(): int|false
     {
         $url = $this->accountSearchVData->getUrl();
-        // Match URLs with protocol (http://, https://, etc.) or starting with www.
+        // Match URLs with a protocol (http://, https://, etc.) or URLs that start with www.
         return preg_match('#^(\w+://|www\.)#i', $url);
     }
 
     public function getSafeUrl(): string
     {
         $url = $this->accountSearchVData->getUrl();
-        // Add https:// if URL starts with www. but has no protocol
+        // Add https:// if the URL starts with www. but has no protocol
         if (preg_match('#^www\.#i', $url) && !preg_match('#^\w+://#', $url)) {
             $url = 'https://' . $url;
         }

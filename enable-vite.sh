@@ -3,14 +3,14 @@
 
 echo "Enabling Vite build system..."
 
-# Backup original layout
+# Back up the original layout
 if [ ! -f "app/modules/web/themes/material-blue/views/_layouts/main.inc.bak" ]; then
     cp app/modules/web/themes/material-blue/views/_layouts/main.inc \
        app/modules/web/themes/material-blue/views/_layouts/main.inc.bak
     echo "✓ Backed up original layout to main.inc.bak"
 fi
 
-# Replace with Vite layout
+# Replace it with the Vite layout
 cp app/modules/web/themes/material-blue/views/_layouts/main-vite.inc \
    app/modules/web/themes/material-blue/views/_layouts/main.inc
 

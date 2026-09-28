@@ -98,7 +98,7 @@ try {
         exit(1);
     }
 
-    // Test 4: Test both listeners receive the same event
+    // Test 4: Test that the two listeners receive the same event
     echo "[5/5] Testing dual dispatch (both legacy and PSR-14)...\n";
 
     $psr14Count = 0;

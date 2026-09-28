@@ -218,7 +218,7 @@ final class AccountHistoryService extends Service
     }
 
     /**
-     * Deletes all the items for given client ids
+     * Deletes all the items for the given client ids
      *
      * @throws QueryException
      * @throws ConstraintException

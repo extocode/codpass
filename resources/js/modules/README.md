@@ -1,10 +1,10 @@
 # sysPass JavaScript Modules
 
-This directory contains the modularized version of sysPass JavaScript code.
+This directory contains the modularized version of the sysPass JavaScript code.
 
 ## Migration Plan
 
-The original files from `/public/js/` will be gradually migrated here as ES modules:
+The original files from `/public/js/` will move here as ES modules, step by step:
 
 - `app.js` → Namespace initialization (moved to main `app.js`)
 - `app-config.js` → `config.js` (configuration object)
@@ -16,5 +16,5 @@ The original files from `/public/js/` will be gradually migrated here as ES modu
 
 ## Current Status
 
-For Phase 7 initial setup, these are placeholder modules that will import the existing compiled code.
-Full ES6 module conversion is a follow-up task.
+For the Phase 7 initial setup, these modules are placeholders. They will import the existing compiled code.
+The full ES6 module conversion is a follow-up task.

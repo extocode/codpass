@@ -1,6 +1,6 @@
 #!/bin/bash
 # Comprehensive sysPass Functionality Test Suite
-# Tests all major operations via database and API simulation
+# Tests all major operations through database and API simulation
 
 echo "════════════════════════════════════════════════════════"
 echo "  sysPass v4 Comprehensive Functionality Test Suite"
@@ -108,7 +108,7 @@ run_test "UserGroup Table Query" \
 run_test "Foreign Key Integrity" \
     "mariadb -u $DB_USER -p$DB_PASS $DB_NAME -e \"SELECT COUNT(*) FROM Account a JOIN Category c ON a.categoryId = c.id JOIN Client cl ON a.clientId = cl.id\" 2>&1"
 
-# Test 16: Account History (if exists)
+# Test 16: Account History (if it exists)
 run_test "Account History Table" \
     "mariadb -u $DB_USER -p$DB_PASS $DB_NAME -e \"SELECT COUNT(*) FROM AccountHistory\" 2>&1"
 

@@ -2,7 +2,7 @@
 <?php
 /**
  * sysPass Functionality Test Script
- * Tests various operations to ensure PHP 8.2 compatibility
+ * Tests different operations to make sure that the code is compatible with PHP 8.2
  */
 
 declare(strict_types=1);
@@ -82,8 +82,8 @@ try {
     $accountRequest->name = 'Test Account ' . time();
     $accountRequest->login = 'testuser_' . time();
     $accountRequest->url = 'https://example.com/test';
-    $accountRequest->categoryId = 1; // Use existing category
-    $accountRequest->clientId = 1; // Use existing client
+    $accountRequest->categoryId = 1; // Use an existing category
+    $accountRequest->clientId = 1; // Use an existing client
     $accountRequest->pass = 'TestPassword123!';
     $accountRequest->userId = 1; // Admin user
     $accountRequest->userGroupId = 1;
@@ -152,7 +152,7 @@ try {
         echo $e->getTraceAsString() . "\n";
     }
 
-    // Test 9: Cleanup - Delete test category
+    // Test 9: Cleanup - Delete the test category
     echo "\n[Test 9] Cleanup - Delete test data\n";
     try {
         if (isset($categoryId)) {

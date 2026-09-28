@@ -60,7 +60,7 @@ use SP\Mvc\View\Template;
 
         sysPassApp.sk.set("<?php echo $_getvar('sk'); ?>");
 
-        // Theme toggle (persisted in localStorage)
+        // Theme toggle (the value stays in localStorage)
         var savedTheme = localStorage.getItem('syspass-theme');
         if (savedTheme === 'light') {
             document.body.classList.add('light-mode');
@@ -262,7 +262,7 @@ use SP\Mvc\View\Template;
             });
         });
 
-        // Copy username from search cards (doesn't trigger card navigation)
+        // Copy the username from search cards (this does not start the card navigation)
         $(document).on('click', '.clip-copy', function (ev) {
             ev.preventDefault();
             ev.stopPropagation();
@@ -287,23 +287,23 @@ use SP\Mvc\View\Template;
             }
         });
 
-        // Brighten the copy icon on hover for affordance
+        // Make the copy icon brighter on hover as a visual cue
         $(document).on('mouseenter', '.clip-copy', function () { this.style.opacity = '1'; });
         $(document).on('mouseleave', '.clip-copy', function () { this.style.opacity = '.45'; });
 
         /* ------------------------------------------------------------------
          * Sticky search / filter bar
          * Native position:sticky (see material-3.min.css) pins #searchbox
-         * under the fixed header. This toggles .is-stuck the instant it pins
-         * so the bar animates out to the full content width, and measures the
-         * width / shift / padding into CSS vars so the inner controls stay
-         * anchored with no layout shift or horizontal overflow.
-         * Re-initialises itself when the search view is reloaded over AJAX.
+         * under the fixed header. This code toggles .is-stuck at the moment the bar pins.
+         * Then the bar expands to the full content width with an animation.
+         * The code also measures the width / shift / padding into CSS vars. Thus, the
+         * inner controls stay anchored with no layout shift or horizontal overflow.
+         * The code initialises itself again when AJAX loads the search view again.
          * ------------------------------------------------------------------ */
         (function () {
             "use strict";
 
-            // Nearest scrolling ancestor == the scrollport position:sticky uses.
+            // The nearest scroll ancestor == the scrollport that position:sticky uses.
             function getScroller(el) {
                 var node = el ? el.parentElement : null;
                 while (node && node !== document.documentElement) {
@@ -313,17 +313,17 @@ use SP\Mvc\View\Template;
                     }
                     node = node.parentElement;
                 }
-                return null; // falls back to the viewport / document scroll
+                return null; // fallback: the viewport / document scroll
             }
 
             function setup(sb) {
                 if (!sb || sb.dataset.stickyInit === '1') { return; }
                 sb.dataset.stickyInit = '1';
 
-                // Opt-in: only stick when enabled in user preferences. The stylesheet
-                // applies position:sticky unconditionally, so when disabled we override
-                // it inline and skip all observers. Gating lives here (not in the
-                // app-version-cached CSS) so it always takes effect.
+                // Opt-in: stick only when the user preferences enable it. The stylesheet
+                // always applies position:sticky. Thus, when the option is off, override
+                // it inline and skip all observers. This check is here (not in the
+                // app-version-cached CSS) so that it always has an effect.
                 if (sb.getAttribute('data-sticky') !== '1') {
                     sb.style.position = 'relative';
                     return;
@@ -334,7 +334,7 @@ use SP\Mvc\View\Template;
                 var content = document.getElementById('content') || sb.parentNode;
                 var basePadL = null;
 
-                // Zero-height marker sitting exactly at the bar's resting top edge.
+                // Zero-height marker at the exact top edge of the bar in its rest position.
                 var sentinel = document.createElement('div');
                 sentinel.className = 'searchbox-sentinel';
                 sentinel.setAttribute('aria-hidden', 'true');
@@ -344,8 +344,8 @@ use SP\Mvc\View\Template;
                 function measure() {
                     if (!sb.isConnected) { return; }
 
-                    // Lock the natural (unstuck) height so expanding the bar can
-                    // never change its height and shift the rows below it.
+                    // Lock the natural (unstuck) height. Then, when the bar expands, its
+                    // height cannot change and cannot move the rows below it.
                     if (!sb.classList.contains('is-stuck')) {
                         sb.style.setProperty('--sb-min-h', '0px');
                         sb.style.setProperty('--sb-min-h', sb.offsetHeight + 'px');
@@ -363,9 +363,9 @@ use SP\Mvc\View\Template;
                     if (leftGap < 0) { leftGap = 0; }
 
                     // #content is centred (margin: auto) => right gap == left gap.
-                    // Expand symmetrically by both gaps so the bar reaches both edges.
-                    // Derived from the same leftGap that drives the shift, so width and
-                    // position can never disagree (independent of clientWidth quirks).
+                    // Expand by the two gaps equally so that the bar reaches the two edges.
+                    // The width comes from the same leftGap that sets the shift. Thus, the
+                    // width and the position always agree (independent of clientWidth quirks).
                     var stuckWidth = contentRect.width + (2 * leftGap);
 
                     if (basePadL === null && !sb.classList.contains('is-stuck')) {
@@ -386,7 +386,7 @@ use SP\Mvc\View\Template;
 
                 measure();
 
-                // Toggle .is-stuck the moment the bar pins to (or leaves) the top.
+                // Toggle .is-stuck at the moment the bar pins to (or leaves) the top.
                 if ('IntersectionObserver' in window) {
                     var io = new IntersectionObserver(function (entries) {
                         var e = entries[0];
@@ -397,7 +397,7 @@ use SP\Mvc\View\Template;
                     io.observe(sentinel);
                 }
 
-                // Re-measure on resize / layout changes without animating the change.
+                // Measure again on resize / layout changes. Do not animate the change.
                 var raf = 0;
                 function onResize() {
                     if (raf) { return; }
@@ -422,7 +422,7 @@ use SP\Mvc\View\Template;
 
             init();
 
-            // The search view is swapped in via AJAX; re-init when #searchbox reappears.
+            // AJAX replaces the search view. Initialise again when #searchbox appears again.
             if ('MutationObserver' in window) {
                 var host = getScroller(document.getElementById('searchbox')) || document.body;
                 new MutationObserver(function () {

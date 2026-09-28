@@ -17,15 +17,15 @@ $staticExtensions = [
     'map', 'json', 'html', 'htm' // HTML files
 ];
 
-// Get file extension
+// Get the file extension
 $extension = strtolower(pathinfo($uri, PATHINFO_EXTENSION));
 
-// Check if it's a static file request
+// Check if this is a static file request
 if (in_array($extension, $staticExtensions)) {
     $filePath = __DIR__ . $uri;
 
     if (file_exists($filePath) && is_file($filePath)) {
-        // Set correct MIME type
+        // Set the correct MIME type
         $mimeTypes = [
             'css' => 'text/css',
             'js' => 'application/javascript',

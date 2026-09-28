@@ -31,7 +31,7 @@ use PHPUnit\Framework\TestCase;
 use SP\DataModel\CategoryData;
 
 /**
- * Proves the Faker-based generator pattern works without a database.
+ * Shows that the Faker-based generator pattern works without a database.
  */
 #[Group('unit')]
 class GeneratorTest extends TestCase

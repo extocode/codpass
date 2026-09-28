@@ -30,12 +30,12 @@ namespace SP\Html;
 /**
  * Class ViteAssets
  *
- * Helper class for integrating Vite-built assets with PHP templates.
+ * Helper class to integrate Vite-built assets with PHP templates.
  *
  * Features:
- * - Development mode: Uses Vite dev server with HMR
+ * - Development mode: Uses the Vite dev server with HMR
  * - Production mode: Reads manifest.json for asset paths with content hashes
- * - Automatic script/link tag generation
+ * - Automatic generation of script/link tags
  *
  * @package SP\Html
  */
@@ -48,17 +48,17 @@ final class ViteAssets
     private static ?bool $isDevelopment = null;
 
     /**
-     * Check if Vite dev server is running
+     * Check if the Vite dev server runs
      *
      * @return bool
      */
     public static function isDevelopment(): bool
     {
         if (self::$isDevelopment === null) {
-            // Dev mode is opt-in via the VITE_DEV env var. Never probe the dev
-            // server over the network here: this runs on every page render and
-            // a blocking connect to localhost:5173 (refused/filtered in prod)
-            // stalls the whole request.
+            // Dev mode is opt-in through the VITE_DEV env var. Do not probe the dev
+            // server over the network here. This code runs on each page render.
+            // A blocking connect to localhost:5173 (refused/filtered in prod)
+            // blocks the full request.
             self::$isDevelopment = getenv('VITE_DEV') === 'true';
         }
 
@@ -87,7 +87,7 @@ final class ViteAssets
     /**
      * Get asset path from manifest
      *
-     * @param string $entry Entry point name (e.g., 'resources/js/app.js')
+     * @param string $entry Entry point name (for example, 'resources/js/app.js')
      * @return string|null
      */
     private static function getAssetPath(string $entry): ?string
@@ -119,9 +119,9 @@ final class ViteAssets
     }
 
     /**
-     * Generate script tag for entry point
+     * Generate the script tag for an entry point
      *
-     * @param string $entry Entry file path (e.g., 'js/app.js')
+     * @param string $entry Entry file path (for example, 'js/app.js')
      * @return string HTML script tag
      */
     public static function script(string $entry): string
@@ -148,15 +148,15 @@ final class ViteAssets
     }
 
     /**
-     * Generate link tag for stylesheet
+     * Generate the link tag for a stylesheet
      *
-     * @param string $entry Entry file path (e.g., 'scss/app.scss')
+     * @param string $entry Entry file path (for example, 'scss/app.scss')
      * @return string HTML link tag(s)
      */
     public static function style(string $entry): string
     {
         if (self::isDevelopment()) {
-            // In dev mode, CSS is injected by Vite via JS
+            // In dev mode, Vite injects the CSS through JS
             return '';
         }
 
@@ -175,7 +175,7 @@ final class ViteAssets
     /**
      * Generate Vite client script (development only)
      *
-     * Required for HMR to work
+     * HMR needs this script
      *
      * @return string
      */
@@ -192,9 +192,9 @@ final class ViteAssets
     }
 
     /**
-     * Generate all necessary tags for an entry point
+     * Generate all the necessary tags for an entry point
      *
-     * Includes Vite client (dev), scripts, and stylesheets
+     * Includes the Vite client (dev), the scripts and the stylesheets
      *
      * @param string $entry Entry file path
      * @return string HTML tags

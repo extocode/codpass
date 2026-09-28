@@ -10,16 +10,16 @@ services:
     volumes:
       # Live source mount for development.
       - .:/var/www/html
-      # Named volumes keep runtime data and deps off the host bind mount so
-      # the container owns them (correct permissions, survives restarts).
+      # Named volumes keep runtime data and deps out of the host bind mount. Thus,
+      # the container owns them (correct permissions, the data stays after restarts).
       - app_config:/var/www/html/app/config
       - app_cache:/var/www/html/app/cache
       - app_temp:/var/www/html/app/temp
       - app_backup:/var/www/html/app/backup
       - vendor:/var/www/html/vendor
     environment:
-      # Reference DB credentials (match the db service). The web installer
-      # still requires manual entry — these are not auto-read by the app.
+      # Reference DB credentials (the same as the db service). You must still type
+      # them in the web installer. The app does not read these values automatically.
       DB_HOST: db
       DB_NAME: syspass
       DB_USER: syspass
@@ -36,7 +36,7 @@ services:
       MARIADB_USER: syspass
       MARIADB_PASSWORD: syspass
     ports:
-      # Host 3307 to avoid clashing with a local MySQL/MariaDB on 3306.
+      # Host port 3307 prevents a conflict with a local MySQL/MariaDB on 3306.
       - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql

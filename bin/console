@@ -7,12 +7,12 @@ declare(strict_types=1);
  * sysPass CLI Console
  *
  * Command-line interface for sysPass administration tasks.
- * Currently supports Doctrine Migrations for database schema management.
+ * At this time, it supports Doctrine Migrations to manage the database schema.
  *
  * Usage:
  *   php bin/console migrations:status     - Show migration status
  *   php bin/console migrations:migrate    - Run pending migrations
- *   php bin/console migrations:diff       - Generate migration from schema diff
+ *   php bin/console migrations:diff       - Generate a migration from a schema diff
  *   php bin/console list                  - List all available commands
  *
  * Environment variables (optional):
@@ -54,7 +54,7 @@ require VENDOR_PATH . DIRECTORY_SEPARATOR . 'autoload.php';
  */
 function getConnectionParams(): array
 {
-    // Check for environment variables first (useful for testing/CI)
+    // Check for environment variables first (useful for tests/CI)
     $host = getenv('DB_SERVER') ?: null;
     $name = getenv('DB_NAME') ?: null;
     $user = getenv('DB_USER') ?: null;

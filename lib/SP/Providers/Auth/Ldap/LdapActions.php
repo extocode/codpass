@@ -162,9 +162,9 @@ final class LdapActions
         }
 
         do {
-            // PHP 8.0 removed ldap_control_paged_result(); paging is now done
-            // via the $controls argument of ldap_search() and the response
-            // cookie is read back from ldap_parse_result().
+            // PHP 8.0 removed ldap_control_paged_result(). The code now does the paging
+            // through the $controls argument of ldap_search(). It reads the response
+            // cookie back from ldap_parse_result().
             $controls = [
                 [
                     'oid' => LDAP_CONTROL_PAGEDRESULTS,

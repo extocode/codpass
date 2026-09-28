@@ -33,8 +33,8 @@ use SP\Storage\Database\DatabaseConnectionData;
 /**
  * Class DatabaseTestCase
  *
- * Base test case for tests that require database queries.
- * Replaces abandoned PHPUnit\DbUnit with custom XML dataset loading.
+ * Base test case for tests that need database queries.
+ * Replaces the abandoned PHPUnit\DbUnit with a custom XML dataset loader.
  *
  * @package SP\Tests
  */
@@ -85,7 +85,7 @@ abstract class DatabaseTestCase extends TestCase
     {
         parent::setUp();
 
-        // Load dataset only once per test class
+        // Load the dataset only once for each test class
         if (!self::$datasetLoaded) {
             $this->loadDataSet();
             self::$datasetLoaded = true;
@@ -116,10 +116,10 @@ abstract class DatabaseTestCase extends TestCase
 
         $pdo = $this->getConnection();
 
-        // Disable foreign key checks temporarily
+        // Disable the foreign key checks for a short time
         $pdo->exec('SET FOREIGN_KEY_CHECKS = 0');
 
-        // Load XML dataset
+        // Load the XML dataset
         $xml = simplexml_load_file($datasetPath);
 
         if ($xml === false) {
@@ -132,12 +132,12 @@ abstract class DatabaseTestCase extends TestCase
         // Insert data from XML
         $this->insertDataFromXml($pdo, $xml);
 
-        // Re-enable foreign key checks
+        // Enable the foreign key checks again
         $pdo->exec('SET FOREIGN_KEY_CHECKS = 1');
     }
 
     /**
-     * Clears all tables defined in the dataset.
+     * Clears all tables that the dataset defines.
      *
      * @param PDO              $pdo
      * @param SimpleXMLElement $xml
@@ -159,14 +159,14 @@ abstract class DatabaseTestCase extends TestCase
             try {
                 $pdo->exec("TRUNCATE TABLE `{$table}`");
             } catch (\PDOException $e) {
-                // If truncate fails, try delete
+                // If truncate fails, try a delete
                 $pdo->exec("DELETE FROM `{$table}`");
             }
         }
     }
 
     /**
-     * Inserts data from XML into database.
+     * Inserts data from XML into the database.
      *
      * @param PDO              $pdo
      * @param SimpleXMLElement $xml
@@ -190,11 +190,11 @@ abstract class DatabaseTestCase extends TestCase
                     // Check for xsi namespace attributes
                     $attributes = $field->attributes('xsi', true);
 
-                    // Handle NULL values (xsi:nil="true")
+                    // Process NULL values (xsi:nil="true")
                     if (isset($attributes['nil']) && (string)$attributes['nil'] === 'true') {
                         $values[] = null;
                     } elseif (isset($attributes['type']) && (string)$attributes['type'] === 'xs:hexBinary') {
-                        // Handle hexBinary type - convert hex string to binary
+                        // Process the hexBinary type: convert the hex string to binary
                         $values[] = hex2bin((string)$field);
                     } else {
                         $values[] = (string)$field;
@@ -220,7 +220,7 @@ abstract class DatabaseTestCase extends TestCase
 
     /**
      * Returns the test dataset path.
-     * Kept for backward compatibility with tests that may reference it.
+     * This method stays for backward compatibility with tests that can reference it.
      *
      * @return string
      */
@@ -250,7 +250,7 @@ abstract class DatabaseTestCase extends TestCase
      * Asserts that a row exists in a table with specific conditions.
      *
      * @param string $table
-     * @param array  $conditions Key-value pairs for WHERE clause
+     * @param array  $conditions Key-value pairs for the WHERE clause
      * @param string $message
      * @throws SPException
      */

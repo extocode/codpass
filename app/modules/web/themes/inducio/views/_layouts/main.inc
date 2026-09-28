@@ -60,7 +60,7 @@ use SP\Mvc\View\Template;
 
         sysPassApp.sk.set("<?php echo $_getvar('sk'); ?>");
 
-        // Copy username from search cards (doesn't trigger card navigation)
+        // Copy the username from search cards (this does not start the card navigation)
         $(document).on('click', '.clip-copy', function (ev) {
             ev.preventDefault();
             ev.stopPropagation();
@@ -85,7 +85,7 @@ use SP\Mvc\View\Template;
             }
         });
 
-        // Brighten the copy icon on hover for affordance
+        // Make the copy icon brighter on hover as a visual cue
         $(document).on('mouseenter', '.clip-copy', function () { this.style.opacity = '1'; });
         $(document).on('mouseleave', '.clip-copy', function () { this.style.opacity = '.45'; });
     });

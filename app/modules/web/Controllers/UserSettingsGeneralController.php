@@ -79,7 +79,7 @@ final class UserSettingsGeneralController extends SimpleControllerBase
             // Guardar las preferencias en la sesión
             $userData->setPreferences($userPreferencesData);
 
-            // Update session locale so language change takes effect immediately
+            // Update the session locale so that the new language applies immediately
             $newLang = $userPreferencesData->getLang();
             if (!empty($newLang)) {
                 $this->session->setLocale($newLang);

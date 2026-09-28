@@ -297,9 +297,9 @@ final class FeedbackController extends SimpleControllerBase
     }
 
     /**
-     * Detects a request body that PHP discarded because it exceeded post_max_size.
-     * In that case $_POST/$_FILES are empty, so without this the user would only see
-     * a confusing CSRF/token error.
+     * Finds a request body that PHP discarded because it was larger than post_max_size.
+     * In this case, $_POST and $_FILES are empty. Without this check, the user sees
+     * only an unclear CSRF/token error.
      *
      * @throws SPException
      */
@@ -322,7 +322,7 @@ final class FeedbackController extends SimpleControllerBase
     }
 
     /**
-     * Converts a PHP ini shorthand byte value (e.g. "8M", "512K") to bytes.
+     * Converts a PHP ini shorthand byte value (for example, "8M" or "512K") to bytes.
      */
     private function iniBytes(string $value): int
     {
@@ -344,7 +344,7 @@ final class FeedbackController extends SimpleControllerBase
     }
 
     /**
-     * Reads and validates the optional feedback attachments (max self::MAX_ATTACH_COUNT).
+     * Reads the optional feedback attachments and validates them (maximum: self::MAX_ATTACH_COUNT).
      *
      * @return array<int, array{tmp_name:string, name:string, mime:string, size:int}>
      * @throws SPException
@@ -357,7 +357,7 @@ final class FeedbackController extends SimpleControllerBase
             return [];
         }
 
-        // Normalize single vs. multiple ($_FILES) structure into a flat list
+        // Change the single or multiple ($_FILES) structure into a flat list
         $candidates = [];
 
         if (is_array($files['tmp_name'])) {
@@ -395,8 +395,8 @@ final class FeedbackController extends SimpleControllerBase
     /**
      * Validates a single uploaded file entry.
      *
-     * @return array{tmp_name:string, name:string, mime:string, size:int}|null null for empty slots
-     * @throws SPException on invalid file
+     * @return array{tmp_name:string, name:string, mime:string, size:int}|null null for an empty slot
+     * @throws SPException if the file is not valid
      */
     private function validateAttachment(array $file): ?array
     {
@@ -450,8 +450,8 @@ final class FeedbackController extends SimpleControllerBase
     }
 
     /**
-     * Detects the real MIME type, falling back gracefully if the fileinfo
-     * extension is unavailable, then to the client-provided type as a last resort.
+     * Finds the real MIME type. If the fileinfo extension is not available, it uses
+     * a fallback. As the last step, it uses the type that the client gives.
      */
     private function detectMimeType(string $tmpName, string $clientType): string
     {
@@ -476,7 +476,7 @@ final class FeedbackController extends SimpleControllerBase
     }
 
     /**
-     * Reduces an uploaded filename to a safe basename. Never throws.
+     * Reduces an uploaded filename to a safe basename. It does not throw exceptions.
      */
     private function sanitizeFilename(string $name): string
     {

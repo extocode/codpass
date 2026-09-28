@@ -248,7 +248,7 @@ final class Database implements DatabaseInterface
                 if (str_contains($hint, '1451')) {
                     $message = __u('Cannot delete: this item is being used by other records');
 
-                    // Try to extract the table name that has the foreign key reference
+                    // Try to get the name of the table that has the foreign key reference
                     // Pattern: foreign key constraint fails (`database`.`TableName`, CONSTRAINT ...
                     if (preg_match('/constraint fails \(`[^`]+`\.`([^`]+)`/i', $hint, $matches)) {
                         $dependentTable = $matches[1];

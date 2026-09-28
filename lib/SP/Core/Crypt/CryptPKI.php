@@ -154,8 +154,8 @@ final class CryptPKI
         try {
             return $privateKey->decrypt($data);
         } catch (\Exception $e) {
-            // phpseclib3 throws on malformed ciphertext (e.g. attacker-supplied
-            // request data); callers expect false on failure, not an exception.
+            // phpseclib3 throws an exception on malformed ciphertext (for example,
+            // request data from an attacker). Callers expect false on failure, not an exception.
             return false;
         }
     }

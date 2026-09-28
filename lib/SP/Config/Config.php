@@ -167,16 +167,16 @@ final class Config
                 $value = $items[$property->getName()];
                 $propertyType = $property->getType();
 
-                // Handle type conversion for typed properties
+                // Convert the value type for typed properties
                 if ($propertyType instanceof \ReflectionNamedType && !$propertyType->isBuiltin()) {
-                    // Skip complex types - let them be handled as-is
+                    // Skip complex types. Keep these values as they are.
                     $property->setValue($configData, $value);
                 } elseif ($propertyType instanceof \ReflectionNamedType) {
                     $typeName = $propertyType->getName();
 
-                    // Convert string values to appropriate types
+                    // Convert string values to the correct types
                     if ($typeName === 'array' && is_string($value)) {
-                        // Convert comma-separated string to array, or empty string to empty array
+                        // Convert a comma-separated string to an array, or an empty string to an empty array
                         $value = $value === '' ? [] : array_map('trim', explode(',', $value));
                     } elseif ($typeName === 'bool' && is_string($value)) {
                         $value = $value === '1' || $value === 'true';

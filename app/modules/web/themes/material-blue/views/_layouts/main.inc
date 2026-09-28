@@ -1,8 +1,8 @@
 <?php
 /**
- * Vite-enabled Main Layout
+ * Main layout with Vite
  *
- * This layout uses Vite for asset loading instead of the legacy ResourceController.
+ * This layout uses Vite to load the assets instead of the legacy ResourceController.
  *
  * @var callable $_getvar
  * @var Template $this
@@ -87,7 +87,7 @@ echo ViteAssets::script('js/theme.js');
             vendor: window.jQuery ? 'loaded' : 'missing'
         });
 
-        // Copy username from search cards (doesn't trigger card navigation)
+        // Copy the username from search cards (this does not start the card navigation)
         $(document).on('click', '.clip-copy', function (ev) {
             ev.preventDefault();
             ev.stopPropagation();
@@ -112,7 +112,7 @@ echo ViteAssets::script('js/theme.js');
             }
         });
 
-        // Brighten the copy icon on hover for affordance
+        // Make the copy icon brighter on hover as a visual cue
         $(document).on('mouseenter', '.clip-copy', function () { this.style.opacity = '1'; });
         $(document).on('mouseleave', '.clip-copy', function () { this.style.opacity = '.45'; });
     });

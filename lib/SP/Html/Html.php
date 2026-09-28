@@ -134,7 +134,7 @@ final class Html
      */
     public static function truncate($text, $limit, string $ellipsis = '...')
     {
-        // Ensure $text is a string
+        // Make sure that $text is a string
         $text = (string) $text;
         $limit = (int) $limit;
 

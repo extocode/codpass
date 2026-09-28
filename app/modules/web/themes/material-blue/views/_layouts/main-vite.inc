@@ -1,8 +1,8 @@
 <?php
 /**
- * Vite-enabled Main Layout
+ * Main layout with Vite
  *
- * This layout uses Vite for asset loading instead of the legacy ResourceController.
+ * This layout uses Vite to load the assets instead of the legacy ResourceController.
  *
  * @var callable $_getvar
  * @var Template $this

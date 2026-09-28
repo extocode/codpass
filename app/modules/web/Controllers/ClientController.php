@@ -276,7 +276,7 @@ final class ClientController extends ControllerBase implements CrudControllerInt
     }
 
     /**
-     * Delete action with history clearing
+     * Delete action that also clears the account history
      *
      * @param $id
      *

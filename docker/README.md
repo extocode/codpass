@@ -8,7 +8,7 @@ A minimal dev stack: PHP 8.4 + Apache for the app, MariaDB 10.6 for the database
 docker compose up --build
 ```
 
-Then open <http://localhost:8080> and run through the codPass installer.
+Then open <http://localhost:8080>. Complete the steps of the codPass installer.
 
 ## Database settings for the installer
 
@@ -23,21 +23,21 @@ Then open <http://localhost:8080> and run through the codPass installer.
 
 ## How it is wired
 
-- **Docroot is the repo root** — codPass front controllers are `index.php`
-  (web) and `api.php` (API). Assets live under `public/` and are served as
-  real files; everything else falls back to `index.php`
-  (`docker/apache-vhost.conf`), mirroring the repo's `router.php`.
+- **Docroot is the repo root**: the codPass front controllers are `index.php`
+  (web) and `api.php` (API). The assets are under `public/`. Apache serves them as
+  real files. All other requests go to `index.php`
+  (`docker/apache-vhost.conf`). This is the same as `router.php` in the repo.
 - **Writable dirs** (`app/config`, `app/cache`, `app/temp`, `app/backup`) are
-  named volumes owned by `www-data`; `docker/entrypoint.sh` fixes ownership on
-  every start.
-- **`vendor/`** is a named volume. If it is empty the entrypoint runs
-  `composer install` automatically on first boot.
-- The project source is **bind-mounted**, so edits on the host are live.
+  named volumes that `www-data` owns. `docker/entrypoint.sh` corrects the
+  ownership at each start.
+- **`vendor/`** is a named volume. If it is empty, the entrypoint runs
+  `composer install` automatically at the first boot.
+- The project source is **bind-mounted**. Thus, edits on the host are live.
 
 ## PHP extensions
 
-The image installs: `pdo_mysql`, `gd`, `gettext`, `zlib`, `ldap`, plus the
-base-image bundled `dom`, `json`, `libxml`, `mbstring`, `fileinfo`.
+The image installs: `pdo_mysql`, `gd`, `gettext`, `zlib`, `ldap`. The base image
+also includes `dom`, `json`, `libxml`, `mbstring`, `fileinfo`.
 
 ## Reset
 

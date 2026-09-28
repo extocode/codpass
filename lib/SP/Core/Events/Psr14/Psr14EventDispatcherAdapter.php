@@ -35,14 +35,14 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 /**
  * Class Psr14EventDispatcherAdapter
  *
- * PSR-14 compliant event dispatcher adapter that maintains backward compatibility
+ * PSR-14 compliant event dispatcher adapter. It keeps backward compatibility
  * with the existing sysPass event system.
  *
  * This adapter:
- * - Implements both sysPass EventDispatcherInterface and PSR-14 EventDispatcherInterface
- * - Wraps Symfony EventDispatcher for PSR-14 compliance
- * - Maintains SplSubject/SplObserver compatibility for existing listeners
- * - Allows gradual migration to PSR-14
+ * - Implements the sysPass EventDispatcherInterface and the PSR-14 EventDispatcherInterface
+ * - Wraps the Symfony EventDispatcher for PSR-14 compliance
+ * - Keeps SplSubject/SplObserver compatibility for the existing listeners
+ * - Lets you migrate to PSR-14 step by step
  *
  * @package SP\Core\Events\Psr14
  */
@@ -95,20 +95,20 @@ final class Psr14EventDispatcherAdapter implements EventDispatcherInterface, Psr
 
     /**
      * Notify legacy observers (backward compatibility)
-     * This maintains the original sysPass event system behavior
+     * This keeps the behavior of the original sysPass event system
      */
     public function notify(): void
     {
         // No-op for backward compatibility
-        // Actual notification happens in notifyEvent()
+        // The actual notification occurs in notifyEvent()
     }
 
     /**
-     * Notify an event using the original sysPass event system
-     * Maintains backward compatibility while also dispatching PSR-14 events
+     * Notify an event through the original sysPass event system
+     * Keeps backward compatibility and also dispatches PSR-14 events
      *
-     * @param string $eventType Event type string (e.g., 'create.account')
-     * @param Event $event Event object containing source and message
+     * @param string $eventType Event type string (for example, 'create.account')
+     * @param Event $event Event object that contains the source and the message
      */
     public function notifyEvent($eventType, Event $event): void
     {
@@ -121,7 +121,7 @@ final class Psr14EventDispatcherAdapter implements EventDispatcherInterface, Psr
     }
 
     /**
-     * Notify legacy SplObserver listeners using the original pattern matching logic
+     * Notify legacy SplObserver listeners with the original pattern match logic
      *
      * @param string $eventType
      * @param Event $event
@@ -129,11 +129,11 @@ final class Psr14EventDispatcherAdapter implements EventDispatcherInterface, Psr
     private function notifyLegacyObservers(string $eventType, Event $event): void
     {
         foreach ($this->observers as $observer) {
-            // Check if observer has event filtering
+            // Check if the observer has an event filter
             if (method_exists($observer, 'getEventsString')) {
                 $events = $observer->getEventsString();
 
-                // Match all events or use regex pattern matching
+                // Match all events or use a regex pattern match
                 if (!empty($events) && ($events === '*' || preg_match('/' . $events . '/i', $eventType))) {
                     if (method_exists($observer, 'updateEvent')) {
                         $observer->updateEvent($eventType, $event);
@@ -142,7 +142,7 @@ final class Psr14EventDispatcherAdapter implements EventDispatcherInterface, Psr
                     }
                 }
             } else {
-                // No filtering, send all events
+                // No filter, send all events
                 if (method_exists($observer, 'updateEvent')) {
                     $observer->updateEvent($eventType, $event);
                 } else {
@@ -155,7 +155,7 @@ final class Psr14EventDispatcherAdapter implements EventDispatcherInterface, Psr
     /**
      * PSR-14 dispatch method
      *
-     * Dispatches an event to all registered PSR-14 listeners
+     * Dispatches an event to all the registered PSR-14 listeners
      *
      * @param object $event The event object
      * @param string|null $eventName Optional event name
@@ -200,7 +200,7 @@ final class Psr14EventDispatcherAdapter implements EventDispatcherInterface, Psr
     }
 
     /**
-     * Get the Symfony EventDispatcher instance for advanced usage
+     * Get the Symfony EventDispatcher instance for advanced use
      *
      * @return EventDispatcher
      */
@@ -210,7 +210,7 @@ final class Psr14EventDispatcherAdapter implements EventDispatcherInterface, Psr
     }
 
     /**
-     * Get count of legacy observers
+     * Get the count of legacy observers
      *
      * @return int
      */

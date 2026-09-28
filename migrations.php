@@ -5,8 +5,8 @@ declare(strict_types=1);
 /**
  * Doctrine Migrations Configuration
  *
- * This file configures Doctrine Migrations for sysPass database schema management.
- * Database connection is loaded from the sysPass configuration.
+ * This file configures Doctrine Migrations to manage the sysPass database schema.
+ * The database connection comes from the sysPass configuration.
  *
  * Usage:
  *   php bin/console migrations:status

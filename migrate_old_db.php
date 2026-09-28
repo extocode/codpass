@@ -23,7 +23,7 @@ if ($newDb->connect_error) {
 
 echo "✓ Connected to both databases\n\n";
 
-// Mapping of old table names to new ones
+// Map of the old table names to the new names
 $tableMappings = [
     'categories' => 'Category',
     'customers' => 'Client',
@@ -124,13 +124,13 @@ try {
     $migrationStats['usergroups'] = $count;
     echo "  ✓ Migrated $count user groups\n";
 
-    // 5. Migrate Users (only if they don't exist)
+    // 5. Migrate Users (only if they do not exist)
     echo "[5/7] Migrating Users...\n";
     $result = $oldDb->query("SELECT * FROM usrData");
     $count = 0;
     $skipped = 0;
     while ($row = $result->fetch_assoc()) {
-        // Check if user already exists
+        // Check if the user already exists
         $checkStmt = $newDb->prepare("SELECT id FROM User WHERE login = ?");
         $checkStmt->bind_param('s', $row['user_login']);
         $checkStmt->execute();
@@ -175,7 +175,7 @@ try {
     $result = $oldDb->query("SELECT * FROM accounts");
     $count = 0;
     while ($row = $result->fetch_assoc()) {
-        // Note: Passwords are encrypted, we'll copy them as-is
+        // Note: The passwords are encrypted. The script copies them as they are.
         $stmt = $newDb->prepare("
             INSERT INTO Account (id, name, categoryId, clientId, login, url,
                                 pass, `key`, notes, userId, userGroupId, userEditId,
@@ -219,7 +219,7 @@ try {
     $migrationStats['accounts'] = $count;
     echo "  ✓ Migrated $count accounts\n";
 
-    // 7. Update account count in config
+    // 7. Update the account count in the config
     echo "[7/7] Updating configuration...\n";
     $totalAccounts = $newDb->query("SELECT COUNT(*) as cnt FROM Account")->fetch_assoc()['cnt'];
     $newDb->query("UPDATE Config SET `value` = '$totalAccounts' WHERE `parameter` = 'account_count'");

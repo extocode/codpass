@@ -105,9 +105,9 @@ abstract class Service
 
                 return $result;
             } catch (Throwable $e) {
-                // ponytail: catch Throwable not Exception — a PHP Error/TypeError
-                // from the closure must still roll back, else the connection
-                // leaks an open transaction and the next TRUNCATE blocks forever.
+                // ponytail: catch Throwable, not Exception. A PHP Error/TypeError
+                // from the closure must also roll back. If not, the connection keeps
+                // an open transaction and the next TRUNCATE blocks forever.
                 $database->rollbackTransaction();
 
                 logger('Transaction:Rollback');

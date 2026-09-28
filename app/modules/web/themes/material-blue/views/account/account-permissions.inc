@@ -165,7 +165,7 @@ use SP\Services\Account\AccountAcl;
                 </td>
             </tr>
 
-            <?php if (!$_getvar('isView')): // Always update permissions when editing or copying ?>
+            <?php if (!$_getvar('isView')): // Always update the permissions when you edit or copy an account ?>
                 <input type="hidden" name="other_users_view_update" value="1">
                 <input type="hidden" name="other_users_edit_update" value="1">
                 <input type="hidden" name="other_usergroups_view_update" value="1">

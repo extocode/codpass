@@ -406,7 +406,7 @@ sysPass.Theme = function (log) {
                     checkFavorite($this);
                 });
             }).on("click", "#search-rows span.tag", function () {
-                // Tags bar is always visible, just add the tag to the filter
+                // The tags bar is always visible. Only add the tag to the filter
                 $tagsSelect.selectize.addItem($(this).data("tag-id"), false);
             });
 
@@ -512,7 +512,7 @@ sysPass.Theme = function (log) {
 
                 $header.append(tab);
 
-                // Add click handler for tab switching
+                // Add a click handler to switch tabs
                 $header.find("a[href='#tabs-" + index + "']").on("click", function(e) {
                     e.preventDefault();
                     const $this = $(this);
@@ -523,7 +523,7 @@ sysPass.Theme = function (log) {
                     $tabsContainer.find(".mdl-tabs__tab").removeClass("is-active");
                     $tabsContainer.find(".mdl-tabs__panel").removeClass("is-active");
 
-                    // Add active class to clicked tab and target panel
+                    // Add the active class to the clicked tab and the target panel
                     $this.addClass("is-active");
                     $tabsContainer.find(targetId).addClass("is-active");
                 });
@@ -549,7 +549,7 @@ sysPass.Theme = function (log) {
     const init = function () {
         // Enable row click selection for data tables
         $(document).on("click", ".mdl-data-table--selectable tbody tr", function (e) {
-            // Don't toggle selection if clicking on interactive elements
+            // Do not toggle the selection if the click is on an interactive element
             const $target = $(e.target);
             if ($target.closest("button, a, input, label.mdl-checkbox, .cell-actions, .mdl-menu").length > 0) {
                 return;

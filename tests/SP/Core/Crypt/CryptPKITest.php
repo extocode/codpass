@@ -50,7 +50,7 @@ class CryptPKITest extends TestCase
      */
     public function testDecryptRSA()
     {
-        // generateRandomBytes() returns hex (2 chars per byte), so cap at the RSA payload limit
+        // generateRandomBytes() returns hex (2 chars per byte). Thus, limit the size to the RSA payload limit
         $maxSize = CryptPKI::getMaxDataSize();
 
         $random = substr(PasswordUtil::generateRandomBytes($maxSize), 0, $maxSize);

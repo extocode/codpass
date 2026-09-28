@@ -95,19 +95,19 @@ if (ViteAssets::isDevelopment()) {
     ?>
 
     <script>
-        // Wait for modules to load and expose globals
-        // Check every 50ms for up to 5 seconds
+        // Wait until the modules load and expose the globals
+        // Check every 50ms for a maximum of 5 seconds
         let checkCount = 0;
         const maxChecks = 100;
 
         const checkInterval = setInterval(() => {
             checkCount++;
 
-            // Check if at least one global is set (means modules are loading)
+            // Check if at least one global is set (this shows that the modules started to load)
             if (typeof window.$ !== 'undefined' || checkCount >= maxChecks) {
                 clearInterval(checkInterval);
 
-                // Wait one more cycle to ensure all globals are set
+                // Wait one more cycle to make sure that all globals are set
                 setTimeout(() => {
                     const results = {
                         jQuery: typeof window.$ !== 'undefined' && typeof window.jQuery !== 'undefined',

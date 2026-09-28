@@ -235,8 +235,8 @@ sysPass.Main = function () {
         log.info("checkLogout");
 
         if (getUrlVars("r") === "login/logout") {
-            // Logout is intentional; skip the "Session finished" warning toast and
-            // go straight to the login screen.
+            // The logout is intentional. Skip the "Session finished" warning toast.
+            // Go directly to the login screen.
             oPublic.util.redirect("index.php?r=login");
 
             return true;
@@ -368,7 +368,7 @@ sysPass.Main = function () {
                         description + "<br>" + data.messages.join("<br>");
                 }
 
-                // Check if error response includes an action option (e.g., clear history and retry)
+                // Check if the error response includes an action option (for example, clear the history and try again)
                 if (status === 1 && data.data && data.data.action) {
                     const actionData = data.data;
                     const self = this;

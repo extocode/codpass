@@ -105,13 +105,13 @@ jobs:
       - name: Unit tests
         run: vendor/bin/phpunit --configuration tests/phpunit.xml --group unit
 
-      # NOTE: the full DB-backed suite is NOT run in CI yet — it has a known
+      # NOTE: CI does NOT run the full DB-backed suite yet. The suite has a known
       # test-isolation hang (an uncommitted transaction blocks a later TRUNCATE
-      # on a metadata lock). Run it locally until that is fixed; the unit group
-      # above is the CI gate. The MariaDB service + schema step above are kept
-      # ready for when the full suite is re-enabled.
+      # on a metadata lock). Run the suite locally until this problem is fixed.
+      # The unit group above is the CI gate. The MariaDB service + schema step
+      # above stay ready for the time when the full suite is enabled again.
 
-  # Uncomment after PHP 8.2 upgrade
+  # Uncomment after the PHP 8.2 upgrade
   # rector-check:
   #   name: Rector (Dry Run)
   #   runs-on: ubuntu-latest

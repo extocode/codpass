@@ -14,13 +14,13 @@ use Rector\TypeDeclaration\Rector\Property\TypedPropertyFromStrictConstructorRec
  * Rector automates PHP code refactoring and upgrades.
  *
  * Usage:
- *   composer rector      - Dry run (show what would change)
- *   composer rector:fix  - Apply changes
+ *   composer rector      - Dry run (show the changes, but do not apply them)
+ *   composer rector:fix  - Apply the changes
  *
  * Strategy:
- *   1. Start with current PHP version (7.4)
- *   2. Run rector to clean up code
- *   3. Upgrade PHP version target incrementally
+ *   1. Start with the current PHP version (7.4)
+ *   2. Run rector to clean up the code
+ *   3. Upgrade the PHP version target step by step
  *   4. Enable more rule sets as needed
  */
 
@@ -37,12 +37,12 @@ return RectorConfig::configure()
         __DIR__ . '/app/backup',
         __DIR__ . '/tests',  // Enable tests later
 
-        // Skip problematic rules that create conflicts
+        // Skip the rules that cause conflicts
         ClassPropertyAssignToConstructorPromotionRector::class,
         TypedPropertyFromStrictConstructorRector::class,
     ])
 
-    // PHP 8.2 target (includes all prior versions automatically)
+    // PHP 8.2 target (automatically includes all earlier versions)
     ->withPhpSets(php82: true)
 
     ->withSets([

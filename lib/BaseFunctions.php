@@ -299,8 +299,8 @@ function printTraceInfo()
 /**
  * Read an env var ($_ENV / $_SERVER / getenv) and cast it to the type of $default.
  *
- * Dotenv::createImmutable() populates $_ENV/$_SERVER but not getenv(), so read
- * those first. The result is cast to the type of $default (bool/int/string).
+ * Dotenv::createImmutable() fills $_ENV/$_SERVER but not getenv(). Thus, read
+ * those first. The function casts the result to the type of $default (bool/int/string).
  *
  * @param string $key
  * @param mixed  $default
@@ -309,16 +309,16 @@ function printTraceInfo()
  */
 function getFromEnv(string $key, $default = null)
 {
-    // .env is loaded with Dotenv::createImmutable(), which populates $_ENV /
-    // $_SERVER but not getenv(); read those first, then fall back to getenv().
+    // Dotenv::createImmutable() loads .env and fills $_ENV / $_SERVER, but not
+    // getenv(). Read those first. Then use getenv() as the fallback.
     $value = $_ENV[$key] ?? $_SERVER[$key] ?? getenv($key);
 
     if ($value === false || $value === null || $value === '') {
         return $default;
     }
 
-    // FILTER_VALIDATE_BOOL parses "true"/"false"/"1"/"0"; settype() would treat
-    // the non-empty string "false" as true, so handle bool explicitly.
+    // FILTER_VALIDATE_BOOL parses "true"/"false"/"1"/"0". settype() changes
+    // the non-empty string "false" to true. Thus, process bool values separately.
     if (is_bool($default)) {
         return filter_var($value, FILTER_VALIDATE_BOOL);
     }

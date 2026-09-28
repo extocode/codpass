@@ -1,9 +1,9 @@
 /**
  * Test script for Vite integration
- * This ensures vendor libraries are loaded before testing
+ * This makes sure that the vendor libraries load before the test
  */
 
-// Import vendor to ensure it loads first
+// Import vendor to make sure that it loads first
 import './vendor.js';
 
 // Now test that libraries are available

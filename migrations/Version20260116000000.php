@@ -10,8 +10,8 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Initial sysPass database schema migration
  *
- * This migration establishes the baseline schema for sysPass v3.1.x / v4.x.
- * It creates all required tables if they don't exist.
+ * This migration sets the baseline schema for sysPass v3.1.x / v4.x.
+ * It creates all the necessary tables if they do not exist.
  *
  * For existing installations:
  *   Run: php bin/console migrations:sync-metadata-storage
@@ -31,7 +31,7 @@ final class Version20260116000000 extends AbstractMigration
 
     public function up(Schema $schema): void
     {
-        // Check if tables already exist (existing installation)
+        // Check if the tables already exist (existing installation)
         $tableExists = $this->connection->executeQuery(
             "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name = 'Account'"
         )->fetchOne();

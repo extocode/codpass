@@ -50,7 +50,7 @@ export default defineConfig({
           'crypto': ['jsencrypt', 'spark-md5', 'zxcvbn']
         },
 
-        // Asset naming with content hash for cache busting
+        // Asset names with content hash for cache busting
         entryFileNames: 'js/[name].[hash].js',
         chunkFileNames: 'js/[name].[hash].js',
         assetFileNames: (assetInfo) => {

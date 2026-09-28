@@ -17,8 +17,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         git \
     && rm -rf /var/lib/apt/lists/*
 
-# PHP extensions required by codPass (composer.json) plus ldap (per dev setup).
-# dom, json, libxml, mbstring, fileinfo are bundled/enabled in the base image.
+# PHP extensions that codPass needs (composer.json), plus ldap (for the dev setup).
+# The base image includes and enables dom, json, libxml, mbstring and fileinfo.
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-configure ldap --with-libdir=lib/$(dpkg-architecture -q DEB_HOST_MULTIARCH) \
     && docker-php-ext-install -j"$(nproc)" \
@@ -27,11 +27,11 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
         gettext \
         ldap
 
-# Composer (copied from official image).
+# Composer (copied from the official image).
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# Apache: docroot is the project root. Real files (assets under public/) are
-# served directly; everything else falls back to index.php — mirrors router.php.
+# Apache: the docroot is the project root. Apache serves real files (assets under
+# public/) directly. All other requests go to index.php, the same as router.php.
 ENV APACHE_DOCUMENT_ROOT=/var/www/html
 COPY docker/apache-vhost.conf /etc/apache2/sites-available/000-default.conf
 COPY docker/php/codpass.ini /usr/local/etc/php/conf.d/zz-codpass.ini
@@ -39,8 +39,8 @@ RUN a2enmod rewrite
 
 WORKDIR /var/www/html
 
-# Source is bind-mounted in dev (see docker-compose.yml); nothing copied here.
-# The writable dirs are owned by the Apache user via the entrypoint.
+# In dev, the source is bind-mounted (see docker-compose.yml). This step copies no source.
+# The entrypoint gives the ownership of the writable dirs to the Apache user.
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 

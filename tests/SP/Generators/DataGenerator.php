@@ -32,8 +32,8 @@ use Faker\Generator;
 /**
  * Base class for Faker-based test-data generators.
  *
- * Subclasses expose a `build<Entity>()` method returning a populated DataModel,
- * with every field filled by Faker so tests never depend on a database.
+ * Each subclass has a `build<Entity>()` method that returns a populated DataModel.
+ * Faker fills every field. Thus, the tests never depend on a database.
  *
  * Usage:
  *   $category = CategoryDataGenerator::factory()->buildCategoryData();

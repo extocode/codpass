@@ -10,13 +10,13 @@
     Group convention (PHP-8 attributes on the test class or method):
       #[Group('unit')]        no DB, no DI container, pure logic (Crypt, Util, generators, ...)
       #[Group('integration')] needs a DB / DI container / filesystem fixtures
-    Run a slice with (note the "no-coverage" flag, written here without a leading dash
-    pair because XML comments cannot contain a double dash):
+    Use these commands to run a slice. Note: the "no-coverage" flag has no leading dash
+    pair here, because XML comments cannot contain a double dash:
       vendor/bin/phpunit -c tests/phpunit.xml [no-coverage] [group unit]
       vendor/bin/phpunit -c tests/phpunit.xml [no-coverage] [group integration]
-    The "no-coverage" flag is required locally because the <coverage> block aborts when
+    Locally, the "no-coverage" flag is necessary, because the <coverage> block aborts when
     no coverage driver (Xdebug/PCOV) is installed. The testsuites below still load the
-    whole suite; the group filter only selects which tests within them run.
+    full suite. The group filter only selects the tests in them that run.
   -->
   <testsuites>
     <testsuite name="Core">

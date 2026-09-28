@@ -113,9 +113,9 @@ final class FileHandler
      */
     private function lock($mode = LOCK_EX): void
     {
-        // Non-blocking with bounded retry: a blocking flock() can deadlock a
-        // process against its own un-released lock on the same file. Fail loudly
-        // after a few seconds instead of hanging forever.
+        // Non-blocking with a limited retry. A blocking flock() can cause a deadlock:
+        // the process waits for its own lock on the same file, which it did not release.
+        // After a few seconds, fail with an error. Do not wait forever.
         for ($attempt = 0; !($this->locked = flock($this->handle, $mode | LOCK_NB)); $attempt++) {
             if ($attempt >= 50) {
                 throw new FileException(sprintf(__('Unable to obtain a lock (%s)'), $this->file));
@@ -239,7 +239,7 @@ final class FileHandler
             $this->open('rb');
         }
 
-        // Clean any existing output buffers to prevent corruption
+        // Clean all existing output buffers to prevent corruption
         while (ob_get_level() > 0) {
             ob_end_clean();
         }

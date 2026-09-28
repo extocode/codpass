@@ -182,14 +182,14 @@ final class AclHandler extends Provider implements EventReceiver
 
             $accountToUserRepository = $this->dic->get(AccountToUserRepository::class);
 
-            // Handle single account edit
+            // Process a single account edit
             if (isset($extra['accountId'])) {
                 foreach ($accountToUserRepository->getUsersByAccountId($extra['accountId']) as $user) {
                     AccountAclService::clearAcl((string)$user->id);
                 }
             }
 
-            // Handle bulk account edit
+            // Process a bulk account edit
             if (isset($extra['accountIds'])) {
                 foreach ($extra['accountIds'] as $accountId) {
                     foreach ($accountToUserRepository->getUsersByAccountId($accountId) as $user) {

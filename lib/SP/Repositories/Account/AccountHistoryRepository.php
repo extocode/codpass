@@ -310,7 +310,7 @@ final class AccountHistoryRepository extends Repository implements RepositoryIte
     }
 
     /**
-     * Deletes all the items for given client ids
+     * Deletes all the items for the given client ids
      *
      * @throws ConstraintException
      * @throws QueryException

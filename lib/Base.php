@@ -63,8 +63,8 @@ $memInit = memory_get_usage();
 require VENDOR_PATH . DIRECTORY_SEPARATOR . 'autoload.php';
 require __DIR__ . DIRECTORY_SEPARATOR . 'SplClassLoader.php';
 
-// ponytail: primary config still lives in app/config/config.xml (web installer);
-// .env only overrides a few bootstrap flags. safeLoad() = missing .env is fine.
+// ponytail: the primary config is still in app/config/config.xml (web installer).
+// .env overrides only a few bootstrap flags. With safeLoad(), a missing .env is not an error.
 \Dotenv\Dotenv::createImmutable(APP_ROOT)->safeLoad();
 
 define('DEBUG', getFromEnv('SYSPASS_DEBUG', false));
@@ -77,7 +77,7 @@ try {
     $builder->addDefinitions(BASE_PATH . DIRECTORY_SEPARATOR . 'Definitions.php');
 
     // Enable PHP 8 attribute support for dependency injection
-    // This allows using #[Inject] and #[Autowire] attributes
+    // This lets you use the #[Inject] and #[Autowire] attributes
     $builder->useAttributes(true);
 
     Bootstrap::run($builder->build());

@@ -1,10 +1,10 @@
 /**
  * sysPass - Main Application Entry Point
  *
- * This file serves as the entry point for the sysPass application.
+ * This file is the entry point for the sysPass application.
  * It initializes the global sysPass namespace and loads all modules.
  *
- * Vite will bundle this along with all dependencies.
+ * Vite bundles this file together with all dependencies.
  */
 
 // Import vendor dependencies

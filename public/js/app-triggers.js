@@ -37,12 +37,12 @@ sysPass.Triggers = function (log) {
             onDropdownOpen: function ($dropdown) {
                 // Add class to body to allow overflow for dropdowns
                 $("body").addClass("selectize-dropdown-open");
-                // Add overflow-visible to ALL ancestor containers up to body so the
-                // dropdown is never clipped, regardless of which view it lives in
-                // (tables, fieldsets, tab panels, popups, etc.). Reverted on close.
+                // Add overflow-visible to ALL ancestor containers up to body. Thus, the
+                // dropdown is never clipped, in all views that can contain it
+                // (tables, fieldsets, tab panels, popups, etc.). The close event reverts this.
                 const $parents = $(this.$input[0]).parentsUntil("body");
                 $parents.addClass("dropdown-overflow-visible");
-                // Raise z-index of parent row to ensure dropdown appears above subsequent rows
+                // Raise the z-index of the parent row. This makes sure that the dropdown shows above the next rows
                 $(this.$input[0]).closest("tr").css("z-index", "1000");
             },
             onDropdownClose: function ($dropdown) {
@@ -66,9 +66,9 @@ sysPass.Triggers = function (log) {
             const $this = $(this);
             const self_options = {};
 
-            // Render the dropdown on <body> so it is not clipped by the
-            // .mdl-layout / .mdl-layout__content scroll containers (overflow:auto).
-            // Popups manage clipping via their own overflow/z-index rules, so they
+            // Render the dropdown on <body>. Then the .mdl-layout / .mdl-layout__content
+            // scroll containers (overflow:auto) do not clip it.
+            // Popups control the clipping with their own overflow/z-index rules. Thus, they
             // keep the default in-place dropdown.
             if ($this.closest("#box-popup, .mfp-content, dialog").length === 0) {
                 self_options.dropdownParent = "body";
@@ -154,7 +154,7 @@ sysPass.Triggers = function (log) {
     };
 
     /**
-     * Validate form fields and switch to tab with first invalid field if needed
+     * Validate the form fields. If necessary, switch to the tab with the first invalid field
      *
      * @param $form
      * @returns {boolean} true if valid, false if invalid
@@ -172,7 +172,7 @@ sysPass.Triggers = function (log) {
         // Check if the invalid field is in a hidden tab panel
         const $tabPanel = invalidField.closest(".mdl-tabs__panel");
         if ($tabPanel.length > 0 && !$tabPanel.hasClass("is-active")) {
-            // Switch to the tab containing the invalid field
+            // Switch to the tab that contains the invalid field
             const panelId = $tabPanel.attr("id");
             const $tabsContainer = $tabPanel.closest(".mdl-tabs");
             const $tabLink = $tabsContainer.find(".mdl-tabs__tab[href='#" + panelId + "']");
@@ -185,7 +185,7 @@ sysPass.Triggers = function (log) {
             }
         }
 
-        // Focus and show validation message
+        // Focus the field and show the validation message
         invalidField.focus();
         if (invalidField[0].reportValidity) {
             invalidField[0].reportValidity();
@@ -202,7 +202,7 @@ sysPass.Triggers = function (log) {
     const handleFormAction = function ($obj) {
         log.info("formAction");
 
-        // For forms with tabs (novalidate), do manual validation first
+        // For forms with tabs (novalidate), do a manual validation first
         if ($obj.attr("novalidate") !== undefined || $obj.hasClass("form-action-tabs")) {
             if (!validateFormWithTabs($obj)) {
                 return false;
@@ -252,10 +252,10 @@ sysPass.Triggers = function (log) {
                     ",tr.btn-action[data-onclick]" +
                     ",.btn-action-pager[data-onclick]",
                 function (e) {
-                    // For div.btn-action (card) or tr.btn-action (row), don't trigger if clicking on buttons/actions inside
+                    // For div.btn-action (card) or tr.btn-action (row), do not trigger if the click is on buttons/actions inside
                     if ($(this).is("div.btn-action, tr.btn-action")) {
                         var $target = $(e.target);
-                        // Skip if clicking on a button, link, or action icon inside the card/row
+                        // Skip if the click is on a button, link, or action icon inside the card/row
                         if (
                             $target.closest(
                                 "button, a, i.btn-action, i.material-icons, .mdl-menu, .account-info, .account-actions, .cell-actions",
@@ -304,12 +304,12 @@ sysPass.Triggers = function (log) {
                 handleFormAction($(this));
             })
             .on("invalid", ".form-action input, .form-action select, .form-action textarea", function (e) {
-                // Handle validation errors for fields in hidden tab panels
+                // Process validation errors for fields in hidden tab panels
                 const $field = $(this);
                 const $tabPanel = $field.closest(".mdl-tabs__panel");
 
                 if ($tabPanel.length > 0 && !$tabPanel.hasClass("is-active")) {
-                    // Field is in a hidden tab - switch to that tab first
+                    // The field is in a hidden tab. Switch to that tab first
                     e.preventDefault();
 
                     const panelId = $tabPanel.attr("id");
@@ -317,13 +317,13 @@ sysPass.Triggers = function (log) {
                     const $tabLink = $tabsContainer.find(".mdl-tabs__tab[href='#" + panelId + "']");
 
                     if ($tabLink.length > 0) {
-                        // Switch to the tab containing the invalid field
+                        // Switch to the tab that contains the invalid field
                         $tabsContainer.find(".mdl-tabs__tab").removeClass("is-active");
                         $tabsContainer.find(".mdl-tabs__panel").removeClass("is-active");
                         $tabLink.addClass("is-active");
                         $tabPanel.addClass("is-active");
 
-                        // Focus the invalid field after tab switch
+                        // Focus the invalid field after the tab switch
                         setTimeout(function() {
                             $field.focus();
                             // Trigger validation message display
@@ -448,7 +448,7 @@ sysPass.Triggers = function (log) {
                     views[page]();
                 }
 
-                // Set initial active nav based on page
+                // Set the initial active nav from the page
                 const pageRouteMap = {
                     "search": "account/index",
                     "items": "itemsPreset/index",
@@ -554,7 +554,7 @@ sysPass.Triggers = function (log) {
 
             initializeTags($container);
 
-            // Load parent account options for account forms (also needed in popups)
+            // Load the parent account options for account forms (popups also need them)
             const $selParentAccount = $container.find("#parent_account_id");
             if ($selParentAccount.length > 0) {
                 sysPassApp.actions.items.get($selParentAccount);

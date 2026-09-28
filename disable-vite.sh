@@ -1,5 +1,5 @@
 #!/bin/bash
-# Disable Vite and restore legacy system
+# Disable Vite and restore the legacy system
 
 echo "Disabling Vite build system..."
 

@@ -37,7 +37,7 @@ sysPass.Actions = function (log) {
 
     Object.freeze(ajaxUrl);
 
-    // Update active navigation item based on current route
+    // Update the active navigation item from the current route
     const updateActiveNav = function (route) {
         log.info("updateActiveNav: " + route);
 
@@ -45,12 +45,12 @@ sysPass.Actions = function (log) {
         $(".mdl-navigation__link").removeClass("nav-active");
         $("#users-menu-lower-right").removeClass("nav-active");
 
-        // Only proceed if route is a valid string
+        // Continue only if the route is a valid string
         if (typeof route !== "string" || !route) {
             return;
         }
 
-        // Find and activate matching nav item by exact route only
+        // Find the matching nav item by exact route only and activate it
         $(".mdl-navigation__link[data-route='" + route + "']").addClass("nav-active");
 
         // Mark user menu as active for user settings routes
@@ -539,7 +539,7 @@ sysPass.Actions = function (log) {
                     json.data.itemId !== undefined &&
                     json.data.nextAction !== undefined
                 ) {
-                    // Remove edit page from history so back button goes to previous page
+                    // Remove the edit page from the history. Then the back button goes to the previous page.
                     sysPassApp.requests.history.del();
 
                     getContent(

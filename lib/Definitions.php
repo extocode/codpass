@@ -6,18 +6,18 @@ declare(strict_types=1);
  * sysPass - PHP-DI Container Definitions
  *
  * This file configures the PHP-DI dependency injection container.
- * PHP-DI 7 supports PHP 8 attributes for autowiring, which can be used
- * in service classes instead of defining everything here.
+ * PHP-DI 7 supports PHP 8 attributes for autowiring. You can use these attributes
+ * in service classes. Then you do not have to define everything here.
  *
  * Autowiring (default behavior):
  * - PHP-DI automatically resolves constructor dependencies by type
- * - No configuration needed for simple services
- * - Use #[Inject] attribute for property/method injection
+ * - Simple services do not need configuration
+ * - Use the #[Inject] attribute for property/method injection
  *
  * Explicit definitions (this file):
- * - Use for interfaces that need concrete implementations
- * - Use for services that require special construction
- * - Use for scalar/non-typed parameters
+ * - Use them for interfaces that need concrete implementations
+ * - Use them for services that need special construction
+ * - Use them for scalar/non-typed parameters
  *
  * @see https://php-di.org/doc/php-definitions.html
  * @see https://php-di.org/doc/attributes.html
@@ -74,11 +74,11 @@ use function DI\get;
 /**
  * Container definitions
  *
- * Services not listed here are auto-wired by PHP-DI.
- * Only define services that:
- * 1. Implement an interface (bind interface to implementation)
- * 2. Require special construction parameters
- * 3. Need scalar values that can't be auto-wired
+ * PHP-DI auto-wires the services that are not in this list.
+ * Define only the services that:
+ * 1. Implement an interface (bind the interface to the implementation)
+ * 2. Need special construction parameters
+ * 3. Need scalar values that PHP-DI cannot auto-wire
  */
 return [
     /*
@@ -183,8 +183,8 @@ return [
      * -------------------------------------------------------------------------
      * Auto-wired Services (explicit for IDE support)
      *
-     * These are auto-wired by PHP-DI, but listed here for documentation
-     * and to enable IDE autocomplete in container usage.
+     * PHP-DI auto-wires these services. This list shows them for documentation
+     * and for IDE autocomplete when you use the container.
      * -------------------------------------------------------------------------
      */
     AccountAclService::class => autowire(AccountAclService::class),

@@ -1,6 +1,6 @@
-# Build context exclusions — these are large, generated, or host-specific.
-# (Source is bind-mounted at runtime; the build context only needs the
-#  Dockerfile and docker/ helpers.)
+# Build context exclusions. These files are large, generated, or host-specific.
+# (The source is bind-mounted at runtime. The build context needs only the
+#  Dockerfile and the docker/ helpers.)
 vendor/
 node_modules/
 .git/

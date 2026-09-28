@@ -4,8 +4,8 @@ declare(strict_types=1);
 /**
  * Material Design 3 Theme
  *
- * A modern dark theme based on Material Design 3 (Material You)
- * with periwinkle accent colors and slate background.
+ * A modern dark theme that is based on Material Design 3 (Material You).
+ * It has periwinkle accent colors and a slate background.
  */
 
 return [
@@ -28,6 +28,6 @@ return [
         'selectize-custom.min.css',
         'toastr.min.css',
         'styles.min.css',
-        'material-3.min.css',  // MD3 overrides - must be last
+        'material-3.min.css',  // MD3 overrides. This entry must be the last.
     ],
 ];

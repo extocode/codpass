@@ -369,7 +369,7 @@ final class SyspassImport extends XmlImportBase implements ImportInterface
      */
     protected function processAccounts(): void
     {
-        // Debug: Check if Accounts node exists and has data
+        // Debug: Check if the Accounts node exists and has data
         $accountsNode = $this->xmlDOM->getElementsByTagName('Accounts');
         $accountNodes = $this->xmlDOM->getElementsByTagName('Account');
 
@@ -381,7 +381,7 @@ final class SyspassImport extends XmlImportBase implements ImportInterface
             count($this->items['client'] ?? [])
         );
 
-        // Throw if no accounts found to make the error visible
+        // Throw an exception if there are no accounts. This makes the error visible.
         if ($accountNodes->length === 0) {
             throw new ImportException('No Account nodes found in XML. ' . $debugInfo);
         }
@@ -439,7 +439,7 @@ final class SyspassImport extends XmlImportBase implements ImportInterface
                     }
                 }
 
-                // Debug: Log account details before import attempt
+                // Debug: Log the account details before the import attempt
                 $this->eventDispatcher->notifyEvent(
                     'run.import.syspass.debug.account',
                     new Event($this, EventMessage::factory()
@@ -460,7 +460,7 @@ final class SyspassImport extends XmlImportBase implements ImportInterface
                             ->addDetail(__u('Account imported'), $accountRequest->name))
                     );
                 } catch (Exception $e) {
-                    // DEBUG: Throw the first error to see what's wrong
+                    // DEBUG: Throw the first error to show the problem
                     throw new ImportException(sprintf(
                         'IMPORT FAILED for "%s": %s | catId=%s, clientId=%s',
                         $accountRequest->name ?? 'unknown',

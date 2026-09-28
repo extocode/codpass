@@ -33,26 +33,26 @@ use SP\Core\Events\Event;
 /**
  * Class Psr14EventAdapter
  *
- * PSR-14 compliant event wrapper that adapts the legacy sysPass Event class
- * to PSR-14 standards while maintaining backward compatibility.
+ * PSR-14 compliant event wrapper. It adapts the legacy sysPass Event class
+ * to the PSR-14 standards and keeps backward compatibility.
  *
  * This adapter:
  * - Implements PSR-14 StoppableEventInterface
  * - Wraps the legacy Event and EventMessage objects
- * - Provides access to event data in both old and new formats
- * - Supports event propagation stopping
+ * - Gives access to the event data in the old and the new formats
+ * - Supports a stop of the event propagation
  *
  * @package SP\Core\Events\Psr14
  */
 final class Psr14EventAdapter implements StoppableEventInterface
 {
     /**
-     * Whether event propagation has been stopped
+     * Shows if the event propagation is stopped
      */
     private bool $propagationStopped = false;
 
     /**
-     * The event type name (e.g., 'create.account')
+     * The event type name (for example, 'create.account')
      */
     private string $eventType;
 
@@ -74,9 +74,9 @@ final class Psr14EventAdapter implements StoppableEventInterface
     }
 
     /**
-     * PSR-14: Check if event propagation has been stopped
+     * PSR-14: Check if the event propagation is stopped
      *
-     * @return bool True if propagation should stop, false otherwise
+     * @return bool True if the propagation must stop, false otherwise
      */
     public function isPropagationStopped(): bool
     {
@@ -84,9 +84,9 @@ final class Psr14EventAdapter implements StoppableEventInterface
     }
 
     /**
-     * Stop event propagation
+     * Stop the event propagation
      *
-     * Prevents subsequent listeners from being called
+     * Prevents calls to the subsequent listeners
      */
     public function stopPropagation(): void
     {
@@ -96,7 +96,7 @@ final class Psr14EventAdapter implements StoppableEventInterface
     /**
      * Get the event type string
      *
-     * @return string Event type (e.g., 'create.account', 'login.auth.browser')
+     * @return string Event type (for example, 'create.account' or 'login.auth.browser')
      */
     public function getEventType(): string
     {
@@ -128,7 +128,7 @@ final class Psr14EventAdapter implements StoppableEventInterface
      *
      * @param string $type Expected type name
      * @return object The source object cast to the expected type
-     * @throws \RuntimeException If type doesn't match
+     * @throws \RuntimeException If the type does not match
      */
     public function getTypedSource(string $type): object
     {
@@ -136,7 +136,7 @@ final class Psr14EventAdapter implements StoppableEventInterface
     }
 
     /**
-     * Get the EventMessage if present
+     * Get the EventMessage if it exists
      *
      * @return \SP\Core\Events\EventMessage|null
      */
@@ -157,7 +157,7 @@ final class Psr14EventAdapter implements StoppableEventInterface
     }
 
     /**
-     * Check if event type matches a pattern (regex)
+     * Check if the event type matches a pattern (regex)
      *
      * @param string $pattern Regex pattern (without delimiters)
      * @return bool True if matches
@@ -218,9 +218,9 @@ final class Psr14EventAdapter implements StoppableEventInterface
     }
 
     /**
-     * Get event category (first part before dot)
+     * Get the event category (the first part before the dot)
      *
-     * @return string Category (e.g., 'create', 'login', 'database')
+     * @return string Category (for example, 'create', 'login' or 'database')
      */
     public function getCategory(): string
     {
@@ -229,9 +229,9 @@ final class Psr14EventAdapter implements StoppableEventInterface
     }
 
     /**
-     * Get event sub-type (part after first dot)
+     * Get the event sub-type (the part after the first dot)
      *
-     * @return string Sub-type (e.g., 'account', 'user')
+     * @return string Sub-type (for example, 'account' or 'user')
      */
     public function getSubType(): string
     {
@@ -240,7 +240,7 @@ final class Psr14EventAdapter implements StoppableEventInterface
     }
 
     /**
-     * String representation for debugging
+     * String representation for debug output
      *
      * @return string
      */
