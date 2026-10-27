@@ -28,7 +28,7 @@
     "phpseclib/phpseclib": "^3.0",
     "klein/klein": "^2.1",
     "php-di/php-di": "^7.0",
-    "guzzlehttp/guzzle": "^7.0",
+    "guzzlehttp/guzzle": "^8.3",
     "monolog/monolog": "^3.5",
     "ext-pdo": "*",
     "ext-dom": "*",
