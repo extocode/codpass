@@ -42,15 +42,14 @@ We deliberately chose not to carry over the original name. We want to keep this 
 ## Requirements
 - PHP **8.4+** with extensions: `pdo`, `dom`, `gd`, `json`, `gettext`, `fileinfo`, `zlib`, `libxml`, `mbstring`
 - MariaDB / MySQL
-- Composer
-- Node.js (for building front-end assets)
+
+No Composer and no Node.js needed on the server.
 
 ## Installation
-```bash
-composer install --no-dev
-npm install
-npm run build
-```
+Download `codpass-<version>.tar.gz` from the [latest release](https://github.com/extocode/codpass/releases/latest) and extract it into your web root. It already contains all PHP dependencies (`vendor/`).
+
+Installing from a git checkout instead? Run `composer install --no-dev`. Node.js is only a dev tool for the Vite migration; the app runs without it.
+
 Then open the app in a browser and follow the web installer. See [docs/INSTALL.md](docs/INSTALL.md) for details (and [docker/README.md](docker/README.md) to run it in Docker).
 
 ## Documentation

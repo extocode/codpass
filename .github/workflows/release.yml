@@ -1,0 +1,52 @@
+name: Release
+
+# Build a drop-in tarball that includes vendor/. Users need no Composer and no Node.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing tag to build (for example, v4.0.2)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  tarball:
+    name: Build release tarball
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: pdo, pdo_mysql, gd, gettext, fileinfo, mbstring, dom, libxml, zlib
+          coverage: none
+          tools: composer:v2
+
+      - name: Build tarball
+        run: |
+          NAME="codpass-${TAG#v}"
+          mkdir dist
+          # Use the current .gitattributes, so that old tags also get the export-ignore list
+          git archive --worktree-attributes --prefix="$NAME/" "$TAG" | tar -x -C dist
+          composer install -d "dist/$NAME" --no-dev --optimize-autoloader --prefer-dist --no-progress
+          tar -czf "$NAME.tar.gz" -C dist "$NAME"
+          sha256sum "$NAME.tar.gz" > "$NAME.tar.gz.sha256"
+          echo "NAME=$NAME" >> "$GITHUB_ENV"
+
+      - name: Upload to release
+        run: |
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "codPass ${TAG#v}" --generate-notes
+          gh release upload "$TAG" "$NAME.tar.gz" "$NAME.tar.gz.sha256" --clobber

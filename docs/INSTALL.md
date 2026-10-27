@@ -22,31 +22,28 @@
 
 # Installation
 
-codPass is a PHP web application. You install it by deploying the code, running
-the dependency/asset build steps, then completing the web-based installer in a
-browser, which writes the configuration and sets up the database.
+codPass is a PHP web application. To install it, extract the release tarball into
+your web root. Then complete the web installer in a browser. The web installer
+writes the configuration and makes the database.
 
 ## Requirements
 
 - **PHP 8.4+** with extensions: `pdo`, `dom`, `gd`, `json`, `gettext`,
   `fileinfo`, `zlib`, `libxml`, `mbstring`
 - **MariaDB / MySQL** database server
-- **Composer** (PHP dependency manager)
-- **Node.js** — only needed to build the front-end assets
+- **Composer**: only for an installation from a git checkout. The release tarball does not need it.
+- **Node.js**: not necessary. Node.js is a development tool for the Vite migration only.
 
 ## Manual installation
 
-1. Get the code into your web root (clone the repository or extract a release).
+1. Download `codpass-<version>.tar.gz` from the GitHub release page.
 
-2. Install PHP dependencies:
+2. Extract the tarball into your web root.
+   The tarball contains the `vendor/` directory. Do not run Composer.
+
+3. If you use a git checkout instead of the tarball, install the PHP dependencies:
    ```bash
    composer install --no-dev
-   ```
-
-3. Build the front-end assets:
-   ```bash
-   npm install
-   npm run build
    ```
 
 4. Make sure the web server can write to the application's runtime
