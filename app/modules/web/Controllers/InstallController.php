@@ -81,6 +81,11 @@ final class InstallController extends ControllerBase
      */
     public function installAction()
     {
+        // CVE-2026-129110
+        if ($this->configData->isInstalled()) {
+            return $this->returnJsonResponse(JsonResponse::JSON_ERROR, __u('Already installed'));
+        }
+
         $installData = new InstallData();
         $installData->setSiteLang($this->request->analyzeString('sitelang', 'en_US'));
         $installData->setAdminLogin($this->request->analyzeString('adminlogin', 'admin'));

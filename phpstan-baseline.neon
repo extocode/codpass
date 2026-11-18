@@ -1557,7 +1557,7 @@ parameters:
 		-
 			message: '#^Function __u not found\.$#'
 			identifier: function.notFound
-			count: 1
+			count: 2
 			path: app/modules/web/Controllers/InstallController.php
 
 		-
