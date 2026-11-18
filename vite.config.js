@@ -133,7 +133,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./resources/scss/_variables.scss";`
+        additionalData: `@import "@css/_variables.scss";`
       }
     },
     devSourcemap: true

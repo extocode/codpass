@@ -95,7 +95,7 @@ final class ResourceController extends SimpleControllerBase
                     ->setBase(PUBLIC_PATH . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'js');
 
                 $this->minify->addFiles([
-                    'jquery-3.3.1.min.js',
+                    'jquery-3.7.1.min.js',
                     'jquery.fileDownload.min.js',
                     'clipboard.min.js',
                     'selectize.min.js',
