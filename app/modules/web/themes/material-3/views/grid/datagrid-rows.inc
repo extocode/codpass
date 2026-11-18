@@ -38,6 +38,11 @@ if (!isset($data)) {
                     if ($rowSrc['truncate'] === true):
                         $value = Html::truncate($value, 150 / $numFields);
                     endif;
+
+                    // Filters build HTML on purpose; raw values are data (CVE-2024-42904 via import)
+                    if ($rowSrc['filter'] === null):
+                        $value = htmlspecialchars((string) $value, ENT_QUOTES);
+                    endif;
                 else:
                     $value = '&nbsp;';
                 endif;

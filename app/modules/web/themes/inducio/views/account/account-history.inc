@@ -75,7 +75,7 @@ $accountAcl = $_getvar('accountAcl');
                                 <?php /** @var SelectItem $client */
                                 foreach ($_getvar('clients') as $client): ?>
                                     <option
-                                            value="<?php echo $client->getId(); ?>" <?php echo $client->isSelected() ? 'selected' : ''; ?>><?php echo $client->getName(); ?></option>
+                                            value="<?php echo $client->getId(); ?>" <?php echo $client->isSelected() ? 'selected' : ''; ?>><?php echo htmlspecialchars($client->getName(), ENT_QUOTES); ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </td>
@@ -92,7 +92,7 @@ $accountAcl = $_getvar('accountAcl');
                                 <?php /** @var SelectItem $category */
                                 foreach ($_getvar('categories') as $category): ?>
                                     <option
-                                            value="<?php echo $category->getId(); ?>" <?php echo $category->isSelected() ? 'selected' : ''; ?>><?php echo $category->getName(); ?></option>
+                                            value="<?php echo $category->getId(); ?>" <?php echo $category->isSelected() ? 'selected' : ''; ?>><?php echo htmlspecialchars($category->getName(), ENT_QUOTES); ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </td>
@@ -104,7 +104,7 @@ $accountAcl = $_getvar('accountAcl');
                                 <input id="url" name="url" type="text"
                                        class="mdl-textfield__input mdl-color-text--indigo-400"
                                        maxlength="255" tabindex="4"
-                                       value="<?php echo $accountData->getUrl(); ?>"
+                                       value="<?php echo htmlspecialchars($accountData->getUrl(), ENT_QUOTES); ?>"
                                        readonly>
                                 <label class="mdl-textfield__label"
                                        for="name"><?php echo __('Access URL or IP'); ?></label>

@@ -101,7 +101,7 @@ $showCustomFields = count($_getvar('customFields', 0)) > 0;
                                 <?php /** @var SelectItem $client */
                                 foreach ($_getvar('clients') as $client): ?>
                                     <option
-                                            value="<?php echo $client->getId(); ?>" <?php echo ($gotData && $client->getId() === $accountData->getClientId()) ? 'selected' : ''; ?>><?php echo $client->getName(); ?></option>
+                                            value="<?php echo $client->getId(); ?>" <?php echo ($gotData && $client->getId() === $accountData->getClientId()) ? 'selected' : ''; ?>><?php echo htmlspecialchars($client->getName(), ENT_QUOTES); ?></option>
                                 <?php endforeach; ?>
                             </select>
                             <?php if ($_getvar('addClientEnabled')): ?>
@@ -127,7 +127,7 @@ $showCustomFields = count($_getvar('customFields', 0)) > 0;
                                 <?php /** @var SelectItem $category */
                                 foreach ($_getvar('categories') as $category): ?>
                                     <option
-                                            value="<?php echo $category->getId(); ?>" <?php echo ($gotData && $category->getId() === $accountData->getCategoryId()) ? 'selected' : ''; ?>><?php echo $category->getName(); ?></option>
+                                            value="<?php echo $category->getId(); ?>" <?php echo ($gotData && $category->getId() === $accountData->getCategoryId()) ? 'selected' : ''; ?>><?php echo htmlspecialchars($category->getName(), ENT_QUOTES); ?></option>
                                 <?php endforeach; ?>
                             </select>
                             <?php if ($_getvar('addCategoryEnabled')): ?>
@@ -148,7 +148,7 @@ $showCustomFields = count($_getvar('customFields', 0)) > 0;
                                 <input id="url" name="url" type="text"
                                        class="mdl-textfield__input mdl-color-text--indigo-400"
                                        maxlength="255"
-                                       value="<?php echo $gotData ? $accountData->getUrl() : ''; ?>" <?php echo $_getvar('readonly'); ?>>
+                                       value="<?php echo $gotData ? htmlspecialchars($accountData->getUrl(), ENT_QUOTES) : ''; ?>" <?php echo $_getvar('readonly'); ?>>
                                 <label class="mdl-textfield__label"
                                        for="name"><?php echo __('Access URL or IP'); ?></label>
                             </div>
@@ -245,7 +245,7 @@ $showCustomFields = count($_getvar('customFields', 0)) > 0;
                                     <option value=""><?php echo __('Select Tags'); ?></option>
                                     <?php /** @var SelectItem $tag */
                                     foreach ($_getvar('tags') as $tag): ?>
-                                        <option value="<?php echo $tag->getId(); ?>" <?php echo $tag->isSelected() ? 'selected' : ''; ?>><?php echo $tag->getName(); ?></option>
+                                        <option value="<?php echo $tag->getId(); ?>" <?php echo $tag->isSelected() ? 'selected' : ''; ?>><?php echo htmlspecialchars($tag->getName(), ENT_QUOTES); ?></option>
                                     <?php endforeach; ?>
                                 </select>
                                 <?php if ($_getvar('addTagEnabled')): ?>
@@ -268,7 +268,7 @@ $showCustomFields = count($_getvar('customFields', 0)) > 0;
                                             <?php /** @var SelectItem $tag */
                                             foreach ($_getvar('tags') as $tag): ?>
                                                 <?php if ($tag->isSelected()): ?>
-                                                    <span class="tag"><?php echo $tag->getName(); ?></span>
+                                                    <span class="tag"><?php echo htmlspecialchars($tag->getName(), ENT_QUOTES); ?></span>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
                                         </div>

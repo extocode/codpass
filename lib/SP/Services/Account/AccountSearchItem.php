@@ -241,7 +241,8 @@ final class AccountSearchItem
      */
     public function getClientLink(): ?string
     {
-        return self::$wikiEnabled ? $this->configData->getWikiSearchurl() . $this->accountSearchVData->getClientName() : null;
+        // CVE-2024-42904: the client name ends up inside an href, so encode it
+        return self::$wikiEnabled ? $this->configData->getWikiSearchurl() . rawurlencode((string) $this->accountSearchVData->getClientName()) : null;
     }
 
     /**

@@ -22,7 +22,7 @@ use SP\Html\Html;
                 <span class="mdl-list__item-primary-content"
                       title="<?php echo htmlspecialchars($file->getName(), ENT_QUOTES); ?>">
                     <i class="material-icons  mdl-list__item-icon">attachment</i>
-                    <span><?php printf('%s (%d KB)', Html::truncate($file->getName(), 50), $file->getSize() / 1024); ?></span>
+                    <span><?php printf('%s (%d KB)', htmlspecialchars(Html::truncate($file->getName(), 50), ENT_QUOTES), $file->getSize() / 1024); ?></span>
                 </span>
 
                 <span class="list-actions">
