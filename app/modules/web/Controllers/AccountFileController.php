@@ -169,10 +169,13 @@ final class AccountFileController extends ControllerBase implements CrudControll
 
             $type = strtolower($fileData->getType());
 
+            // CVE-2025-25478: names stored before the upload fix may still hold line breaks
+            $fileName = preg_replace('/[\x00-\x1F\x7F]/', '', $fileData->getName());
+
             if ($type === 'application/pdf') {
-                $disposition = sprintf('inline; filename="%s"', $fileData->getName());
+                $disposition = sprintf('inline; filename="%s"', $fileName);
             } else {
-                $disposition = sprintf('attachment; filename="%s"', $fileData->getName());
+                $disposition = sprintf('attachment; filename="%s"', $fileName);
                 $response->header('Set-Cookie', 'fileDownload=true; path=/');
             }
 
@@ -218,7 +221,8 @@ final class AccountFileController extends ControllerBase implements CrudControll
 
                 $fileData = new FileData();
                 $fileData->setAccountId($accountId);
-                $fileData->setName(Html::sanitize($file['name']));
+                // CVE-2025-25478: a line break in the name breaks the download header
+                $fileData->setName(preg_replace('/[\x00-\x1F\x7F]/', '', (string) Html::sanitize($file['name'])));
                 $fileData->setSize($file['size']);
                 $fileData->setType($file['type']);
                 $fileData->setExtension(mb_strtoupper(pathinfo($fileData->getName(), PATHINFO_EXTENSION)));
