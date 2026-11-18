@@ -4657,12 +4657,6 @@ parameters:
 			path: lib/SP/Services/Backup/FileBackupService.php
 
 		-
-			message: '#^Constant BASE_PATH not found\.$#'
-			identifier: constant.notFound
-			count: 1
-			path: lib/SP/Services/Backup/FileBackupService.php
-
-		-
 			message: '#^Function __ not found\.$#'
 			identifier: function.notFound
 			count: 1
@@ -4671,7 +4665,7 @@ parameters:
 		-
 			message: '#^Function __u not found\.$#'
 			identifier: function.notFound
-			count: 9
+			count: 6
 			path: lib/SP/Services/Backup/FileBackupService.php
 
 		-
