@@ -47,7 +47,6 @@ use SP\Storage\Database\QueryData;
 use SP\Storage\File\ArchiveHandler;
 use SP\Storage\File\FileException;
 use SP\Storage\File\FileHandler;
-use SP\Util\Checks;
 
 defined('APP_ROOT') || die();
 
@@ -116,11 +115,7 @@ final class FileBackupService extends Service
 
             $this->backupTables(new FileHandler($this->backupFileDb), '*');
 
-            if (!$this->backupApp()
-                && !$this->backupAppLegacyLinux()
-            ) {
-                throw new ServiceException(__u('Error while doing the backup in compatibility mode'));
-            }
+            $this->backupApp();
 
             $this->configData->setBackupHash($this->hash);
             $this->config->saveConfig($this->configData);
@@ -357,33 +352,6 @@ final class FileBackupService extends Service
         $archive->compressDirectory(APP_ROOT, self::BACKUP_EXCLUDE_REGEX);
 
         return true;
-    }
-
-    /**
-     * Realizar un backup de la aplicación y comprimirlo usando aplicaciones del SO Linux.
-     *
-     * @return int Con el código de salida del comando ejecutado
-     * @throws ServiceException
-     */
-    private function backupAppLegacyLinux(): int
-    {
-        if (Checks::checkIsWindows()) {
-            throw new ServiceException(
-                __u('This operation is only available on Linux environments'),
-                ServiceException::INFO
-            );
-        }
-
-        $this->eventDispatcher->notifyEvent(
-            'run.backup.process',
-            new Event($this, EventMessage::factory()
-                ->addDescription(__u('Copying application')))
-        );
-
-        $command = 'tar czf ' . $this->backupFileApp . ArchiveHandler::COMPRESS_EXTENSION . ' ' . BASE_PATH . ' --exclude "' . $this->path . '" 2>&1';
-        exec($command, $resOut, $resBakApp);
-
-        return $resBakApp;
     }
 
     public function getHash(): string
