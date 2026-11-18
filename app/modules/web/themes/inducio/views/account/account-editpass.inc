@@ -50,7 +50,7 @@ $accountAcl = $_getvar('accountAcl');
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input id="client" name="client" type="text"
                                class="mdl-textfield__input mdl-color-text--indigo-400"
-                               value="<?php echo $accountData->getClientName(); ?>"
+                               value="<?php echo htmlspecialchars($accountData->getClientName(), ENT_QUOTES); ?>"
                                readonly>
                         <label class="mdl-textfield__label"
                                for="client"><?php echo __('Client'); ?></label>
@@ -63,7 +63,7 @@ $accountAcl = $_getvar('accountAcl');
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input id="url" name="url" type="text"
                                class="mdl-textfield__input mdl-color-text--indigo-400"
-                               value="<?php echo $accountData->getUrl(); ?>"
+                               value="<?php echo htmlspecialchars($accountData->getUrl(), ENT_QUOTES); ?>"
                                readonly>
                         <label class="mdl-textfield__label"
                                for="url"><?php echo __('URL / IP'); ?></label>

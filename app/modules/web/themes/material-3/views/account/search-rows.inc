@@ -90,7 +90,7 @@ $favoriteRouteOff = $_getvar('favoriteRouteOff');
                             : '';
                         ?>
                         <?php if (null !== $accountSearchItem->getClientLink()): ?>
-                            <a href="<?php echo $accountSearchItem->getClientLink(); ?>"
+                            <a href="<?php echo htmlspecialchars($accountSearchItem->getClientLink(), ENT_QUOTES); ?>"
                                target="blank"
                                title="<?php echo __('Search in Wiki'); ?>">
                                 <span class="mdl-chip mdl-chip--contact client-chip" style="<?php echo $chipStyle; ?>">

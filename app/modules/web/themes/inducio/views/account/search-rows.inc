@@ -39,22 +39,22 @@ $favoriteRouteOff = $_getvar('favoriteRouteOff');
                     <div class="field-customer label-field">
                         <div class="field-name-hidden"><?php echo __('Client'); ?></div>
                         <?php if (null !== $accountSearchItem->getClientLink()): ?>
-                            <a href="<?php echo $accountSearchItem->getClientLink(); ?>"
+                            <a href="<?php echo htmlspecialchars($accountSearchItem->getClientLink(), ENT_QUOTES); ?>"
                                target="blank"
                                title="<?php echo __('Search in Wiki'); ?>">
                                 <span class="mdl-chip mdl-chip--contact">
                                     <span style="background-color: <?php echo $accountSearchItem->getColor(); ?>;"
-                                          class="mdl-chip__contact mdl-color-text--white"><?php echo mb_ucfirst($accountSearchData->getClientName()); ?></span>
+                                          class="mdl-chip__contact mdl-color-text--white"><?php echo htmlspecialchars(mb_ucfirst($accountSearchData->getClientName()), ENT_QUOTES); ?></span>
                                     <span class="mdl-chip__text"
-                                          title="<?php echo $accountSearchData->getClientName(); ?>"><?php echo $accountSearchItem->getShortClientName(); ?></span>
+                                          title="<?php echo htmlspecialchars($accountSearchData->getClientName(), ENT_QUOTES); ?>"><?php echo htmlspecialchars($accountSearchItem->getShortClientName(), ENT_QUOTES); ?></span>
                                 </span>
                             </a>
                         <?php else: ?>
                             <span class="mdl-chip mdl-chip--contact">
                                 <span style="background-color: <?php echo $accountSearchItem->getColor(); ?>;"
-                                      class="mdl-chip__contact mdl-color-text--white"><?php echo mb_ucfirst($accountSearchData->getClientName()); ?></span>
+                                      class="mdl-chip__contact mdl-color-text--white"><?php echo htmlspecialchars(mb_ucfirst($accountSearchData->getClientName()), ENT_QUOTES); ?></span>
                                 <span class="mdl-chip__text"
-                                      title="<?php echo $accountSearchData->getClientName(); ?>"><?php echo $accountSearchItem->getShortClientName(); ?></span>
+                                      title="<?php echo htmlspecialchars($accountSearchData->getClientName(), ENT_QUOTES); ?>"><?php echo htmlspecialchars($accountSearchItem->getShortClientName(), ENT_QUOTES); ?></span>
                             </span>
                         <?php endif; ?>
                     </div>
@@ -85,7 +85,7 @@ $favoriteRouteOff = $_getvar('favoriteRouteOff');
 
                     <div class="field-category field-text label-field">
                         <div class="field-name"><?php echo __('Category'); ?></div>
-                        <div class="field-text"><?php echo $accountSearchData->getCategoryName(); ?></div>
+                        <div class="field-text"><?php echo htmlspecialchars($accountSearchData->getCategoryName(), ENT_QUOTES); ?></div>
                     </div>
 
                     <?php if ($accountSearchItem->isShow()): ?>
@@ -97,11 +97,11 @@ $favoriteRouteOff = $_getvar('favoriteRouteOff');
                         <div class="field-url field-text label-field">
                             <div class="field-name"><?php echo __('URL / IP'); ?></div>
                             <?php if ($accountSearchItem->isUrlIslink()): ?>
-                                <a href="<?php echo $accountSearchData->getUrl(); ?>"
+                                <a href="<?php echo $accountSearchItem->getSafeUrl(); ?>"
                                    target="_blank"
-                                   title="<?php printf(__('Open link to: %s'), $accountSearchData->getUrl()); ?>"><?php echo $accountSearchItem->getShortUrl(); ?></a>
+                                   title="<?php printf(__('Open link to: %s'), htmlspecialchars($accountSearchData->getUrl(), ENT_QUOTES)); ?>"><?php echo htmlspecialchars($accountSearchItem->getShortUrl(), ENT_QUOTES); ?></a>
                             <?php else: ?>
-                                <div class="field-text"><?php echo $accountSearchItem->getShortUrl(); ?></div>
+                                <div class="field-text"><?php echo htmlspecialchars($accountSearchItem->getShortUrl(), ENT_QUOTES); ?></div>
                             <?php endif; ?>
                         </div>
                     <?php else: ?>
@@ -113,7 +113,7 @@ $favoriteRouteOff = $_getvar('favoriteRouteOff');
                     <div class="tags-box">
                         <?php foreach ($accountSearchItem->getTags() as $tag): ?>
                             <span class="tag"
-                                  data-tag-id="<?php echo $tag->id; ?>"><?php echo $tag->name; ?></span>
+                                  data-tag-id="<?php echo $tag->id; ?>"><?php echo htmlspecialchars($tag->name, ENT_QUOTES); ?></span>
                         <?php endforeach; ?>
                     </div>
                 </div>

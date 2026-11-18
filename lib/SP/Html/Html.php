@@ -61,6 +61,9 @@ final class Html
             );
             $data = html_entity_decode((string) $data, ENT_COMPAT, 'UTF-8');
 
+            // CVE-2017-9306: decoded entities can form new tags, so strip them again
+            $data = strip_tags($data);
+
             // Remove any attribute starting with "on" or xmlns
             $data = preg_replace(/** @lang RegExp */
                 '#(<[^>]+?[\x00-\x20\x2f"\'])(?:on|xmlns)[^>]*+>#iu',

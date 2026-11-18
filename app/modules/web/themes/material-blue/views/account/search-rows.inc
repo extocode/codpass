@@ -62,7 +62,7 @@ $favoriteRouteOff = $_getvar('favoriteRouteOff');
                     <div class="field-customer label-field">
                         <div class="field-name-hidden"><?php echo __('Client'); ?></div>
                         <?php if (null !== $accountSearchItem->getClientLink()): ?>
-                            <a href="<?php echo $accountSearchItem->getClientLink(); ?>"
+                            <a href="<?php echo htmlspecialchars($accountSearchItem->getClientLink(), ENT_QUOTES); ?>"
                                target="blank"
                                title="<?php echo __('Search in Wiki'); ?>">
                                 <span class="mdl-chip mdl-chip--contact">

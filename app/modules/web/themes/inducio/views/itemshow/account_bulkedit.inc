@@ -51,7 +51,7 @@ use SP\Mvc\View\Template;
                                 <option value=""><?php echo __('Select Client'); ?></option>
                                 <?php foreach ($_getvar('clients') as $client): ?>
                                     <option
-                                            value="<?php echo $client->getId(); ?>"><?php echo $client->getName(); ?></option>
+                                            value="<?php echo $client->getId(); ?>"><?php echo htmlspecialchars($client->getName(), ENT_QUOTES); ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </td>
@@ -67,7 +67,7 @@ use SP\Mvc\View\Template;
                                 <option value=""><?php echo __('Select Category'); ?></option>
                                 <?php foreach ($_getvar('categories') as $category): ?>
                                     <option
-                                            value="<?php echo $category->getId(); ?>"><?php echo $category->getName(); ?></option>
+                                            value="<?php echo $category->getId(); ?>"><?php echo htmlspecialchars($category->getName(), ENT_QUOTES); ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </td>
@@ -112,7 +112,7 @@ use SP\Mvc\View\Template;
                                     class="select-box-tags">
                                 <option value=""><?php echo __('Select Tags'); ?></option>
                                 <?php foreach ($_getvar('tags') as $tag): ?>
-                                    <option value="<?php echo $tag->getId(); ?>"><?php echo $tag->getName(); ?></option>
+                                    <option value="<?php echo $tag->getId(); ?>"><?php echo htmlspecialchars($tag->getName(), ENT_QUOTES); ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </td>

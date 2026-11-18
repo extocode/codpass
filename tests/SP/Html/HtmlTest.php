@@ -71,4 +71,15 @@ class HtmlTest extends TestCase
             ['mongodb+srv://cluster.foo.mongodb.net/bar'],
         ];
     }
+
+    // CVE-2017-9306: entity-encoded tags must not decode into live markup
+    public function testSanitizeStripsDecodedTags()
+    {
+        foreach (['&#60;img src=x onerror=alert(1)//', '&#x3C;svg/onload=alert(1)&#x3E;', '<svg/onload=alert(1)>report.pdf'] as $input) {
+            $this->assertEquals(0, preg_match('/<[a-z!\/?]/i', (string) Html::sanitize($input)), $input);
+        }
+
+        $name = 'Rechnung März 2026 (final).pdf';
+        $this->assertEquals($name, Html::sanitize($name));
+    }
 }
