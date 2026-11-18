@@ -93,6 +93,15 @@ final class UserPassResetController extends ControllerBase
 
             $this->checkTracking();
 
+            // CVE-2025-25477: the emailed link must come from the configured URL, never from the Host header
+            if (!$this->configData->getApplicationUrl()) {
+                throw new SPException(
+                    __u('Unable to reset the password'),
+                    SPException::WARNING,
+                    __u('The application URL is not set in the site settings')
+                );
+            }
+
             $login = $this->request->analyzeString('login');
             $email = $this->request->analyzeEmail('email');
 

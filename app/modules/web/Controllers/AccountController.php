@@ -1090,7 +1090,8 @@ final class AccountController extends ControllerBase implements CrudControllerIn
 
             $accountDetails = $this->accountService->getById($id)->getAccountVData();
 
-            $baseUrl = ($this->configData->getApplicationUrl() ?: Bootstrap::$WEBURI) . Bootstrap::$SUBURI;
+            // CVE-2025-25477: this link is emailed, so it must not come from the Host header
+            $baseUrl = ($this->configData->getApplicationUrl() ?: Bootstrap::$WEBROOT) . Bootstrap::$SUBURI;
 
             $deepLink = new Uri($baseUrl);
             $deepLink->addParam('r', Acl::getActionRoute(ActionsInterface::ACCOUNT_VIEW) . '/' . $id);

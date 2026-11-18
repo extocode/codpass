@@ -99,7 +99,8 @@ final class LayoutHelper extends HelperBase
      */
     public function initBody(): void
     {
-        $baseUrl = $this->configData->getApplicationUrl() ?: Bootstrap::$WEBURI;
+        // CVE-2025-25477: without an application URL, page assets stay on the current origin
+        $baseUrl = $this->configData->getApplicationUrl() ?: Bootstrap::$WEBROOT;
 
         $this->view->assign('isInstalled', $this->configData->isInstalled());
         $this->view->assign('app_name', AppInfoInterface::APP_NAME);
@@ -140,7 +141,7 @@ final class LayoutHelper extends HelperBase
     protected function getResourcesLinks(): void
     {
         $version = VersionUtil::getVersionStringNormalized();
-        $baseUrl = ($this->configData->getApplicationUrl() ?: Bootstrap::$WEBURI) . Bootstrap::$SUBURI;
+        $baseUrl = ($this->configData->getApplicationUrl() ?: Bootstrap::$WEBROOT) . Bootstrap::$SUBURI;
 
         $jsUri = new Uri($baseUrl);
         $jsUri->addParam('_r', 'resource/js');
