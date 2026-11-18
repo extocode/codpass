@@ -28,7 +28,6 @@ namespace SP\Services\Mail;
 
 use Exception;
 use PHPMailer\PHPMailer\PHPMailer;
-use SP\Bootstrap;
 use SP\Core\AppInfoInterface;
 use SP\Core\Events\Event;
 use SP\Core\Events\EventMessage;
@@ -93,12 +92,16 @@ final class MailService extends Service
      */
     protected function getEmailFooter(): array
     {
-        return [
-            '',
-            '--',
-            sprintf('%s - %s', AppInfoInterface::APP_NAME, AppInfoInterface::APP_DESC),
-            Html::anchorText(Bootstrap::$WEBURI),
-        ];
+        $footer = ['', '--', sprintf('%s - %s', AppInfoInterface::APP_NAME, AppInfoInterface::APP_DESC)];
+
+        // CVE-2025-25477: link only the configured URL, never one built from the Host header
+        $appUrl = $this->config->getConfigData()->getApplicationUrl();
+
+        if ($appUrl) {
+            $footer[] = Html::anchorText($appUrl);
+        }
+
+        return $footer;
     }
 
     /**

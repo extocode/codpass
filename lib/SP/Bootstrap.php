@@ -384,15 +384,11 @@ final class Bootstrap
     {
         self::$SUBURI = '/' . basename($this->request->getServer('SCRIPT_FILENAME'));
 
-        $uri = $this->request->getServer('REQUEST_URI');
+        // CVE-2025-25477: the path comes from the server, not from the client's request URI
+        self::$WEBROOT = rtrim(dirname($this->request->getServer('SCRIPT_NAME')), '/\\');
 
-        $pos = strpos($uri, self::$SUBURI);
-
-        if ($pos > 0) {
-            self::$WEBROOT = substr($uri, 0, $pos);
-        }
-
-        self::$WEBURI = $this->request->getHttpHost() . self::$WEBROOT;
+        // A configured application URL always wins over the Host header
+        self::$WEBURI = $this->configData->getApplicationUrl() ?: $this->request->getHttpHost() . self::$WEBROOT;
     }
 
     /**

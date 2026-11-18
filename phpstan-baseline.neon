@@ -2103,7 +2103,7 @@ parameters:
 		-
 			message: '#^Function __u not found\.$#'
 			identifier: function.notFound
-			count: 13
+			count: 15
 			path: app/modules/web/Controllers/UserPassResetController.php
 
 		-
